@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Len的博客">
 <meta property="og:description" content="No.1 指针： 指针就是地址。 指针变量就是存储地址的变量。  *p ： 解引用、间接引用。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-08T08:24:03.109Z">
+<meta property="og:updated_time" content="2019-07-08T08:44:45.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GolangStudy">
 <meta name="twitter:description" content="No.1 指针： 指针就是地址。 指针变量就是存储地址的变量。  *p ： 解引用、间接引用。">
@@ -476,7 +476,62 @@ write([]byte)：按字节字节</code></pre><p>目录操作：</p>
 4. 将一行数据的字符串，拆分后，存入 []string 。 Split、Fields    —— 字符串练习题
 
 5. 遍历[]string 统计“Love”单词出现的次数。    —— map练习题</code></pre><p>No.3    </p>
+<p>并行： 借助多核 cpu 实现。            （真 并行）</p>
+<p>并发：<br>    宏观：用户体验上，程序在并行执行。</p>
+<pre><code>微观：多个计划任务，顺序执行。在飞快的切换。轮换使用 cpu 时间轮片。         【假 并行】
+1S = 1000ms 1ms = 1000us1us = 1000ns</code></pre><p>进程并发：<br>    程序：编译成功得到的二进制文件。    占用 磁盘空间。    死的    1    1</p>
+<pre><code>进程：运行起来程序。 占用系统资源。（内存）        活的    N    1</code></pre><p>进程状态：<br>    初始态、就绪态、运行态、挂起（阻塞）态、终止（停止）态。</p>
+<p>线程并发：</p>
+<pre><code>线程：LWP 轻量级的 进程。最小的执行单位。 —— cpu分配时间轮片的对象。
 
+进程： 最小的系统资源分配单位。</code></pre><p>同步：<br>    协同步调。规划先后顺序。</p>
+<pre><code>线程同步机制：
+
+    互斥锁（互斥量）：    建议锁。 拿到锁以后，才能访问数据，没有拿到锁的线程，阻塞等待。等到拿锁的线程释放锁。
+
+    读写锁：一把锁（读属性、写属性）。 写独占，读共享。 写锁优先级高。</code></pre><p>协程并发：<br>    Python、Lua、Ruset。。。</p>
+<pre><code>21世纪。
+
+提高程序执行的效率。</code></pre><p>总结：<br>    进程、线程、协程 都可以完成并发。</p>
+<pre><code>稳定性强、节省资源、效率高。    
+
+老板——手机：
+
+生产线 —— 设备、材料、厂房 —— 进程。（资源分配单位）
+
+工人 —— 线程。    —— 单进程、单线程的 程序。
+
+50 工人 —— 50 线程。     ——单进程、多线程的 程序。
+
+10 条生产线 —— 500 工人 —— 。多进程、多线程的 程序。
+
+利用闲暇时间义务搬砖 —— 协程。—— 多进程、多线程、多协程 程序。</code></pre><p>创建Goroutine程</p>
+<pre><code>创建于进程中。 直接使用 go 关键，放置于 函数调用前面，产生一个 go程。 并发。</code></pre><p>Goroutine的特性：【重点】</p>
+<pre><code>主go程结束，子go程随之退出。</code></pre><p>runtime.Gosched()： </p>
+<pre><code>出让当前go程所占用的 cpu时间片。当再次获得cpu时，从出让位置继续回复执行。
+
+—— 时间片轮转调度算法。</code></pre><p>runtime.Goexit()：</p>
+<pre><code>return：    返回当前函数调用到调用者那里去。 return之前的 defer 注册生效。
+
+Goexit():   结束调用该函数的当前go程。Goexit():之前注册的 defer都生效。</code></pre><p>runtime.GOMAXPROCS():</p>
+<pre><code>设置当前 进程使用的最大cpu核数。 返回 上一次调用成功的设置值。 首次调用返回默认值。</code></pre><p>===================================</p>
+<p>【补充知识点】：</p>
+<pre><code>每当有一个进程启动时，系统会自动打开三个文件： 标准输入、标准输出、标准错误。 —— 对应三个文件： stdin、stdout、stderr
+
+当进行运行结束。操作系统自动关闭三个文件。</code></pre><p>channel：<br>    是一种数据类型。 对应一个“管道”（通道 FIFO）</p>
+<pre><code>channel的定义：
+
+    make (chan  在channel中传递的数据类型， 容量)    容量= 0： 无缓冲channel， 容量 &gt; 0 ：有缓冲channel
+
+    e.g.： make（chan int） 或 make （chan string , 0）
+
+channel有两个端：
+
+    一端：写端（传入端）    chan &lt;-
+
+    另一端： 读端（传出端）&lt;- chan
+
+    要求：读端和写端必须同时满足条件，才在channel上进行数据流动。否则，则阻塞。</code></pre>
       
 
       
