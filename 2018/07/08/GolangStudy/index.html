@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Len的博客">
 <meta property="og:description" content="No.1 指针： 指针就是地址。 指针变量就是存储地址的变量。  *p ： 解引用、间接引用。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-08T08:56:26.955Z">
+<meta property="og:updated_time" content="2019-07-08T09:24:23.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GolangStudy">
 <meta name="twitter:description" content="No.1 指针： 指针就是地址。 指针变量就是存储地址的变量。  *p ： 解引用、间接引用。">
@@ -652,7 +652,174 @@ r runtimeTimer
     5. break 跳出 select中的一个case选项 。类似于switch中的用法。</code></pre><p>select实现fibonacci数列：</p>
 <pre><code>1  1  2  3  5  8  13  21  34  55   89 
 x = y
-y = x+y    </code></pre>
+y = x+y    </code></pre><p>No.5</p>
+<p>select 超时处理：</p>
+<pre><code>select 监听 time.After() 中 channel 的读事件。  如果定时时间到，系统会向该channel中写入系统当前时间。
+
+select {
+        case  &lt;-time.After(time.Second * 5)
+    定时到达后，要处理的内容
+} </code></pre><p>死锁： 不是锁的一种！！！是一种错误使用锁导致的现象。</p>
+<pre><code>1. 单go程自己死锁
+
+    channel 应该在 至少 2 个以上的 go程中进行通信。否则死锁！！！
+
+2. go程间channel访问顺序导致死锁
+
+    使用channel一端读（写）， 要保证另一端写（读）操作，同时有机会执行。否则死锁。
+
+3. 多go程，多channel 交叉死锁
+
+    A go程，掌握M的同时，尝试拿N； Bgo程，掌握N的同时尝试拿M。 
+
+4. 在go语言中，尽量不要将 互斥锁、读写锁 与 channel 混用。 ——  隐性死锁。</code></pre><p>互斥锁：（互斥量）</p>
+<pre><code>A 、B go程 共同访问共享数据。 由于cpu调度随机，需要对 共享数据访问顺序加以限定（同步）。
+
+创建 mutex（互斥锁），访问共享数据之前，加锁，访问结束，解锁。 在A go程加锁期间，B go程加锁会失败——阻塞。
+
+直至 A go程 解说mutex，B 从阻塞处。恢复执行。</code></pre><p>读写锁：<br>    读时共享，写时独占。写锁优先级比读锁高。</p>
+<p>条件变量：</p>
+<pre><code>本身不是锁！！！ 但经常与锁结合使用！！
+
+   使用流程：
+
+1.  创建 条件变量： var cond    sync.Cond
+
+2.  指定条件变量用的 锁：  cond.L = new(sync.Mutex)
+
+3.  cond.L.Lock()    给公共区加锁（互斥量）
+
+4.  判断是否到达 阻塞条件（缓冲区满/空）    —— for 循环判断
+
+    for  len(ch) == cap(ch) {   cond.Wait() —— 1) 阻塞 2) 解锁 3) 加锁
+
+5.  访问公共区 —— 读、写数据、打印 
+
+6.  解锁条件变量用的 锁  cond.L.Unlock()
+
+7.  唤醒阻塞在条件变量上的 对端。 signal()  Broadcast()</code></pre><p>No.6</p>
+<p>协议： 一组规则。要求使用协议的双方，必须严格遵守协议内容。</p>
+<p>网络分层架构：</p>
+<pre><code>OSI七层模型结构体： 物、数、网、传、会、表、应
+
+TCP/IP 四层模型：数、网、传、应</code></pre><p>各层功能：<br>    链路层：     ARP</p>
+<pre><code>    源mac —— 目标mac
+
+    ARP 协议作用： 借助 IP 获取 mac 地址。
+
+网络层：   IP
+
+    源IP —— 目标IP
+
+    IP协议的作用： 在 网络环境中唯一标识一台主机。
+
+    IP地址本质：2进制数。—— 点分十进制 IP地址 （string）
+
+传输层：   TCP / UDP 
+
+    port —— 在 一台主机上唯一标识一个进程。
+
+应用层：    ftp、http、自定义
+
+    对数据进行封装。 解封装。</code></pre><p>数据通信过程：</p>
+<pre><code>封装： 应用层 —— 传输层 —— 网络层 —— 链路层    。 没有经过封装的数据，不能在网络环境中传递。
+
+解封装 ： 链路层 —— 网络层 —— 传输层 —— 应用层</code></pre><p>总结通信过程：</p>
+<pre><code>1. mac地址（不需要用户指定）        (ARP 协议)Ip ——&gt; mac
+
+2. IP 地址 （需要用户指定）    —— 确定主机
+
+3. port 端口号 （需要用户指定）    —— 确定程序
+
+    1. 不能使用系统占用的默认端口。    5000+ 端口我们使用 （8080）
+
+    2. 65535为端口上限。 </code></pre><p>socket：   套接字。</p>
+<pre><code>网络通信过程中，socket 一定是成对出现的。</code></pre><p>网络应用设计模式：</p>
+<pre><code>C/S:
+    优点：数据传输效率高、协议选择灵活
+
+    缺点：工作量大、安全性构成威胁
+
+B/S:
+    优点：开发工作较小、不受平台限制、安全威胁小
+
+    缺点：缓存数据差、协议选择不灵活、</code></pre><p>TCP-CS服务器：</p>
+<pre><code>1.  创建监听socket  listener := net.Listen(&quot;TCP&quot;, &quot;IP+port&quot;)    IP+port    —— 服务器自己的IP 和 port
+
+2.  启动监听  conn := listener.Accept()  conn 用于 通信的 socket
+
+3.  conn.Read()  
+
+4.  处理使用 数据
+
+5.  conn.Write()
+
+6.  关闭  listener、conn</code></pre><p>nc工具环境变量配置。</p>
+<pre><code>1. 解压 netcat-win32-1.12.zip 文件 到指定目录
+
+2. 拷贝 解压后目录，保存到环境变量： 
+
+    方法：我的电脑--&gt;属性--&gt;高级系统设置--&gt;环境变量--&gt;系统变量中找“path”--&gt;双击它--&gt;新建--&gt;粘贴
+
+3. 启动 cmd 执行 nc 命令 充当客户端测试
+
+4. nc 127.0.01 8000 （注意 IP 和 端口之间是“空格”）
+
+5. 输入 hello socket。 服务器应该能读到并向服务器的屏幕打印 “hello socket”</code></pre><p>TCP-CS客户端：</p>
+<pre><code>1.  conn, err := net.Dial(&quot;TCP&quot;, 服务器的IP+port)
+
+2.  写数据给 服务器 conn.Write()
+
+3.  读取服务器回发的 数据 conn.Read()
+
+4.  conn.Close()</code></pre><p>TCP-CS并发服务器：</p>
+<pre><code>1.  创建 监听套接字 listener := net.Listen(&quot;tcp&quot;， 服务器的IP+port)        // tcp 不能大写
+
+2.  defer listener.Close()
+
+3.  for 循环 阻塞监听 客户端连接事件     conn := listener.Accept()
+
+4. 创建 go程 对应每一个 客户端进行数据通信    go HandlerConnet()
+
+5. 实现 HandlerConnet(conn net.Conn) 
+
+    1) defer conn.Close()
+
+    2) 获取成功连接的客户端 Addr         conn.RemoteAddr()
+
+    3) for 循环 读取 客户端发送数据        conn.Read(buf)
+
+    4) 处理数据 小 —— 大    strings.ToUpper()
+
+    5）回写转化后的数据        conn.Write(buf[:n]) </code></pre><p>服务器判断关闭：</p>
+<pre><code>Read读客户端/服务器，返回 0  ——  对端关闭！
+
+nc 命令发送数据时，默认在结尾自带‘\n’</code></pre><p>TCP-CS并发客户端：    </p>
+<pre><code>1. 匿名 go 程 ， 获取 键盘输入， 写给服务器
+
+2. for 循环读取服务器回发数据
+
+发送数据时，默认在结尾自带‘ \r\n ’</code></pre><p>TCP通信过程：</p>
+<pre><code>三次握手：
+
+    1. 主动发起请求端， 发送 SYN 
+
+    2. 被动建立连接请求端 ， 应答ACK 同时 发送 SYN
+
+    3. 主动发起请求端，发送应答 ACK
+
+    标志 TCP 三次握手建立完成。 —— server：Accept() 返回 。     —— client：Dial() 返回。
+
+四次挥手：
+
+    1. 主动关闭连接请求端， 发送 FIN
+
+    2. 被动关闭连接请求端 ，应答 ACK
+                    标志。半关闭完成。 —— close()
+    3. 被动关闭连接请求端 ，发送 FIN
+
+    4.  主动关闭连接请求端，应答 ACK
+                    标志。四次挥手建立完成。 —— close().</code></pre>
       
 
       
