@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://daelephant.github.io">
   <title>beego note | Len的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="beego框架1.课程规划 2.Beego框架快速入门2.1beego框架了解 ​                                    Beego作者：谢孟军 Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框">
+  <meta name="description" content="Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？ 第一，beego是中国人开发的，开发">
 <meta name="keywords" content="beego">
 <meta property="og:type" content="article">
 <meta property="og:title" content="beego note">
 <meta property="og:url" content="https://daelephant.github.io/2018/07/18/beego-note/index.html">
 <meta property="og:site_name" content="Len的博客">
-<meta property="og:description" content="beego框架1.课程规划 2.Beego框架快速入门2.1beego框架了解 ​                                    Beego作者：谢孟军 Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框">
+<meta property="og:description" content="Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？ 第一，beego是中国人开发的，开发">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538463711665.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538464418121.png">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538468501308.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538480105977.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538486815102.png">
-<meta property="og:updated_time" content="2019-07-12T04:54:05.106Z">
+<meta property="og:updated_time" content="2019-07-12T04:57:01.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="beego note">
-<meta name="twitter:description" content="beego框架1.课程规划 2.Beego框架快速入门2.1beego框架了解 ​                                    Beego作者：谢孟军 Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框">
+<meta name="twitter:description" content="Beego框架是go语言开发的web框架。 那什么是框架呢？就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？ 第一，beego是中国人开发的，开发">
 <meta name="twitter:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538463711665.png">
   
     <link rel="alternative" href="/atom.xml" title="Len的博客" type="application/atom+xml">
@@ -183,14 +183,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="beego框架"><a href="#beego框架" class="headerlink" title="beego框架"></a>beego框架</h1><h2 id="1-课程规划"><a href="#1-课程规划" class="headerlink" title="1.课程规划"></a>1.课程规划</h2><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538463711665.png" alt="1538463711665"></p>
+        <p>Beego框架是go语言开发的web框架。</p>
+<p><strong>那什么是框架呢？</strong>就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。 </p>
+<p>go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？</p>
+<p>第一，beego是中国人开发的，开发文档比较详细，<strong>beego官网网址:</strong> <a href="https://beego.me/" target="_blank" rel="noopener">https://beego.me/</a> 。第二，现在公司里面用beego的也比较多，比如今日头条，百度云盘，腾讯，阿里等。</p>
+<a id="more"></a>
+
+<h1 id="beego框架"><a href="#beego框架" class="headerlink" title="beego框架"></a>beego框架</h1><h2 id="1-规划"><a href="#1-规划" class="headerlink" title="1.规划"></a>1.规划</h2><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538463711665.png" alt="1538463711665"></p>
 <h2 id="2-Beego框架快速入门"><a href="#2-Beego框架快速入门" class="headerlink" title="2.Beego框架快速入门"></a>2.Beego框架快速入门</h2><h3 id="2-1beego框架了解"><a href="#2-1beego框架了解" class="headerlink" title="2.1beego框架了解"></a>2.1beego框架了解</h3><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538464418121.png" alt="1538464418121"></p>
 <p>​                                    <strong>Beego作者：谢孟军</strong></p>
 <p>Beego框架是go语言开发的web框架。</p>
 <p><strong>那什么是框架呢？</strong>就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。 </p>
 <p>go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？</p>
 <p>第一，beego是中国人开发的，开发文档比较详细，<strong>beego官网网址:</strong> <a href="https://beego.me/" target="_blank" rel="noopener">https://beego.me/</a> 。第二，现在公司里面用beego的也比较多，比如今日头条，百度云盘，腾讯，阿里等。</p>
-<a id="more"></a>
 <h3 id="2-2MVC架构"><a href="#2-2MVC架构" class="headerlink" title="2.2MVC架构"></a>2.2MVC架构</h3><p>Beego是MVC架构。MVC 是一种应用非常广泛的体系架构，<strong>几乎所有的编程语言都会使用到</strong>，而且<strong>所有的程序员在工作中都会遇到</strong>！用 MVC 的方式开发程序，可以让程序的结构更加合理和清晰。 我们画图说明</p>
 <p><img src="//daelephant.github.io/2018/07/18/beego-note/1538487453982.png" alt="1538487453982"></p>
 <p><strong>beego具体是如何内嵌MVC呢？我们搭起环境通过代码分析。</strong></p>
