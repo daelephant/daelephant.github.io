@@ -21,9 +21,10 @@
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538487453982.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538467908697.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538468501308.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538468765577.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538480105977.png">
 <meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538486815102.png">
-<meta property="og:updated_time" content="2019-07-12T07:08:04.143Z">
+<meta property="og:updated_time" content="2019-07-12T07:10:18.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="beego note">
 <meta name="twitter:description" content="Beego框架是go语言开发的web框架。可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的其他优秀web&amp;amp;API框架：beego,gin,iris（极速高效）等等beego是中国人开发的，开发文档比较详细，beego官网网址: https">
@@ -231,8 +232,50 @@
 <p>根据上图所示的步骤，对自己创建的项目进行三步修改，然后在浏览器是否能看到修改之后的效果。</p>
 <p>如果把你们前面做的静态网页放到views文件夹下呢？一个静态网站是不是就出现啦！有没有感受到beego开发网站的快捷！</p>
 <p><strong>代码分析</strong></p>
-<p><code>c.Data[&quot;Email&quot;] = &quot;astaxie@gmail.com&quot;</code>是给视图传递数据，在视图界面里面需要用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>加上<code>.</code>才能获取到，比如这行代码的意思就是，给视图传递，*<em>Key为Email，value为<a href="mailto:astaxie@gmail.com" target="_blank" rel="noopener">astaxie@gmail.com</a> *</em>的数据。在视图中要通过<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">`c.TplName = &quot;index.tpl&quot;`的作用是指定视图。这里面需要注意的是，默认指定的界面是tpl结尾，但是打开这个文件分析，发现还是一个html界面。所以我们也可以用html文件当视图文件。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">通过我们对Beego的快速体验能够得出如下结论：</span><br><span class="line"></span><br><span class="line">**控制器(Controller)的作用**</span><br><span class="line"></span><br><span class="line">1.能够给视图传递数据</span><br><span class="line"></span><br><span class="line">2.能够指定视图</span><br><span class="line"></span><br><span class="line">**视图(View)的作用 **</span><br><span class="line"></span><br><span class="line">1.view本质就是个html。所以能在浏览器显示</span><br><span class="line"></span><br><span class="line">2.能够接收控制器传递过来的数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 2.6Beego运行流程分析</span><br><span class="line"></span><br><span class="line">![1538468765577](beego-note/1538468765577.png)</span><br><span class="line"></span><br><span class="line">+ 浏览器发出请求</span><br><span class="line"></span><br><span class="line">+ 路由拿到请求，并给相应的请求指定相应的控制器</span><br><span class="line"></span><br><span class="line">+ 找到指定的控制器之后，控制器看是否需要查询数据库</span><br><span class="line"></span><br><span class="line">+ 如果需要查询数据库就找model取数据</span><br><span class="line"></span><br><span class="line">+ 如果不需要数据库，直接找view要视图</span><br><span class="line"></span><br><span class="line">+ 控制器拿到视图页面之后，把页面返回给浏览器</span><br><span class="line"></span><br><span class="line">  **根据文字流程分析代码流程**</span><br><span class="line"></span><br><span class="line">+ 从项目的入口main.go开始</span><br><span class="line"></span><br><span class="line">+ 找到router.go文件的Init函数</span><br><span class="line"></span><br><span class="line">+ 找到路由指定的控制器文件default.go的Get方法</span><br><span class="line"></span><br><span class="line">+ 然后找到指定视图的语法，整个项目就串起来啦。</span><br><span class="line"></span><br><span class="line">### 2.7Post案例实现</span><br><span class="line"></span><br><span class="line">刚才我们分析了beego项目的整个运行流程，最终是如何调到Get方法的呢？**beego通过内部语法给不同的http请求指定了不同的方法**，因为我们是从浏览器地址栏发送的请求，属于get请求，所以调用的是Get方法。为了检验老师说的对不对，我们可以实现一个post请求，看看效果。</span><br><span class="line"></span><br><span class="line">#### 2.7.1前端修改</span><br><span class="line"></span><br><span class="line">**前端代码如下:**</span><br><span class="line"></span><br><span class="line">修改我们刚才创建的新的视图，为了能够发送post请求，我们在视图中添加一个能发送post请求的控件`form`</span><br><span class="line"></span><br><span class="line">```go</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;/index&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<p><code>c.Data[&quot;Email&quot;] = &quot;astaxie@gmail.com&quot;</code>是给视图传递数据，在视图界面里面需要用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>加上<code>.</code>才能获取到，比如这行代码的意思就是，给视图传递，*<em>Key为Email，value为<a href="mailto:astaxie@gmail.com" target="_blank" rel="noopener">astaxie@gmail.com</a> *</em>的数据。在视图中要通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;.Email&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>就能获取到value值。</p>
+<p><code>c.TplName = &quot;index.tpl&quot;</code>的作用是指定视图。这里面需要注意的是，默认指定的界面是tpl结尾，但是打开这个文件分析，发现还是一个html界面。所以我们也可以用html文件当视图文件。</p>
+<p>通过我们对Beego的快速体验能够得出如下结论：</p>
+<p><strong>控制器(Controller)的作用</strong></p>
+<p>1.能够给视图传递数据</p>
+<p>2.能够指定视图</p>
+<p>*<em>视图(View)的作用 *</em></p>
+<p>1.view本质就是个html。所以能在浏览器显示</p>
+<p>2.能够接收控制器传递过来的数据</p>
+<h3 id="2-6Beego运行流程分析"><a href="#2-6Beego运行流程分析" class="headerlink" title="2.6Beego运行流程分析"></a>2.6Beego运行流程分析</h3><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538468765577.png" alt="1538468765577"></p>
+<ul>
+<li><p>浏览器发出请求</p>
+</li>
+<li><p>路由拿到请求，并给相应的请求指定相应的控制器</p>
+</li>
+<li><p>找到指定的控制器之后，控制器看是否需要查询数据库</p>
+</li>
+<li><p>如果需要查询数据库就找model取数据</p>
+</li>
+<li><p>如果不需要数据库，直接找view要视图</p>
+</li>
+<li><p>控制器拿到视图页面之后，把页面返回给浏览器</p>
+<p><strong>根据文字流程分析代码流程</strong></p>
+</li>
+<li><p>从项目的入口main.go开始</p>
+</li>
+<li><p>找到router.go文件的Init函数</p>
+</li>
+<li><p>找到路由指定的控制器文件default.go的Get方法</p>
+</li>
+<li><p>然后找到指定视图的语法，整个项目就串起来啦。</p>
+</li>
+</ul>
+<h3 id="2-7Post案例实现"><a href="#2-7Post案例实现" class="headerlink" title="2.7Post案例实现"></a>2.7Post案例实现</h3><p>刚才我们分析了beego项目的整个运行流程，最终是如何调到Get方法的呢？<strong>beego通过内部语法给不同的http请求指定了不同的方法</strong>，因为我们是从浏览器地址栏发送的请求，属于get请求，所以调用的是Get方法。为了检验老师说的对不对，我们可以实现一个post请求，看看效果。</p>
+<h4 id="2-7-1前端修改"><a href="#2-7-1前端修改" class="headerlink" title="2.7.1前端修改"></a>2.7.1前端修改</h4><p><strong>前端代码如下:</strong></p>
+<p>修改我们刚才创建的新的视图，为了能够发送post请求，我们在视图中添加一个能发送post请求的控件<code>form</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"/index"</span>&gt;</span><br><span class="line">    &lt;input <span class="keyword">type</span>=<span class="string">"submit"</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
 <p>然后设置一个能接收后台传递过来的数据的标签</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;hello &#123;&#123;.data&#125;&#125;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
 
