@@ -6,29 +6,40 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://daelephant.github.io">
-  <title>beego note | Len的博客</title>
+  <title>beego-news发布系统 | Len的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Beego框架是go语言开发的web框架。可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的其他优秀web&amp;amp;API框架：beego,gin,iris（极速高效）等等beego是中国人开发的，开发文档比较详细，beego官网网址: https">
+  <meta name="description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
 <meta name="keywords" content="beego">
 <meta property="og:type" content="article">
-<meta property="og:title" content="beego note">
-<meta property="og:url" content="https://daelephant.github.io/2018/07/18/beego-note/index.html">
+<meta property="og:title" content="beego-news发布系统">
+<meta property="og:url" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/index.html">
 <meta property="og:site_name" content="Len的博客">
-<meta property="og:description" content="Beego框架是go语言开发的web框架。可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的其他优秀web&amp;amp;API框架：beego,gin,iris（极速高效）等等beego是中国人开发的，开发文档比较详细，beego官网网址: https">
+<meta property="og:description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538463711665.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538464418121.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538487453982.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538467908697.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538468501308.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538468765577.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538480105977.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538486815102.png">
-<meta property="og:updated_time" content="2019-07-12T07:13:01.008Z">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538500613581.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538500659872.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538591447624.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538591575762.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538591636455.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538591824871.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538591946260.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538619910805.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538595086914.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538620374676.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538669662236.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538669662236.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538715475866.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538716777459.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538717147605.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538717467806.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538718026674.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538719480706.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538720450645.png">
+<meta property="og:updated_time" content="2019-07-12T10:28:04.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="beego note">
-<meta name="twitter:description" content="Beego框架是go语言开发的web框架。可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。  go语言的其他优秀web&amp;amp;API框架：beego,gin,iris（极速高效）等等beego是中国人开发的，开发文档比较详细，beego官网网址: https">
-<meta name="twitter:image" content="https://daelephant.github.io/2018/07/18/beego-note/1538463711665.png">
+<meta name="twitter:title" content="beego-news发布系统">
+<meta name="twitter:description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
+<meta name="twitter:image" content="https://daelephant.github.io/2018/11/11/beego-news发布系统/1538500613581.png">
   
     <link rel="alternative" href="/atom.xml" title="Len的博客" type="application/atom+xml">
   
@@ -164,464 +175,545 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-beego-note" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-beego-news发布系统" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      beego note
+      beego-news发布系统
     </h1>
   
 
         
-        <a href="/2018/07/18/beego-note/" class="archive-article-date">
-  	<time datetime="2018-07-18T03:57:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
+        <a href="/2018/11/11/beego-news发布系统/" class="archive-article-date">
+  	<time datetime="2018-11-11T09:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Beego框架是go语言开发的web框架。<br>可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。 </p>
-<p>go语言的其他优秀web&amp;API框架：beego,gin,iris（极速高效）等等<br>beego是中国人开发的，开发文档比较详细，<strong>beego官网网址:</strong> <a href="https://beego.me/" target="_blank" rel="noopener">https://beego.me/</a> </p>
-<a id="more"></a>
-<h1 id="beego框架"><a href="#beego框架" class="headerlink" title="beego框架"></a>beego框架</h1><h2 id="1-规划"><a href="#1-规划" class="headerlink" title="1.规划"></a>1.规划</h2><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538463711665.png" alt="1538463711665"></p>
-<h2 id="2-Beego框架快速入门"><a href="#2-Beego框架快速入门" class="headerlink" title="2.Beego框架快速入门"></a>2.Beego框架快速入门</h2><h3 id="2-1beego框架了解"><a href="#2-1beego框架了解" class="headerlink" title="2.1beego框架了解"></a>2.1beego框架了解</h3><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538464418121.png" alt="1538464418121"></p>
-<p>​                                    <strong>Beego作者：谢孟军</strong></p>
-<p>Beego框架是go语言开发的web框架。</p>
-<p><strong>那什么是框架呢？</strong>就是别人写好的代码，我们可以直接使用！这个代码是专门针对某一个开发方向定制的，例如：我们要做一个网站，利用 beego 框架就能非常快的完成网站的开发，如果没有框架，每一个细节都需要我们处理，开发速度会大大降低。 </p>
-<p>go语言的web框架：beego,gin,echo等等，那为什么我们选择beego呢？</p>
-<p>第一，beego是中国人开发的，开发文档比较详细，<strong>beego官网网址:</strong> <a href="https://beego.me/" target="_blank" rel="noopener">https://beego.me/</a> 。第二，现在公司里面用beego的也比较多，比如今日头条，百度云盘，腾讯，阿里等。</p>
-<h3 id="2-2MVC架构"><a href="#2-2MVC架构" class="headerlink" title="2.2MVC架构"></a>2.2MVC架构</h3><p>Beego是MVC架构。MVC 是一种应用非常广泛的体系架构，<strong>几乎所有的编程语言都会使用到</strong>，而且<strong>所有的程序员在工作中都会遇到</strong>！用 MVC 的方式开发程序，可以让程序的结构更加合理和清晰。 我们画图说明</p>
-<p><img src="//daelephant.github.io/2018/07/18/beego-note/1538487453982.png" alt="1538487453982"></p>
-<p><strong>beego具体是如何内嵌MVC呢？我们搭起环境通过代码分析。</strong></p>
-<h3 id="2-3环境搭建"><a href="#2-3环境搭建" class="headerlink" title="2.3环境搭建"></a>2.3环境搭建</h3><p>这里默认大家已经搭建好了go语言的开发环境。</p>
+        <h1 id="Beego案例-新闻发布系统"><a href="#Beego案例-新闻发布系统" class="headerlink" title="Beego案例-新闻发布系统"></a>Beego案例-新闻发布系统</h1><h2 id="1-注册"><a href="#1-注册" class="headerlink" title="1.注册"></a>1.注册</h2><p>注册的业务流程图。</p>
+<p>*<em>业务流程图 *</em></p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538500613581.png" alt="1538500613581"></p>
+<h2 id="2-登陆"><a href="#2-登陆" class="headerlink" title="2.登陆"></a>2.登陆</h2><a id="more"></a>
+<p><strong>业务流程图</strong></p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538500659872.png" alt="1538500659872"></p>
+<p><strong>登陆和注册业务和我们昨天登陆和注册基本一样，所以就不再重复写这个代码</strong></p>
+<p>但是我们遇到的问题是如何做代码的迁移，把昨天的登陆和注册拿过来直接用？</p>
 <ul>
-<li><p>需要安装Beego源码和Bee开发工具//sudo apt-get install</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> go get -u -v github.com/astaxie/beego</span><br><span class="line"><span class="meta">$</span> go get -u -v github.com/beego/bee</span><br></pre></td></tr></table></figure>
-
-<p>beego源码大家都了解，就是框架的源码。</p>
-<p>Bee开发工具带有很多Bee命令。比如<code>bee new</code>创建项目，<code>bee run</code>运行项目等。</p>
-<p>用bee运行项目，项目自带<strong>热更新</strong>（是现在后台程序常用的一种技术，即在服务器运行期间，可以不停服替换静态资源。替换go文件时会自动重新编译。）</p>
-<p>安装完之后，bee可执行文件默认存放在<code>$GOPATH/bin</code>里面，所以需要把<code>$GOPATH/bin</code>添加到环境变量中才可以进行下一步 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd ~</span><br><span class="line"><span class="meta">$</span> vim .bashrc</span><br><span class="line">//在最后一行插入</span><br><span class="line">export PATH="$GOPATH/bin:$PATH"</span><br><span class="line">//然后保存退出</span><br><span class="line"><span class="meta">$</span> source .bashrc</span><br></pre></td></tr></table></figure>
-
-<p>安装好之后，运行<code>bee new preojectName</code>来创建一个项目，注意：<strong>通过bee创建的项目代码都是在<code>$GOPATH/src</code>目录下面的</strong></p>
-<p>生成的项目目录结构如下:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">quickstart</span><br><span class="line">|-- conf</span><br><span class="line">|   `-- app.conf</span><br><span class="line">|-- controllers</span><br><span class="line">|   `-- default.go</span><br><span class="line">|-- main.go</span><br><span class="line">|-- models</span><br><span class="line">|-- routers</span><br><span class="line">|   `-- router.go</span><br><span class="line">|-- static</span><br><span class="line">|   |-- css</span><br><span class="line">|   |-- img</span><br><span class="line">|   `-- js</span><br><span class="line">|-- tests</span><br><span class="line">|   `-- default_test.go</span><br><span class="line">|-- views</span><br><span class="line">    `-- index.tpl</span><br></pre></td></tr></table></figure>
-
-<p>*<em>进入项目目录 *</em>执行<code>bee run</code>命令，在浏览器输入网址：127.0.0.1：8080，显示如下： </p>
-<p><img src="//daelephant.github.io/2018/07/18/beego-note/1538467908697.png" alt="1538467908697"></p>
-</li>
-</ul>
-<h3 id="2-4beego的项目结构分析"><a href="#2-4beego的项目结构分析" class="headerlink" title="2.4beego的项目结构分析"></a>2.4beego的项目结构分析</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">quickstart</span><br><span class="line">|-- conf</span><br><span class="line">|   `-- app.conf</span><br><span class="line">|-- controllers</span><br><span class="line">|   `-- default.go</span><br><span class="line">|-- main.go</span><br><span class="line">|-- models</span><br><span class="line">|-- routers</span><br><span class="line">|   `-- router.go</span><br><span class="line">|-- static</span><br><span class="line">|   |-- css</span><br><span class="line">|   |-- img</span><br><span class="line">|   `-- js</span><br><span class="line">|-- tests</span><br><span class="line">|   `-- default_test.go</span><br><span class="line">|-- views</span><br><span class="line">    `-- index.tpl</span><br></pre></td></tr></table></figure>
-
-<p><strong>conf文件夹</strong>:放的是项目有关的配置文件</p>
-<p><strong>controllers</strong>:存放主要的业务代码</p>
-<p><strong>main.go</strong>:项目的入口文件</p>
-<p><strong>models</strong>:存放的是数据库有关内容</p>
-<p><strong>routers</strong>:存放路由文件，<strong>路由作用是根据不同的请求指定不同的控制器</strong></p>
-<p><strong>static</strong>：存放静态资源，包括图片，html页面，css样式，js文件等</p>
-<p><strong>tests</strong>:测试文件</p>
-<p><strong>views：</strong>存放视图有关内容</p>
-<p>后面我们重点需要操作的是MVC文件夹，routers文件夹。</p>
-<h3 id="2-5Beego快速体验"><a href="#2-5Beego快速体验" class="headerlink" title="2.5Beego快速体验"></a>2.5Beego快速体验</h3><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538468501308.png" alt="1538468501308"></p>
-<p>前面我们简单了解了 beego初始化的内容，那么就来个beego的快速体验吧！</p>
-<p>根据上图所示的步骤，对自己创建的项目进行三步修改，然后在浏览器是否能看到修改之后的效果。</p>
-<p>如果把你们前面做的静态网页放到views文件夹下呢？一个静态网站是不是就出现啦！有没有感受到beego开发网站的快捷！</p>
-<p><strong>代码分析</strong></p>
-<p><code>c.Data[&quot;Email&quot;] = &quot;astaxie@gmail.com&quot;</code>是给视图传递数据，在视图界面里面需要用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>加上<code>.</code>才能获取到，比如这行代码的意思就是，给视图传递，*<em>Key为Email，value为<a href="mailto:astaxie@gmail.com" target="_blank" rel="noopener">astaxie@gmail.com</a> *</em>的数据。在视图中要通过</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;.Email&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>就能获取到value值。</p>
-<p><code>c.TplName = &quot;index.tpl&quot;</code>的作用是指定视图。这里面需要注意的是，默认指定的界面是tpl结尾，但是打开这个文件分析，发现还是一个html界面。所以我们也可以用html文件当视图文件。</p>
-<p>通过我们对Beego的快速体验能够得出如下结论：</p>
-<p><strong>控制器(Controller)的作用</strong></p>
-<p>1.能够给视图传递数据</p>
-<p>2.能够指定视图</p>
-<p>*<em>视图(View)的作用 *</em></p>
-<p>1.view本质就是个html。所以能在浏览器显示</p>
-<p>2.能够接收控制器传递过来的数据</p>
-<h3 id="2-6Beego运行流程分析"><a href="#2-6Beego运行流程分析" class="headerlink" title="2.6Beego运行流程分析"></a>2.6Beego运行流程分析</h3><p><img src="//daelephant.github.io/2018/07/18/beego-note/1538468765577.png" alt="1538468765577"></p>
+<li><p>首先，我们需要把静态页面拷贝到我们项目目录下面。</p>
 <ul>
-<li><p>浏览器发出请求</p>
+<li><p>进入项目目录，删除掉原来的static文件夹</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538591447624.png" alt="1538591447624"></p>
 </li>
-<li><p>路由拿到请求，并给相应的请求指定相应的控制器</p>
+<li><p>然后拷贝我们昨天课堂资料中的 <code>static.zip</code>到这个目录，并解压，解压之后如下图：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538591575762.png" alt="1538591575762"></p>
 </li>
-<li><p>找到指定的控制器之后，控制器看是否需要查询数据库</p>
-</li>
-<li><p>如果需要查询数据库就找model取数据</p>
-</li>
-<li><p>如果不需要数据库，直接找view要视图</p>
-</li>
-<li><p>控制器拿到视图页面之后，把页面返回给浏览器</p>
-<p><strong>根据文字流程分析代码流程</strong></p>
-</li>
-<li><p>从项目的入口main.go开始</p>
-</li>
-<li><p>找到router.go文件的Init函数</p>
-</li>
-<li><p>找到路由指定的控制器文件default.go的Get方法</p>
-</li>
-<li><p>然后找到指定视图的语法，整个项目就串起来啦。</p>
+<li><p>打开static文件夹，显示如下，则说明拷贝成功：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538591636455.png" alt="1538591636455"></p>
 </li>
 </ul>
-<h3 id="2-7Post案例实现"><a href="#2-7Post案例实现" class="headerlink" title="2.7Post案例实现"></a>2.7Post案例实现</h3><p>刚才我们分析了beego项目的整个运行流程，最终是如何调到Get方法的呢？<strong>beego通过内部语法给不同的http请求指定了不同的方法</strong>，因为我们是从浏览器地址栏发送的请求，属于get请求，所以调用的是Get方法。为了检验老师说的对不对，我们可以实现一个post请求，看看效果。</p>
-<h4 id="2-7-1前端修改"><a href="#2-7-1前端修改" class="headerlink" title="2.7.1前端修改"></a>2.7.1前端修改</h4><p><strong>前端代码如下:</strong></p>
-<p>修改我们刚才创建的新的视图，为了能够发送post请求，我们在视图中添加一个能发送post请求的控件<code>form</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;/index&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后设置一个能接收后台传递过来的数据的标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">&lt;h1&gt;hello &#123;&#123;.data&#125;&#125;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
-
-<p>全部代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;/index&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;h1&gt;hello &#123;&#123;.data&#125;&#125;&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-7-2后台代码修改"><a href="#2-7-2后台代码修改" class="headerlink" title="2.7.2后台代码修改"></a>2.7.2后台代码修改</h4><p><strong>后台代码</strong></p>
-<p>先设置我们Get请求要传递的数据和要显示的视图页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">func (c *MainController) Get() &#123;</span><br><span class="line">	c.Data[&quot;data&quot;] = &quot;world&quot;</span><br><span class="line">	c.TplName = &quot;test.html&quot;  //渲染</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>再设置我们post请求要传递的数据和要显示的视图页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">func (c *MainController) Post() &#123;</span><br><span class="line">	c.Data[&quot;data&quot;] = &quot;区块链一期最棒&quot;</span><br><span class="line">	c.TplName = &quot;test.html&quot;  //渲染</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>操作</strong></p>
-<p>先在浏览器输入网址，然后点击页面上的按钮，看一下页面的变化，有没有出现<code>区块链一期最棒</code>几个字</p>
-<h3 id="2-8Beego中路由的快速体验"><a href="#2-8Beego中路由的快速体验" class="headerlink" title="2.8Beego中路由的快速体验"></a>2.8Beego中路由的快速体验</h3><h4 id="2-8-1路由的简单设置"><a href="#2-8-1路由的简单设置" class="headerlink" title="2.8.1路由的简单设置"></a>2.8.1路由的简单设置</h4><p>路由的作用：<strong>根据不同的请求指定不同的控制器</strong></p>
-<p>路由函数：<code>beego.Router(&quot;/path&quot;,&amp;controller.MainController{})</code></p>
-<p><strong>函数参数：</strong></p>
-<p>先分析一下Url地址由哪几部分组成？ 同一资源定位符</p>
-<p><a href="http://192.168.110.71:8080/index" target="_blank" rel="noopener">http://192.168.110.71:8080/index</a></p>
-<p>*<em>http://地址:端口/资源路径 *</em></p>
-<p>第一个参数：资源路径，也就是<code>/</code>后面的内容</p>
-<p>第二个参数：需要指定的控制器指针</p>
-<p>了解上面的内容之后我们来看几个简单的例子：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/"</span>, &amp;controllers.MainController&#123;&#125;)</span><br><span class="line">beego.Router(<span class="string">"/index"</span>, &amp;controllers.IndexController&#123;&#125;)</span><br><span class="line">beego.Router(<span class="string">"/login"</span>, &amp;controllers.LoginController&#123;&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-8-2高级路由设置"><a href="#2-8-2高级路由设置" class="headerlink" title="2.8.2高级路由设置"></a>2.8.2高级路由设置</h4><p>一般在开发过程中，我们基本不使用beego提供的默认请求访问方法，都是自定义相应的方法。那我们来看一下如何来自定义请求方法。</p>
-<p>自定义请求方法需要用到Router的第三个参数。这个参数是用来给不同的请求指定不同的方法。具体有如下几种情况。</p>
+</li>
+<li><p>把static文件夹中所有的html文件都拷贝到views文件夹下面（昨天的几个页面已经没用了，可以删除），拷贝之后views文件显示如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538591824871.png" alt="1538591824871"></p>
+<p>这时候用GoLand打开我们的项目,显示如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538591946260.png" alt="1538591946260"></p>
+</li>
+<li><p>打开<code>register.html</code>页面，修改页面中form表单的内容</p>
 <ul>
-<li><p>一个请求访问一个方法(<strong>也是最常用的</strong>)，请求和方法之间用 <code>:</code> 隔开，不同的请求用 <code>;</code> 隔开:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/simple"</span>,&amp;SimpleController&#123;&#125;,<span class="string">"get:GetFunc;post:PostFunc"</span>)</span><br></pre></td></tr></table></figure>
+<li><p>给<code>&lt;form&gt;</code>标签加上<code>action=&quot;/register&quot; method=&quot;post&quot;</code>属性</p>
 </li>
-<li><p>可以多个请求，访问一个方法 ，请求之间用<code>,</code>隔开，请求与方法之间用<code>:</code>隔开：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/api"</span>,&amp;RestController&#123;&#125;,<span class="string">"get,post:ApiFunc"</span>)</span><br></pre></td></tr></table></figure>
+<li><p>给两个<code>&lt;input&gt;</code>标签的name分别改为<code>name=&quot;userName&quot;</code>和<code>name = &quot;passwd&quot;</code></p>
 </li>
-<li><p>所有的请求访问同一个方法，用<code>*</code>号代表所有的请求，和方法之间用<code>:</code>隔开：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/api/list"</span>,&amp;RestController&#123;&#125;,<span class="string">"*:ListFood"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果同时存在 * 和对应的 HTTP请求，那么优先执行 HTTP请求所对应的方法，例如同时注册了如下所示的路由：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/simple"</span>,&amp;SimpleController&#123;&#125;,<span class="string">"*:AllFunc;post:PostFunc"</span>)</span><br></pre></td></tr></table></figure>
+<li><form>表单相关代码如下:
 
-<p><strong>那么当遇到Post请求的时候，执行PostFunc而不是AllFunc。</strong></p>
-<blockquote>
-<p>如果用了自定义方法之后，默认请求将不能访问。</p>
-</blockquote>
-</li>
+</form></li>
 </ul>
-<h3 id="2-9Go操作MySQL数据库（复习）"><a href="#2-9Go操作MySQL数据库（复习）" class="headerlink" title="2.9Go操作MySQL数据库（复习）"></a>2.9Go操作MySQL数据库（复习）</h3><ul>
-<li><p>安装go操作MySQL的驱动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u -v github.com/go-sql-driver/mysql</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">&lt;form  class=&quot;login_form&quot; name = &quot;login&quot; action=&quot;/register&quot; method=&quot;post&quot;&gt;</span><br><span class="line">     &lt;h1 class=&quot;login_title&quot;&gt;用户注册&lt;/h1&gt;</span><br><span class="line">     &lt;input type=&quot;text&quot; placeholder=&quot;用户名&quot; class=&quot;input_txt&quot; name=&quot;userName&quot;&gt;</span><br><span class="line">     &lt;input type=&quot;password&quot; placeholder=&quot;密码&quot; class=&quot;input_txt&quot; name = &quot;passwd&quot;&gt;</span><br><span class="line">     &lt;input type=&quot;submit&quot; value=&quot;注 册&quot; class=&quot;input_sub&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>go简单操作MySQL数据库</p>
+<li><p>打开<code>login.html</code>页面，修改form表单的内容</p>
 <ul>
-<li><p>导包</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/go-sql-driver/mysql"</span></span><br></pre></td></tr></table></figure>
+<li><p>给<code>&lt;form&gt;</code>标签加上<code>action=&quot;/login&quot; method=&quot;post&quot;</code>属性</p>
 </li>
-<li><p>连接数据库，用sql.Open()方法,open()方法的第一个参数是驱动名称,第二个参数是<strong>用户名:密码@tcp(ip:port)/数据库名称?编码方式</strong>,返回值是连接对象和错误信息，例如：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conn,err := sql.Open(<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/test?charset=utf8"</span>)</span><br><span class="line"><span class="keyword">defer</span> conn.Close()<span class="comment">//随手关闭数据库是个好习惯</span></span><br></pre></td></tr></table></figure>
+<li><p>给两个<code>&lt;input&gt;</code>标签的name分别改为<code>name=&quot;userName&quot;</code>和<code>name = &quot;passwd&quot;</code></p>
 </li>
-<li><p>执行数据库操作，这一步分为两种情况，一种是增删改，一种是查询，因为增删改不返回数据，只返回执行结果，查询要返回数据，所以这两块的操作函数不一样。</p>
-<p><strong>创建表</strong></p>
-<p>创建表的方法也是Exec(),参数是SQL语句，返回值是结果集和错误信息：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res ,err:= conn.Exec(<span class="string">"create table user(name VARCHAR(40),pwd VARCHAR(40))"</span>)</span><br><span class="line">beego.Info(<span class="string">"create table result="</span>,res,err)</span><br></pre></td></tr></table></figure>
+<li><form>表单相关代码如下：
 
-<p><strong>增删改操作</strong></p>
-<p>执行增删改操作语句的是Exec()，参数是SQL语句，返回值是结果集和错误信息，通过对结果集的判断，得到执行结果的信息。以插入数据为例代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res,_:=stmt.Exec(<span class="string">"insert user(name,pwd) values (?,?)"</span>,<span class="string">"tony"</span>,<span class="string">"tony"</span>)</span><br><span class="line">count,_:=res.RowsAffected()</span><br><span class="line">this.Ctx.WriteString(strconv.Itoa(<span class="keyword">int</span>(count)))</span><br></pre></td></tr></table></figure>
+</form></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">   &lt;form  class=&quot;login_form&quot;  name = &quot;login&quot; action=&quot;/login&quot; method=&quot;post&quot;&gt;</span><br><span class="line">       &lt;h1 class=&quot;login_title&quot;&gt;用户登录&lt;/h1&gt;</span><br><span class="line">       &lt;input type=&quot;text&quot;  class=&quot;input_txt&quot; name = &quot;userName&quot;&gt;</span><br><span class="line">       &lt;input type=&quot;password&quot; name = &quot;passwd&quot;  class=&quot;input_txt&quot;&gt;</span><br><span class="line">       &lt;div class=&quot;remember&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; &gt;</span><br><span class="line">   		&lt;label&gt;记住用户名&lt;/label&gt;</span><br><span class="line">   	&lt;/div&gt;</span><br><span class="line">       &lt;input type=&quot;submit&quot; value=&quot;登 录&quot; class=&quot;input_sub&quot;&gt;</span><br><span class="line">   &lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>查询操作</strong></p>
-<p>用的函数是Query(),参数是SQL语句，返回值是查询结果集和错误信息，然后循环结果集取出其中的数据。代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data ,err :=conn.Query(<span class="string">"SELECT name from user"</span>)</span><br><span class="line">	<span class="keyword">var</span> userName <span class="keyword">string</span></span><br><span class="line">	<span class="keyword">if</span> err == <span class="literal">nil</span>&#123;</span><br><span class="line">		<span class="keyword">for</span> data.Next()&#123;</span><br><span class="line">			data.Scan(&amp;userName)</span><br><span class="line">			beego.Info(userName)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>全部代码</strong></p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//连接数据库</span></span><br><span class="line">conn,err := sql.Open(<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/testtest?charset=utf8"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"链接失败"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> conn.Close()</span><br><span class="line"><span class="comment">//建表</span></span><br><span class="line">	res ,err:= conn.Exec(<span class="string">"create table user(userName VARCHAR(40),passwd VARCHAR(40))"</span>)</span><br><span class="line">	beego.Info(<span class="string">"create table result="</span>,res,err)</span><br><span class="line"><span class="comment">//插入数据</span></span><br><span class="line">    res,err =conn.Exec(<span class="string">"insert user(userName,passwd) values(?,?)"</span>,<span class="string">"itcast"</span>,<span class="string">"heima"</span>)</span><br><span class="line">	beego.Info(res,err)</span><br><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	data ,err :=conn.Query(<span class="string">"SELECT userName from user"</span>)</span><br><span class="line">	<span class="keyword">var</span> userName <span class="keyword">string</span></span><br><span class="line">	<span class="keyword">if</span> err == <span class="literal">nil</span>&#123;</span><br><span class="line">		<span class="keyword">for</span> data.Next()&#123;</span><br><span class="line">			data.Scan(&amp;userName)</span><br><span class="line">			beego.Error(userName)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
+<p>  （登陆界面多了个记住用户名标签，明天我们实现这个功能）</p>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="2-10-ORM框架"><a href="#2-10-ORM框架" class="headerlink" title="2.10 ORM框架"></a>2.10 ORM框架</h3><p>Beego中内嵌了ORM框架，用来操作数据库。那么ORM框架是什么呢？ORM框架是Object-RelationShip-Mapping的缩写，中文叫对象关系映射，他们之间的关系，我们用图来表示：</p>
-<p><img src="//daelephant.github.io/2018/07/18/beego-note/1538480105977.png" alt="1538480105977"></p>
-<h4 id="2-10-1-ORM初始化"><a href="#2-10-1-ORM初始化" class="headerlink" title="2.10.1 ORM初始化"></a>2.10.1 ORM初始化</h4><ul>
-<li><p>首先要导包</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/astaxie/beego/orm"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后要定义一个结构体</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span>&#123;</span><br><span class="line">    Id <span class="keyword">int</span></span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    PassWord <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>改完之后，运行项目，测试注册和登陆页面能够能唱显示，并且功能没有问题说明代码迁移成功。</p>
+<h2 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3.创建数据库"></a>3.创建数据库</h2><h3 id="3-1数据库表的设计"><a href="#3-1数据库表的设计" class="headerlink" title="3.1数据库表的设计"></a>3.1数据库表的设计</h3><p>接下来我们就要实现文章相关的操作，所以这里我们要在数据库中生成一个文章表。</p>
+<p>我们以前在数据库中创建表的时候，会给字段加很多限制属性，比如非空，长度，默认值等等，在ORM中，创建表时也可以给各个字段添加相应的限制。那如何去加限制呢？我们先看例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">type Article struct &#123;</span><br><span class="line">	Id int `orm:&quot;pk;auto&quot;`</span><br><span class="line">	ArtiName string `orm:&quot;size(20)&quot;`</span><br><span class="line">	Atime time.Time `orm:&quot;auto_now&quot;`</span><br><span class="line">	Acount int `orm:&quot;default(0);null&quot;`</span><br><span class="line">	Acontent string `orm:&quot;size(500)&quot;`</span><br><span class="line">	Aimg string  `orm:&quot;size(100)&quot;`</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>思考:如果表名和字段名为小写会发生什么结果？</p>
-<p>注意观察数据库表中的字段和结构体中的字段是否一样？</p>
-</blockquote>
-</li>
-<li><p>然后向数据库中注册表，这一步又分为三步：</p>
-<ul>
-<li><p>连接数据库</p>
-<p>用RegisterDataBase()函数，第一个参数为数据库别名，也可以理解为数据库的key值，<strong>项目中必须有且只能有一个别名为<code>default</code>的连接</strong>，第二个参数是数据库驱动，这里我们用的是MySQL数据库，所以以MySQL驱动为例，第三个参数是连接字符串，和传统操作数据库连接字符串一样，格式为：<strong>用户名:密码@tcp(ip:port)/数据库名称?编码方式</strong>，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orm.RegisterDataBase(<span class="string">"default"</span>,<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/class1?charset=utf8"</span>)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：ORM只能操作表，不能操作数据库，所以我们连接的数据库要提前在MySQL终端创建好。</p>
-</blockquote>
-</li>
-<li><p>注册数据库表</p>
-<p>用orm.RegisterModel()函数，参数是结构体对象，如果有多个表，可以用 <code>,</code>隔开，多new几个对象：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orm.RegisterModel(<span class="built_in">new</span>(User))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成表</p>
-<p>用orm.RunSyncdb()函数，这个函数有三个参数，</p>
-<p>第一个参数是数据库的别名和连接数据库的第一个参数相对应。</p>
-<p>第二个参数是是否强制更新，一般我们写的都是false，如果写true的话，每次项目编译一次数据库就会被清空一次，fasle的话会在数据库发生重大改变（比如添加字段）的时候更新数据库。</p>
-<p>第三个参数是用来说，生成表过程是否可见，如果我们写成课件，那么生成表的时候执行的SQL语句就会在终端看到。反之看不见。代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">orm.RunSyncdb(<span class="string">"default"</span>,<span class="literal">false</span>,<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-<p>完整代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/astaxie/beego/orm"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span></span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Passwd <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//1.连接数据库</span></span><br><span class="line">	orm.RegisterDataBase(<span class="string">"default"</span>,<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/test?charset=utf8"</span>)</span><br><span class="line">	<span class="comment">//2.注册表</span></span><br><span class="line">	orm.RegisterModel(<span class="built_in">new</span>(User))</span><br><span class="line">	<span class="comment">//3.生成表</span></span><br><span class="line">	<span class="comment">//1.数据库别名</span></span><br><span class="line">	<span class="comment">//2.是否强制更新</span></span><br><span class="line">	<span class="comment">//3.创建表过程是否可见</span></span><br><span class="line">	orm.RunSyncdb(<span class="string">"default"</span>,<span class="literal">false</span>,<span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因为这里我们把ORM初始化的代码放到了 models包的init()函数里面，所以如果我们想让他执行的话就需要在main.go里面加入这么一句代码:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="string">"classOne/models"</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-10-2-简单的ORM增删改查操作"><a href="#2-10-2-简单的ORM增删改查操作" class="headerlink" title="2.10.2 简单的ORM增删改查操作"></a>2.10.2 简单的ORM增删改查操作</h4><p>在执行ORM的操作之前需要先把ORM包导入，但是GoLand会自动帮我们导包，也可以手动导包</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/astaxie/beego/orm"</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>插入</strong></p>
-<ul>
-<li><p>先获取一个ORM对象,用orm.NewOrm()即可获得</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义一个要插入数据库的结构体对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> user User</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给定义的对象赋值</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user.Name = <span class="string">"itcast"</span></span><br><span class="line">user.Passwd = <span class="string">"heima"</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里不用给Id赋值，因为建表的时候我们没有指定主键，ORM默认会以变量名为Id，类型为int的字段当主键，至于如何指定主键，我们明天详细介绍。</p>
-</blockquote>
-</li>
-<li><p>执行插入操作，o.Insert()插入，参数是结构体对象，返回值是插入的id和错误信息。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id, err := o.Insert(&amp;user)</span><br><span class="line"><span class="keyword">if</span> err == <span class="literal">nil</span> &#123;</span><br><span class="line">    fmt.Println(id)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p><strong>查询</strong>    </p>
-<ul>
-<li><p>也是要先获得一个ORM对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义一个要获取数据的结构体对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> user User</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给结构体对象赋值，相当于给查询条件赋值</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user.Name = <span class="string">"itcast"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询,用o.Read()，第一个参数是对象地址，第二个参数是指定查询字段，返回值只有错误信息。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">err := o.Read(&amp;user,<span class="string">"Name"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"查询数据错误"</span>,err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果查询字段是查询对象的主键的话，可以不用指定查询字段</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>更新</strong></p>
-<ul>
-<li><p>一样的套路，先获得ORM对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义一个要更新的结构体对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> user User</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给结构体对象赋值，相当于给查询条件赋值</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user.Name = <span class="string">"itcast"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询要更新的对象是否存在</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">err := o.Read(&amp;user)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"查询数据错误"</span>,err)</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果查找到了要更新的对象,就给这个对象赋新值</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user.Passwd = <span class="string">"itheima"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行更新操作,用o.Update()函数，参数是结构体对象指针，返回值是更新的条目数和错误信息</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">count,err=o.Update(&amp;user)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"更新数据错误"</span>,err)</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p><strong>删除</strong></p>
-<ul>
-<li><p>同样的，获取ORM对象，获取要删除的对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br><span class="line"><span class="keyword">var</span> user User</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给删除对象赋值，删除的对象主键必须有值，如果主键没值，就查询一下。我们这里直接给主键赋值。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user.Id = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行删除操作，用的方法是o.Delete()，参数是删除的结构体对象,返回值是删除的条目数和错误信息</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num, err := o.Delete(&amp;User&#123;Id: <span class="number">1</span>&#125;)</span><br><span class="line"><span class="keyword">if</span> err == <span class="literal">nil</span> &#123;</span><br><span class="line">    fmt.Println(num)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="3-当天案例"><a href="#3-当天案例" class="headerlink" title="3.当天案例"></a>3.当天案例</h2><p>我们今天以注册和登陆作为我们今天的大练习，把今天讲到的内容都串起来。先注册，然后登陆。</p>
-<p>在开始具体的业务之前我们要做数据库设计，在正式开发中这一步是非常重要，也比较复杂的，但是今天我们只实现登陆和注册，就简单有个用户名和密码即可，model.go内容如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> models</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"github.com/astaxie/beego/orm"</span></span><br><span class="line">	_ <span class="string">"github.com/go-sql-driver/mysql"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span></span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Passwd <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//1.连接数据库</span></span><br><span class="line">	orm.RegisterDataBase(<span class="string">"default"</span>,<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/test?charset=utf8"</span>)</span><br><span class="line">	<span class="comment">//2.注册表</span></span><br><span class="line">	orm.RegisterModel(<span class="built_in">new</span>(User))</span><br><span class="line">	<span class="comment">//3.生成表</span></span><br><span class="line">	<span class="comment">//1.数据库别名</span></span><br><span class="line">	<span class="comment">//2.是否强制更新</span></span><br><span class="line">	<span class="comment">//3.创建表过程是否可见</span></span><br><span class="line">	orm.RunSyncdb(<span class="string">"default"</span>,<span class="literal">false</span>,<span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-1注册"><a href="#3-1注册" class="headerlink" title="3.1注册"></a>3.1注册</h3><p><strong>确定注册请求路径,修改路由文件</strong></p>
-<p>我们这里以<code>/register</code>作为注册的请求路径。所以这里我们需要修改router.go文件的内容。</p>
-<p>在router.go文件的init()函数中加下面这行代码:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/register"</span>, &amp;controllers.UserController&#123;&#125;,<span class="string">"get:ShowRegister"</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>根据上面路由的指定，我们需要添加注册控制器</strong></p>
-<p>在controllers文件夹下创建一个user.go，然后在这个文件里面定义一个结构体<code>UserController</code>当控制器。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> UserController <span class="keyword">struct</span>&#123;</span><br><span class="line">    beego.Controller</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意这里面添加的<code>beego.Controller</code>,是为了继承自beego自带的控制器。</p>
-</blockquote>
-<p><strong>添加显示注册页面函数</strong></p>
-<p>添加函数的时候需要注意，这个函数必须是<code>UserController</code>的函数才可以，不然在路由里面调用不到。那如何把函数设置成<code>UserController</code>的成员函数呢？是在函数名前面加上括号，然后放上<code>UserController</code>的指针。这里我们先指定注册的视图。代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*UserController)</span><span class="title">ShowRegister</span><span class="params">()</span></span>&#123;</span><br><span class="line">    this.TplName = <span class="string">"register.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：这里如果函数名首字母小写，路由同意找不到函数，所以函数名首字母必须大写</p>
-</blockquote>
-<p><strong>添加视图页面</strong></p>
-<p>在views文件夹下面创建一个名字为<code>register.html</code>的文件。然后实现成类似界面：</p>
-<p><img src="//daelephant.github.io/2018/07/18/beego-note/1538486815102.png" alt="1538486815102"></p>
-<p>我们做后台的不关注样式，明天直接拿现成的样式来用即可，我们重在实现功能。</p>
-<p>form标签里面需要添加两个属性，一个是action,一个是method，action其实就是请求路径，这里处理的还是注册业务，所以我们还用register请求，<code>action = &quot;/register&quot;</code>,因为是上传数据，所以我们把method设置为post,即<code>method=&quot;post&quot;</code>,代码如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>注册页面<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position:absolute;left:50%; top:50%;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/register"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">        用户名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"userName"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>   <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"passwd"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>   <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注册"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>让项目运行起来，然后我们在浏览器里面输入相应的地址就能看见我们的注册页面了。</p>
-<p>显示完注册页面之后，接着我们来处理注册的post请求。因为<code>action=&quot;/register&quot;，method=&quot;post&quot;</code>,所以我们可以去router.go界面给post请求指定相应的方法。修改如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/register"</span>, &amp;controllers.UserController&#123;&#125;,<span class="string">"get:ShowRegister;post:HandleRegister"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>指定方法名之后我们就需要去控制器中实现他。</p>
-<p><strong>注册业务处理</strong></p>
-<ul>
-<li><p>首先在user.go中添加这个函数：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*UserController)</span><span class="title">HandleRegister</span><span class="params">()</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接着开始处理注册业务</p>
-<ul>
-<li><p>首先要获取数据。这里给大家介绍一类方法，这类方法将会在我们项目一中高频率的出现，因为他的作用太强大了。</p>
-<p><strong>this.GetString()：</strong>获取字符串类型值</p>
-<p><strong>this.GetInt()：</strong>获取整型值</p>
-<p><strong>this.GetFloat：</strong>获取浮点型值</p>
-<p>…</p>
-<p><strong>this.GetFile()：</strong>获取上传的文件</p>
-<p><strong>作用：</strong>接收前端传递过来的数据，不管是get请求还是post请求，都能接收。</p>
-<p>*<em>参数: *</em> 是传递数据的key值，一般情况下是form表单中<input>标签的name属性值</p>
-<p><strong>返回值：</strong>根据返回类型不同，返回值也不一样，最常用的GetString()只有一个返回值，如果没有取到值就返回空字符串，其他几个函数会返回一个错误类型。获取的值一般是<input>标签里面的value属性值。至于比较特殊的，我们用到的时候给大家做介绍。</p>
-<p>知道了获取数据函数，我们就可以获取前端传递过来的数据啦。</p>
-</li>
-<li><p>获取注册的用户名和密码</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userName := this.GetString(<span class="string">"userName"</span>)</span><br><span class="line">passwd := this.GetString(<span class="string">"passwd"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对数据进行校验</p>
-<p>一般情况下，我们做服务器开发，从前端拿过来数据都要进行一系列的校验，然后才会用数据对数据库进行操作。不做校验的服务器很容易被黑掉。这里我们只做简单的判空校验。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> userName == <span class="string">""</span> || passwd == <span class="string">""</span>&#123;</span><br><span class="line">    beego.Info(<span class="string">"数据数据不完整，请重新输入！"</span>)</span><br><span class="line">    this.TplName = <span class="string">"register.html"</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>思考：如何把那句错误提示传递给视图？</p>
-</blockquote>
-</li>
-<li><p>把数据插入数据库</p>
-<p>如果数据校验没有问题，那我们就需要把数据插入到数据库中。数据库插入操作前面刚讲过，这里就不一步一步的分开介绍了，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取orm对象</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="comment">//获取要插入的数据对象</span></span><br><span class="line">	<span class="keyword">var</span> user models.User</span><br><span class="line">	<span class="comment">//给对象赋值</span></span><br><span class="line">	user.Name = userName</span><br><span class="line">	user.Passwd = passwd</span><br><span class="line">	<span class="comment">//把数据插入到数据库</span></span><br><span class="line">	<span class="keyword">if</span> _,err := o.Insert(&amp;user);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"注册失败，请更换用户名再次注册!"</span>)</span><br><span class="line">		this.TplName = <span class="string">"register.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因为我们现在还没有其他界面，如果跳转成功就返回一句话<code>注册成功</code>,等我们实现了登陆界面之后再实现注册之后跳转登陆界面的操作。</p>
-<p>给浏览器返回一句化的代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.WriteString(<span class="string">"注册成功!"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>完整后台代码如下</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示注册页面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*UserController)</span><span class="title">ShowRegister</span><span class="params">()</span></span>&#123;</span><br><span class="line">	this.TplName = <span class="string">"register.html"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//处理注册业务</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*UserController)</span><span class="title">HandleRegister</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取前端传递的数据</span></span><br><span class="line">	userName := this.GetString(<span class="string">"userName"</span>)</span><br><span class="line">	passwd := this.GetString(<span class="string">"passwd"</span>)</span><br><span class="line">	<span class="comment">//对数据进行校验</span></span><br><span class="line">	<span class="keyword">if</span> userName == <span class="string">""</span> || passwd == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"数据数据不完整，请重新输入！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"register.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//把数据插入到数据库</span></span><br><span class="line">	<span class="comment">//获取orm对象</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="comment">//获取要插入的数据对象</span></span><br><span class="line">	<span class="keyword">var</span> user models.User</span><br><span class="line">	<span class="comment">//给对象赋值</span></span><br><span class="line">	user.Name = userName</span><br><span class="line">	user.Passwd = passwd</span><br><span class="line">	<span class="comment">//把数据插入到数据库</span></span><br><span class="line">	<span class="keyword">if</span> _,err := o.Insert(&amp;user);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"注册失败，请更换用户名再次注册!"</span>)</span><br><span class="line">		this.TplName = <span class="string">"register.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//返回提示信息</span></span><br><span class="line">	this.Ctx.WriteString(<span class="string">"注册成功!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="3-2登陆"><a href="#3-2登陆" class="headerlink" title="3.2登陆"></a>3.2登陆</h3><p>登陆和注册业务流程差不多，差别也就体现在一个是对数据的查询一个是数据的插入，讲义里面就不做详细分析，直接贴代码。</p>
-<p><strong>路由文件修改</strong></p>
-<p>添加下面一行代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/login"</span>, &amp;controllers.UserController&#123;&#125;,<span class="string">"get:ShowLogin;post:HandleLogin"</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>后台代码修改</strong></p>
-<p>在控制器中添加展示登录页的函数<code>ShowLogin</code>和处理登陆数据的函数<code>HandleLogin</code>。完整代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示登陆界面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*UserController)</span><span class="title">ShowLogin</span><span class="params">()</span></span>&#123;</span><br><span class="line">	this.TplName = <span class="string">"login.html"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//处理登陆业务</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*UserController)</span><span class="title">HandleLogin</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取前端传递的数据</span></span><br><span class="line">	userName := this.GetString(<span class="string">"userName"</span>)</span><br><span class="line">	passwd := this.GetString(<span class="string">"passwd"</span>)</span><br><span class="line">	<span class="comment">//对数据进行校验</span></span><br><span class="line">	<span class="keyword">if</span> userName == <span class="string">""</span> || passwd == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"数据数据不完整，请重新输入！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"login.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//查询数据库，判断用户名和密码是否正确</span></span><br><span class="line">	<span class="comment">//获取orm对象</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="comment">//获取要插入的数据对象</span></span><br><span class="line">	<span class="keyword">var</span> user models.User</span><br><span class="line">	<span class="comment">//给对象赋值</span></span><br><span class="line">	user.Name = userName</span><br><span class="line">	<span class="comment">//根据用户名查询</span></span><br><span class="line">	<span class="keyword">if</span> err := o.Read(&amp;user,<span class="string">"Name"</span>);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"用户名错误，请重新输入！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"login.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> user.Passwd != passwd&#123;</span><br><span class="line">		beego.Info(<span class="string">"密码错误，请重新输入！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"login.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//返回提示信息</span></span><br><span class="line">	this.Ctx.WriteString(<span class="string">"登陆成功!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>添加视图文件</strong></p>
-<p>登陆界面和注册界面很相似，拷贝过来简单修改一下即可，代码如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;登陆页面&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;div style=<span class="string">"position:absolute;left:50%; top:50%;"</span>&gt;</span><br><span class="line">    &lt;form action=<span class="string">"/login"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">        用户名:&lt;input <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">"userName"</span>&gt;</span><br><span class="line">        &lt;p&gt;   &lt;/p&gt;</span><br><span class="line">        密码：&lt;input <span class="keyword">type</span>=<span class="string">"password"</span> name=<span class="string">"passwd"</span>&gt;</span><br><span class="line">        &lt;p&gt;   &lt;/p&gt;</span><br><span class="line">        &lt;input <span class="keyword">type</span>=<span class="string">"submit"</span> value=<span class="string">"登陆"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这样我们的登陆和注册就算完成了，但是有一个问题，我们的登陆注册还是各干各的，没有关联起来，我们前面等登陆页面实现完之后，注册成功就跳转到登陆页面。现在我们来实现一下跳转。</p>
-<h3 id="3-3页面之间的跳转"><a href="#3-3页面之间的跳转" class="headerlink" title="3.3页面之间的跳转"></a>3.3页面之间的跳转</h3><p>beego里面页面跳转的方式有两种，一种是重定向，一种是渲染，都能够在浏览器上显示新的页面</p>
-<h4 id="3-3-1重定向"><a href="#3-3-1重定向" class="headerlink" title="3.3.1重定向"></a>3.3.1重定向</h4><p>重定向用到的方法是<code>this.Redirect()</code>函数，有两个参数，第一个参数是请求路径，第二个参数是http状态码。</p>
-<p>请求路径就不说了，就是和超链接一样的路径。</p>
-<p>我们重点介绍一下状态码：</p>
-<p>状态码一共分为五类：</p>
-<p>1xx : 服务端已经接收到了客户端请求，客户端应当继续发送请求 。常见的请求：100</p>
-<p>2xx :请求已成功 （已实现）常见的请求：200</p>
-<p>3xx :请求的资源转换路径了，请求被跳转。常见的请求：300，302</p>
-<p>4xx :客户端请求失败。常见的请求：404</p>
-<p>5xx :服务器端错误。常见的请求：500</p>
-<p>状态码详解:<a href="http://tool.oschina.net/commons?type=5" target="_blank" rel="noopener">http://tool.oschina.net/commons?type=5</a></p>
-<p>重定向的工作流程是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1：当服务端向客户端响应 redirect后，并没有提供任何view数据进行渲染，仅仅是告诉浏览器响应为 redirect，以及重定向的目标地址</span><br><span class="line"></span><br><span class="line">2：浏览器收到服务端 redirect 过来的响应，会再次发起一个 http 请求</span><br><span class="line"></span><br><span class="line">3：由于是浏览器再次发起了一个新的 http 请求，所以浏览器地址栏中的 url 会发生变化</span><br><span class="line"></span><br><span class="line">4：浏览中最终得到的页面是最后这个 重定向的url 请求后的页面</span><br><span class="line"></span><br><span class="line">5：所以redirect(&quot;/register&quot;,302) 相当于你在浏览器中手动输入 localhost/register</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-3-2渲染"><a href="#3-3-2渲染" class="headerlink" title="3.3.2渲染"></a>3.3.2渲染</h4><p>渲染就是控制期把一些数据传递给视图，然后视图用这些输出组织成html界面。所以不会再给浏览器发请求，是服务器自己的行为，所以浏览器的地址栏不会改变，但是显示的页面可能会发生变化。用的函数是:<code>this.TplName = &quot;login.html&quot;</code></p>
-<h4 id="3-3-3两者之间的区别"><a href="#3-3-3两者之间的区别" class="headerlink" title="3.3.3两者之间的区别"></a>3.3.3两者之间的区别</h4><table>
+<p> 由上面的代码可以看出，要给哪个字段添加属性，需要在这个字段后面添加 `` 括起来的内容，格式为<code>orm:&quot;限制条件&quot;</code>。那这些限制条件都有哪些呢？我在这里给大家列了一个表格。</p>
+<table>
 <thead>
 <tr>
-<th align="center">区别</th>
-<th align="center">重定向</th>
-<th align="center">渲染</th>
+<th align="center">限制条件</th>
+<th align="center">作用</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">响应方式</td>
-<td align="center">告诉浏览器相应是redirect，然后返回一个新的地址给浏览器，让浏览器重新发起请求</td>
-<td align="center">直接给浏览器返回视图</td>
+<td align="center">pk</td>
+<td align="center">设置该字段为主键</td>
 </tr>
 <tr>
-<td align="center">地址栏显示</td>
-<td align="center">浏览器地址栏显示的是新的地址</td>
-<td align="center">浏览器地址栏显示的还是原来的地址</td>
+<td align="center">auto</td>
+<td align="center">这只该字段自增，但是要求该字段必须为整型</td>
 </tr>
 <tr>
-<td align="center">作用</td>
-<td align="center">不能给视图传递数据，但是能够获取到加载页面时的数据</td>
-<td align="center">能够给视图传递数据，但如果要获取加载页面时的数据，需要再次写相关代码</td>
+<td align="center">default(0)</td>
+<td align="center">设置该字段的默认值，需要注意字段类型和默认值类型一致</td>
 </tr>
 <tr>
-<td align="center">使用场景</td>
-<td align="center">页面跳转的时候</td>
-<td align="center">页面加载或者是登陆注册失败的时候</td>
+<td align="center">size(100)</td>
+<td align="center">设置该字段长度为100个字节，一般用来设置字符串类型</td>
+</tr>
+<tr>
+<td align="center">null</td>
+<td align="center">设置该字段允许为空，默认不允许为空</td>
+</tr>
+<tr>
+<td align="center">unique</td>
+<td align="center">设置该字段全局唯一</td>
+</tr>
+<tr>
+<td align="center">digits(12);decimals(4)</td>
+<td align="center">设置浮点数位数和精度。比如这个是说，浮点数总共12位，小数位为四位。</td>
+</tr>
+<tr>
+<td align="center">auto_now</td>
+<td align="center">针对时间类型字段，作用是保存数据的更新时间</td>
+</tr>
+<tr>
+<td align="center">auto_now_add</td>
+<td align="center">针对时间类型字段,作用是保存数据的添加时间</td>
 </tr>
 </tbody></table>
-<h2 id="4-小结"><a href="#4-小结" class="headerlink" title="4.小结"></a>4.小结</h2><p>1.了解MVC结构</p>
-<p>2.了解beego初始化之后各个模块的作用</p>
-<p>3.了解beego项目的运行流程</p>
-<p>4.能够对路由进行简单的设置</p>
-<p>5.能够通过ORM对数据库进行简单的增删改查。</p>
-<p>6.能够独立实现登陆和注册业务</p>
-<p>7.了解重定向和渲染之间的区别。</p>
+<blockquote>
+<p>注意：<strong>当模型定义里没有主键时，符合int, int32, int64, uint, uint32, uint64 类型且名称为 Id 的 Field 将被视为主键，能够自增.</strong> “</p>
+<p>Mysql中时间类型有date和datetime两种类型，但是我们go里面只有time.time一种类型，如果项目里面要求精确的话，就需要指定类型，指定类型用的是type(date)或者type(datetime)</p>
+</blockquote>
+<h3 id="3-2生成表"><a href="#3-2生成表" class="headerlink" title="3.2生成表"></a>3.2生成表</h3><p>这时候注意，我们添加了结构体对象之后，并不能直接生成表，需要注册，注册的代码就是初始化数据库三行代码中的第二行，注册表结构，把要创建的表对应的结构体对象作为函数的参数，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">orm.RegisterModel(new(User),new(Article))</span><br></pre></td></tr></table></figure>
 
+<p>创建之后，我们可以在goland下方查看创建表过程，也可以进入数据库查看是否建表成功，成功的话，数据库显示如下:</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538619910805.png" alt="1538619910805"></p>
+<p>登陆成功之后，访问新闻列表展示页面，但是我们现在还没有新闻，所以我们先实现插入文章界面。</p>
+<h2 id="4-插入文章"><a href="#4-插入文章" class="headerlink" title="4.插入文章"></a>4.插入文章</h2><p>业务流程图</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538595086914.png" alt="1538595086914"></p>
+<p>插入页面我们用的视图是<code>add.html</code>，这里我们规定添加文章界面的请求路径为<code>/addArticle</code></p>
+<h3 id="4-1修改路由文件"><a href="#4-1修改路由文件" class="headerlink" title="4.1修改路由文件"></a>4.1修改路由文件</h3><p>在router.go文件的init函数中添加下面这一行代码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticle"</span>,&amp;controllers.ArticleControlle&#123;&#125;,<span class="string">"get:ShowAddArticle"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2添加文章界面的显示"><a href="#4-2添加文章界面的显示" class="headerlink" title="4.2添加文章界面的显示"></a>4.2添加文章界面的显示</h3><ul>
+<li><p>先创建一个article.go文件用来存放文章有关的业务代码</p>
+</li>
+<li><p>然后在article.go文件中创建一个ArticleController控制器，并定义一个ShowAddArticle函数代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/astaxie/beego"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ArticleController <span class="keyword">struct</span> &#123;</span><br><span class="line">	beego.Controller</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*ArticleController)</span><span class="title">ShowAddArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接着我们来实现<code>ShowAddArticle</code>函数，这个函数只是用来展示页面的，所以我们只需要给他制定一个视图就可以，代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*ArticleController)</span><span class="title">ShowAddArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写完代码之后，我们从浏览器发出一个请求<code>http://192.168.110.71:8080/addArticle</code>，如果能在浏览器中看到下面这个界面，表示页面展示成功：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538620374676.png" alt="1538620374676"></p>
+</li>
+</ul>
+<h3 id="4-3插入文章数据处理"><a href="#4-3插入文章数据处理" class="headerlink" title="4.3插入文章数据处理"></a>4.3插入文章数据处理</h3><p>上面我们显示了添加文章界面，观察界面可以发现，我们需要获取<strong>文章标题</strong>，<strong>文章类型</strong>,  <strong>文章内容</strong>，<strong>上传图片</strong>。其中文章类型牵涉到多表操作，我们放到明天来讲，今天只讲简单的单表操作。首先让我们来看一下，插入页面的前端部分修改。</p>
+<h4 id="4-3-1前端页面修改"><a href="#4-3-1前端页面修改" class="headerlink" title="4.3.1前端页面修改"></a>4.3.1前端页面修改</h4><p>由页面可知，我们这里面是要上传数据，所以我们这里需要一个form表单，打开前端界面<code>add.html</code>，能看到我们这里面确实有一个<form>标签，只是没有属性，我们需要给<form>标签添加action和method属性，这个请求还是添加文章，所以我们还可以用添加文章的请求路径，设置action属性<code>action=&quot;/addArticle&quot;</code>。因为上传数据，我们这里用post方法，设置method属性<code>method=&quot;post&quot;</code>。其他部分不用修改。form修改代码如下：</form></form></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"/addArticle"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-3-2路由内容修改"><a href="#4-3-2路由内容修改" class="headerlink" title="4.3.2路由内容修改"></a>4.3.2路由内容修改</h4><p>我们在前端添加了addArticle请求的post方法，所以需要修改一下router.go，给addArticle的post请求指定一个函数，修改代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowAddArticle;post:HandleAddArticle"</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-3-3后台代码实现"><a href="#4-3-3后台代码实现" class="headerlink" title="4.3.3后台代码实现"></a>4.3.3后台代码实现</h4><p>有了函数名之后，我们就需要在后台中实现这个函数。</p>
+<ul>
+<li><p>首先是获取数据</p>
+<p>这时候我们看一下前端界面，我们需要获取<strong>文章标题，</strong> <strong>文章内容</strong>，<strong>上传图片</strong>数据，文章标题和文章内容都是字符串，比较简单，直接通过GetString获取，所以我们先获取这两个内容。通过查看add.html代码我们发现，文章标题对应的<input>标签name等于articleName，文章内容对应的<textarea>标签name等于content（注意这里用的是textarea标签，不是用的input，但是获取数据方式一样）。获取数据的代码如下：</textarea></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">articleName := this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">content := this.GetString(<span class="string">"content"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取数据之后就做数据校验，我们这里还是做判空校验</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对数据进行校验</span></span><br><span class="line"><span class="keyword">if</span> articleName == <span class="string">""</span>|| content == <span class="string">""</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"添加文章数据不完整"</span>)</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">	<span class="keyword">return</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>正常的添加流程，在校验完数据之后就要把数据插入数据库了，但是我们添加文章这个界面有点特殊，因为这里面牵涉到一个静态文件的上传，所以我们先处理静态文件上传功能。</p>
+</li>
+<li><p>静态文件上传(<strong>难点</strong>)</p>
+<ul>
+<li><p>前端代码</p>
+<p><strong>如果form表单中牵涉到文件上传，在form表单中就需要添加一个属性<code>enctype=&quot;multipart/form-data&quot;</code>不然上传就是假上传</strong>，后台不能获取到上传的文件。<form>修改如下：</form></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"/addArticle"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">	&lt;input <span class="keyword">type</span>=<span class="string">"file"</span> class=<span class="string">"input_file"</span>  name=<span class="string">"uploadname"</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后台代码修改</p>
+<p>后台接收上传文件有两个函数可以用。</p>
+<p>*<em>GetFile(key string) (multipart.File, *multipart.FileHeader, error)  *</em></p>
+<p>*<em>作用 *</em>是获取前端传递过来的文件。</p>
+<p><strong>参数</strong> 是input标签中的name值</p>
+<p><strong>返回值</strong> 有三个，一个是文件流（就是我们打开文件返回的内容），第二个是文件相关信息，包括文件头，文件大小，文件名字等，第三个是错误信息。示例代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file,head,err := this.GetFile(<span class="string">"uploadname"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>*<em>SaveToFile(fromfile, tofile string) error *</em></p>
+<p><strong>作用</strong>直接保存前端出过来的文件。</p>
+<p><strong>参数</strong> 有两个参数，第一个参数是前端<input>标签的name属性值，第二个参数是文件在服务器端存储的位置。<strong>注意:这个位置字符串在前面需要加一个<code>.</code></strong></p>
+<p><strong>返回值</strong>是错误信息。示例代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">err := this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/1.jpg"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在我们开发过程中，如果后台接收文件并存储需要做以下几种判断</p>
+<p><strong>文件格式判断</strong></p>
+<p>我们通过GetFile可以获取到文件名，然后通过path包，可以分离出文件的后缀，即文件格式，把你需要的文件格式过滤出来，不需要的返回即可。我们根据文件名获取文件后缀，代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件大小的判断</strong></p>
+<p>我们获取文件之后，在存储之前，文件流一般是在内存中，所以文件不易过大，我们在这里做一个文件大小的判断。代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>避免文件重名</strong></p>
+<p>获取文件之后我们要把文件存储到服务器上，但是用户可能会上传同名的文件，如果文件同名的话，后来上传的文件就把之前上传的文件给覆盖了，所以我们要给上传的文件重新确定一个名字。这里我们以上传文件时的时间作为上传文件的文件名。默认的时间格式和我们常见的时间格式不一样，所以这里我们需要对事件做一个格式化。格式化字符串为<code>&quot;2006-01-02-15-04-05（规定的必须是这个，方便记忆可以用6-1-2-3-4-5来记）</code>代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line"><span class="comment">//存储</span></span><br><span class="line">this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>保存数据到数据库</p>
+<p>这里是数据的插入操作，我们不做详细解释，直接看代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入数据库</span></span><br><span class="line"><span class="comment">//获取orm对象</span></span><br><span class="line">o := orm.NewOrm()</span><br><span class="line"><span class="comment">//获取要插入的对象</span></span><br><span class="line"><span class="keyword">var</span> article models.Article</span><br><span class="line"><span class="comment">//给对象赋值</span></span><br><span class="line">article.ArtiName = articleName</span><br><span class="line">article.Acontent = content</span><br><span class="line"><span class="comment">//这一步需要注意，我们存储的图片是图片地址，没有 .</span></span><br><span class="line">article.Aimg = <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line">o.Insert(&amp;article)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回视图</p>
+<p>如果没有视图，先返回一句话，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.WriteString(<span class="string">"添加成功"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>完整代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">	articleName := this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">	content := this.GetString(<span class="string">"content"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> articleName == <span class="string">""</span> || content == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"添加文章数据不完整，请重新输入"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取上传图片</span></span><br><span class="line">	file,head,err := this.GetFile(<span class="string">"uploadname"</span>)</span><br><span class="line">	<span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//避免文件重名</span></span><br><span class="line">	fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line">	this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入数据库</span></span><br><span class="line">	<span class="comment">//获取orm对象</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="comment">//获取要插入的对象</span></span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	<span class="comment">//给对象赋值</span></span><br><span class="line">	article.ArtiName = articleName</span><br><span class="line">	article.Acontent = content</span><br><span class="line">	<span class="comment">//这一步需要注意，我们存储的图片是图片地址，没有.</span></span><br><span class="line">	article.Aimg = <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line">	<span class="comment">//插入</span></span><br><span class="line">	o.Insert(&amp;article)</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回视图</span></span><br><span class="line">	this.Ctx.WriteString(<span class="string">"添加成功"</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="5-新闻信息展示"><a href="#5-新闻信息展示" class="headerlink" title="5.新闻信息展示"></a>5.新闻信息展示</h2><p>添加文章之后我们回到文章显示界面，我们这里固定显示文章列表页的请求为<code>/ShowArticleList</code>,然后给这个请求指定控制器，以及相应的方法修改。</p>
+<h3 id="5-1修改路由文件"><a href="#5-1修改路由文件" class="headerlink" title="5.1修改路由文件"></a>5.1修改路由文件</h3><p>首先我们修改路由文件，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/ShowArticleList"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowArticleList"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2后台代码"><a href="#5-2后台代码" class="headerlink" title="5.2后台代码"></a>5.2后台代码</h3><p>修改路由文件之后，我们实现ShowArticleList函数。</p>
+<h4 id="5-2-1获取所有文章"><a href="#5-2-1获取所有文章" class="headerlink" title="5.2.1获取所有文章"></a>5.2.1获取所有文章</h4><ul>
+<li><p>获取orm对象</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义一个对象数组，用来存储获取的所有对象</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> articles []models.Article</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定要查询的数据库表，用QueryTable函数，参数是表名，返回值是<strong>queryseter</strong>，ORM 以 <strong>QuerySeter</strong> 来组织查询，每个返回 <strong>QuerySeter</strong> 的方法都会获得一个新的 <strong>QuerySeter</strong> 对象。 </p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs := o.QueryTable(<span class="string">"Article"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取所有数据，用all方法，参数是对象数组地址</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs.All(&amp;articles)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取数据之后把数据传递给视图，并且指定视图文件</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.Data[<span class="string">"articles"</span>] = articles</span><br><span class="line">this.TplName = <span class="string">"index.html"</span></span><br></pre></td></tr></table></figure>
+
+<p>在浏览器里面输入地址之后能获取下面页面，表示代码没有问题</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538669662236.png" alt="1538669662236"></p>
+</li>
+<li><p>ORM高级查询<strong>（重点）</strong></p>
+<p>我们在后面项目开发中对数据库的查询，一般都是指定数据库表，用高级查询的方法进行查询。ORM支持如下几种高级查询。</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">作用</th>
+<th align="center">用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Limit()</td>
+<td align="center">获取部分数据</td>
+<td align="center">有两个参数，第一个参数是指定获取几条数据，第二个参数指定从哪里获取qs.Limit(size,start)。返回值还是qs</td>
+</tr>
+<tr>
+<td align="center">OrderBy()</td>
+<td align="center">根据指定的字段排序</td>
+<td align="center">只有一个参数，参数作用是指定按照哪个字段排序，返回值是qs</td>
+</tr>
+<tr>
+<td align="center">Distinct()</td>
+<td align="center">去重</td>
+<td align="center">没有参数，返回值是qs</td>
+</tr>
+<tr>
+<td align="center">Count()</td>
+<td align="center">查询符合条件的数据条目数</td>
+<td align="center">没有参数，返回值是查询到的条目数和错误信息</td>
+</tr>
+<tr>
+<td align="center">All()</td>
+<td align="center">把查询到的数据全部存储到指定的容器里面</td>
+<td align="center">只有一个参数，指定存储查询对象的存储容器</td>
+</tr>
+<tr>
+<td align="center">RelatedSel()</td>
+<td align="center">多表查询的时候使用，指定关联的数据库表</td>
+<td align="center">参数长度不限，关联几个表，放几个参数</td>
+</tr>
+<tr>
+<td align="center">Filter()</td>
+<td align="center">过滤器，相当于SQL语句中的where</td>
+<td align="center">有两个参数，第一个参数是指定查询条件，第二个参数是值</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+<p>还有其他很多高级查询，具体参考：<a href="https://beego.me/docs/mvc/model/query.md页面查看" target="_blank" rel="noopener">https://beego.me/docs/mvc/model/query.md页面查看</a></p>
+</li>
+</ul>
+<h3 id="5-3前端代码"><a href="#5-3前端代码" class="headerlink" title="5.3前端代码"></a>5.3前端代码</h3><h4 id="5-3-1视图循环语法"><a href="#5-3-1视图循环语法" class="headerlink" title="5.3.1视图循环语法"></a>5.3.1视图循环语法</h4><p>后台传递给视图的数据是对象数组，要访问到每一个对象需要循环访问这个数组，那我们来看一下这个循环语法。循环语法有两种，一种格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range $index,$val := .articles&#125;&#125;</span><br><span class="line">        &#123;&#123;$val&#125;&#125;        </span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>$index</code>表示的是下标，<code>$val</code>表示的数组元素，循环的内容放在range和end之间。</p>
+<p>另外一种循环如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articles&#125;&#125;</span><br><span class="line">	&#123;&#123;.Name&#125;&#125;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在range和end之间通过&#123;&#123;.&#125;&#125;直接获取数组元素的字段值。</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-2视图数据展示"><a href="#5-3-2视图数据展示" class="headerlink" title="5.3.2视图数据展示"></a>5.3.2视图数据展示</h4><p>了解了视图的循环语法之后，我们就可以循环获取控制器传递过来的对象数组数据。代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articles&#125;&#125;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.ArtiName&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot;&gt;查看详情&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt; &#123;&#123;.Atime.Format &quot;2006-01-02-15-04-05&quot;&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.Acount&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;dels&quot;&gt;删除&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot;&gt;编辑&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;财经新闻&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实现之后我们就可以把添加文章最后的跳转改成显示文章列表页，超链接和文章类型，我们在接下来的页面实现。</p>
+</blockquote>
+<h3 id="5-4数据的分页显示-难点"><a href="#5-4数据的分页显示-难点" class="headerlink" title="5.4数据的分页显示(难点)"></a>5.4数据的分页显示(难点)</h3><p>观察我们的列表页可以发现，我们文章里表下面是分页展示，接着我们来实现这个分页。分页功能在我们平常浏览网页的时候也比较常见，这里我们先实现简单的分页功能，等到我们项目实战的时候会给大家封装一个分页函数，实现一个高级点的分页。首页显示如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538669662236.png" alt="1538669662236"></p>
+<p><strong>分页的好处</strong>：如果没有分页，我们访问完数据就要全部在页面显示，有分页之后我们可以显示部分数据，好处有一下两点。</p>
+<ul>
+<li>方便浏览，分页浏览可以更方便我们平常访问网页。</li>
+<li>提高访问网站速度。如果一次性把数据全部从数据库中取出来，效率没有一次取出部分数据块。</li>
+</ul>
+<p>了解了上面的内容之后我们开始写代码实现分页的功能，一般开发中遇见这种大的功能模块，我们都是划分为几个小块，一点一点来实现。我们从简单到复杂来实现相应功能，首先我们先获取总页数和总记录数。</p>
+<h4 id="5-4-1获取总记录数和总页数"><a href="#5-4-1获取总记录数和总页数" class="headerlink" title="5.4.1获取总记录数和总页数"></a>5.4.1获取总记录数和总页数</h4><p>首页显示代码是ShowArticleList函数，所以我们分页的业务代码也在这个函数里面。</p>
+<ul>
+<li><p>获取总记录数，orm是用count函数来获取数据的记录数，没有参数，返回值为记录数和错误信息，代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count，err := qs.Count()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取总页数</p>
+<p><strong>总页数 = 总记录数  /  每页显示的数据条数</strong></p>
+<p>总记录数我们已经获取了，所以需要我们自己设置每页显示多少条数据，然后相除就可以获得，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//确定每页显示数</span></span><br><span class="line">	pageSize := <span class="number">2</span></span><br><span class="line"><span class="comment">//获取总页数</span></span><br><span class="line">	pageCount := count / pageSize</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把数据传递给视图，并在视图中显示。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.Data[<span class="string">"count"</span>] = count</span><br><span class="line">this.Data[<span class="string">"pageCount"</span>] = pageCount</span><br></pre></td></tr></table></figure>
+
+<p>这时候你会发现，当你的最后一页显示的数据不满的话，总页数会少计算一页，原因是我们求总页数的计算是两个整数相除，除不尽的时候会自动舍去小数位。这和我们真实的业务不相符。所以我们需要修改获取总页数的代码。怎么修改呢？完全改成浮点数显然也不行，因为总页码不会是小数。这里面我们用天花板函数Ceil()。<strong>Ceil()</strong>的作用是<strong>传递过来一个浮点数，获取比这个浮点数大的又离这个浮点数最近的整数</strong>,代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取总页数</span></span><br><span class="line">	pageCount :=math.Ceil(<span class="keyword">float64</span>(count) / <span class="keyword">float64</span>(pageSize))</span><br></pre></td></tr></table></figure>
+
+<p>页码这时候显示正确。</p>
+</li>
+</ul>
+<h4 id="5-4-2获取首页和末页数据"><a href="#5-4-2获取首页和末页数据" class="headerlink" title="5.4.2获取首页和末页数据"></a>5.4.2获取首页和末页数据</h4><p>获取完总页数和总记录数之后，最简单的功能模块就是首页和末页内容的显示。首页和末页，我们需要把相应的页码传递过来才能知道获取哪些数据。那视图如何给后台传递数据呢？我们在平常浏览网页的时候经常会遇到类似于这样的URL地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://tieba.baidu.com/f?fr=index&amp;fp=0&amp;ie=utf-8&amp;red_tag=m2329796506</span><br></pre></td></tr></table></figure>
+
+<p>我们重点关注?后面的内容，他们是成对出现的，每对之间用<code>&amp;</code>连接，这种是URL传值的一种。我们在后台通过GetString函数可以获取到相应的值。</p>
+<ul>
+<li><p>设置首页的超链接</p>
+<p>我们可以通过URL传值的方式把页码传递过来。这里我们设置首页的<a>标签超链接为<code>/ShowArticleList?pageIndex=1</code></a></p>
+</li>
+<li><p>获取首页数据</p>
+<p>我们先通过GetString()获取到页码，然后通过页码获取相应的数据。这里给大家介绍数据库获取部分数据的函数*<em>Limit() *</em></p>
+<p><strong>Limit()</strong></p>
+<p><strong>作用：</strong>获取数据库中部分数据</p>
+<p><strong>参数:</strong>第一个参数是获取多少数据，第二个参数是从哪里开始取数据</p>
+<p><strong>返回值</strong>是queryseter类型，示例代码如下</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs := qs.Limit(pageSize,start)</span><br></pre></td></tr></table></figure>
+
+<p>我们掌握了limit函数之后，现在要获取数据库中部分数据，pageSize我们已经知道了，这个start怎么去求呢？我们可以根据start的规律来找，比如说，第一页数据的起始位置是0,第二页的其实位置是2，第三页的其实位置是4，你发现起始位置刚好是页码减一乘以pageSize，由此我们得出公式。<strong>start = (pageIndex - 1) * pageSize</strong> </p>
+<p>那么我们获取首页的代码如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取页码</span><br><span class="line">pageIndex,_ := this.GetInt(&quot;pageIndex&quot;)</span><br><span class="line">//确定数据的起始位置</span><br><span class="line">start := (pageIndex - 1) * pageSize</span><br><span class="line">//查询数据库部分数据</span><br><span class="line">qs.Limit(pageSize,start).All(&amp;articles)</span><br></pre></td></tr></table></figure>
+
+<p>  这时候有个问题，我们从其他页面跳转到首页的时候没有指定pageIndex,所以我们需要对获取不到pageIndex的情况进行处理，<strong>处理方案：</strong>当没有获取到pageIndex的时候默认pageIndex等于1，即默认访问首页内容。修改后的代码如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取页码</span><br><span class="line">	pageIndex,err := this.GetInt(&quot;pageIndex&quot;)</span><br><span class="line">	if err != nil&#123;</span><br><span class="line">		pageIndex = 1</span><br><span class="line">	&#125;</span><br><span class="line">//确定数据的起始位置</span><br><span class="line">	start := (pageIndex - 1) * pageSize</span><br><span class="line">//查询数据库部分数据</span><br><span class="line">	qs.Limit(pageSize,start).All(&amp;articles)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>获取末页数据只要参考着首页，把传过来的pageIndex改为总页码数即可。设置末页的链接为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/ShowArticleList?pageIndex=&#123;&#123;.pageCount&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时候记得把页码也传递给视图</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="5-4-2获取上一页和下一页数据"><a href="#5-4-2获取上一页和下一页数据" class="headerlink" title="5.4.2获取上一页和下一页数据"></a>5.4.2获取上一页和下一页数据</h4><p>前面我们已经获取了首页和末页的数据，仿照着链接，我们可以把上一页下一页的链接也实现，设置上一页的超链接为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/ShowArticleList?pageIndex=&#123;&#123;.pageIndex&#125;&#125; - 1</span><br></pre></td></tr></table></figure>
+
+<p>，但是你在index.html写了这个之后，编辑器会报错，html标签属性不能直接进行数学运算。这时候我们就要想办法，不在视图里面操作，并且给pageIndex减1，方法有很多，这里呢，老师给你们介绍一种beego处理这种简单业务逻辑的方法，<strong>视图函数</strong></p>
+<ul>
+<li><p><strong>视图函数</strong>(模板函数)</p>
+<p><strong>使用条件:</strong>beego支持用户定义视图函数，但是必须在beego.Run()调用之前。</p>
+<p>设置如下:</p>
+<ul>
+<li><p>先定义函数</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">hello</span><span class="params">(in <span class="keyword">string</span>)</span><span class="params">(out <span class="keyword">string</span>)</span></span>&#123;</span><br><span class="line">    out = in + <span class="string">"world"</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加映射</p>
+<p>添加映射是把后台的函数名和视图中调用的函数名关联起来，两个名字可以不一样。用的方法是AddFuncMap(),第一个参数是视图中调用的函数名，第二个参数是后台的函数名</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.AddFuncMap(<span class="string">"hi"</span>,hello)这一步必须在beego.Run()之前调用</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在视图中调用，有两种形式</p>
+<p>第一种调用视图函数</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;.Content | hi&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意，这里面的.Content是传递给函数的参数，类型要一致，函数的返回值将在这里显示,只能传递一个参数</p>
+</blockquote>
+<p>   第二种调用视图函数</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;hi .Content&#125;&#125;</span><br></pre></td></tr></table></figure></code></pre><blockquote>
+<p>第二种方法刚好和第一种方法顺序反过来，是先写函数名，再写参数，如果参数比较多，可以一直往后写。这种方法在开发中也比较常用。</p>
+</blockquote>
+<ul>
+<li><p>beego默认封装的视图函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|    函数名     |                   函数作用                   | 使用方法                                     |</span><br><span class="line">| :--------: | :--------------------------------------: | ---------------------------------------- |</span><br><span class="line">| dateformat |             实现了时间的格式化，返回字符串。             | &#123;&#123;dateformat .Time “2006-01-02T15:04:05Z07:00”&#125;&#125; |</span><br><span class="line">|    date    |  实现了类似 PHP 的 date 函数，可以很方便的根据字符串返回时间 。   | &#123;&#123;date .T “Y-m-d H:i:s”&#125;&#125;                |</span><br><span class="line">|  compare   |    实现了比较两个对象的比较，如果相同返回 true，否者 false。    | &#123;&#123;compare .A .B&#125;&#125;                        |</span><br><span class="line">|   substr   |          实现了字符串的截取，支持中文截取的完美截取           | &#123;&#123;substr .Str 0 30&#125;&#125;                     |</span><br><span class="line">|  html2str  | 实现了把 html 转化为字符串，剔除一些 script、css 之类的元素，返回纯文本信息 。 | &#123;&#123;html2str .Htmlinfo&#125;&#125;                   |</span><br><span class="line">|  str2html  |        实现了把相应的字符串当作 HTML 来输出，不转义         | &#123;&#123;str2html .Strhtml&#125;&#125;                    |</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>还有一些其他不常用的， 可以参考开发文档了解</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>用视图函数实现获取上一页下一页页码</p>
+<ul>
+<li><p>定义函数</p>
+<p>因为函数要在beego.Run()之前执行，我们可以把函数直接定义在main.go中,定义函数如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">   //获取下一页页码</span><br><span class="line">   func ShowNextPage(pageIndex int)int&#123;</span><br><span class="line">   	return pageIndex + 1</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //获取上一页页码</span><br><span class="line">   func ShowPrePage(pageIndex int)int&#123;</span><br><span class="line">   	return pageIndex - 1</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加映射</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">beego.AddFuncMap(&quot;next&quot;,ShowNextPage)</span><br><span class="line">beego.AddFuncMap(&quot;pre&quot;,ShowPrePage)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>在视图中调用</p>
+<p>我们这里用第二种调用视图函数的方法</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line"> &lt;li&gt;&lt;a href=&quot;/ShowArticleList?pageIndex=&#123;&#123;pre .pageIndex&#125;&#125;&quot;&gt;上一页 &lt;/a&gt; &lt;/li&gt;</span><br><span class="line"> &lt;li&gt; &lt;a href=&quot;/ShowArticleList?pageIndex=&#123;&#123;next .pageIndex&#125;&#125;&quot;&gt;下一页&lt;/a&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>问题：显示之后，我们点击上一页下一页发现功能实现了，但是有一个问题，一直点击上一页页码能出现负值，一直点击下一页页码能超过总页码，那我们怎么解决呢？</p>
+</blockquote>
+<ul>
+<li><p>问题解决</p>
+<p>页码超出范围的问题，思路：只需要在获取上一页下一页页码的时候对页码做一个判断即可,代码如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取下一页页码</span><br><span class="line">func ShowNextPage(pageIndex int,pageCount int)int&#123;</span><br><span class="line">    if pageIndex == pageCount&#123;</span><br><span class="line">        return pageIndex</span><br><span class="line">    &#125;</span><br><span class="line">    return pageIndex + 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//获取上一页页码</span><br><span class="line">func ShowPrePage(pageIndex int)int&#123;</span><br><span class="line">    if pageIndex == 1&#123;</span><br><span class="line">        return pageIndex</span><br><span class="line">    &#125;</span><br><span class="line">    return pageIndex - 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  到这里我们的分页功能就完全实现了</p>
+<h3 id="5-5小结"><a href="#5-5小结" class="headerlink" title="5.5小结"></a>5.5小结</h3><h2 id="6-查看文章详情"><a href="#6-查看文章详情" class="headerlink" title="6.查看文章详情"></a>6.查看文章详情</h2><p>业务流程图如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538715475866.png" alt="1538715475866"></p>
+<p>首先我们还是需要设计一下查看详情的请求路径。分析可知，我们查看文章详情必须指定要查看哪一篇文章，所以我们在点击查看详情的时候需要把能够标识具体哪一篇文章的数据传递给后台，这里我们通过URL传值的方式，传递文章ID给后台，设计路由为<code>/ShowArticleDetail?id=article.Id</code></p>
+<h3 id="6-1文章详情页面显示"><a href="#6-1文章详情页面显示" class="headerlink" title="6.1文章详情页面显示"></a>6.1文章详情页面显示</h3><ul>
+<li><p>前端处理</p>
+<p>修改查看详情的超链接代码如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;td&gt;&lt;a href=&quot;ShowArticleDetail?id=&#123;&#123;.Id&#125;&#125;&quot;&gt;查看详情&lt;/a&gt;&lt;/td&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改路由文件，添加查看详情的路由匹配，然后指定控制和请求对应的方法,修改如下:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">beego.Router(&quot;/ShowArticleDetail&quot;,&amp;controllers.ArticleController&#123;&#125;,&quot;get:ShowArticleDetail&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>实现ShowArticleDetail()函数</p>
+<p>首先呢，我们需要获取传递过来的文章id</p>
+</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id,err := this.GetInt(<span class="string">"id"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>  然后做数据校验</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  数据没问题的话，就根据文章id查询文章信息</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br></pre></td></tr></table></figure>
+
+<p>  获取数据之后，指定视图，并给视图传递数据</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"content.html"</span></span><br></pre></td></tr></table></figure>
+
+<p>  完整代码如下</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取文章id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br><span class="line"></span><br><span class="line"><span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"content.html"</span></span><br></pre></td></tr></table></figure>
+
+<p>  访问浏览器，查看页面如下：</p>
+<p>  <img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538716777459.png" alt="1538716777459"></p>
+<p>  这时候页面显示的是假数据，我们修改视图文件，让页面显示的数据为我们添加的文章数据：</p>
+<ul>
+<li>视图文件修改,还没有添加的数据不做修改。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;div class=&quot;pannel&quot;&gt;</span><br><span class="line">          &lt;h3 class=&quot;review_title&quot;&gt;文章详情&lt;/h3&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章标题：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&lt;b&gt;&#123;&#123;.article.ArtiName&#125;&#125;&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章类型：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;体育新闻&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章内容：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&lt;img src=&quot;&#123;&#123;.article.Aimg&#125;&#125;&quot;&gt;&#123;&#123;.article.Acontent&#125;&#125;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;阅读次数：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&#123;&#123;.article.Acount&#125;&#125;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;最近浏览：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;张三 | 李四 |&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;创建时间：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&#123;&#123;.article.Atime.Format &quot;2006-01-02-15-04-05&quot;&#125;&#125;&lt;/p&gt;</span><br><span class="line">              &lt;span&gt;&#123;&#123;.errmsg&#125;&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>  保存之后再次刷新页面，显示如下：</p>
+<p>  <img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538717147605.png" alt="1538717147605"></p>
+<p>  我们查看详情页面的显示这部分就实现了。</p>
+<h3 id="6-2阅读次数增加"><a href="#6-2阅读次数增加" class="headerlink" title="6.2阅读次数增加"></a>6.2阅读次数增加</h3><p>每次查看详情其实就是阅读次数的增加，我们需要在查看详情函数里面给阅读次数加一，代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给查询出来的文章阅读次数加一</span></span><br><span class="line">	article.Acount += <span class="number">1</span></span><br><span class="line">	o.Update(&amp;article)</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-编辑文章内容"><a href="#7-编辑文章内容" class="headerlink" title="7.编辑文章内容"></a>7.编辑文章内容</h2><h3 id="7-1编辑页面显示"><a href="#7-1编辑页面显示" class="headerlink" title="7.1编辑页面显示"></a>7.1编辑页面显示</h3><p>业务流程图如下:</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538717467806.png" alt="1538717467806"></p>
+<p>编辑页面显示和文章详情页面处理流程基本一样,也同样需要传递文章ID，先需要确定请求路径，这里我们设置请求路径为<code>UpdateArticle?id=article.id</code>，修改路由文件，代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/UpdateArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowUpdateArticle"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然后在后台查询数据传递给视图，逻辑重复，就不详细分析了，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//展示编辑文章界面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">ShowUpdateArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取文章id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	<span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"update.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前端数据展示代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;更新文章内容&lt;/title&gt;</span><br><span class="line"> &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/reset.css&quot;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/main.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;header&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot; class=&quot;logo fl&quot;&gt;&lt;img src=&quot;/static/img/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot; class=&quot;logout fr&quot;&gt;退 出&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;side_bar&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;user_info&quot;&gt;</span><br><span class="line">        &lt;img src=&quot;/static/img/person.png&quot; alt=&quot;张大山&quot;&gt;</span><br><span class="line">        &lt;p&gt;欢迎你 &lt;em&gt;李雷&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=&quot;menu_con&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;first_menu active&quot;&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;icon02&quot;&gt;文章管理&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">        &lt;ul class=&quot;sub_menu show&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon031&quot;&gt;文章列表&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon032&quot;&gt;添加文章&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon034&quot;&gt;添加分类&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;main_body&quot; id=&quot;main_body&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;breadcrub&quot;&gt;</span><br><span class="line">        当前位置：文章管理&gt;编辑文章</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;pannel&quot;&gt;</span><br><span class="line">        &lt;form name = logon &gt;</span><br><span class="line">        &lt;h3 class=&quot;review_title&quot;&gt;编辑文章&lt;/h3&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;文章标题：&lt;/label&gt;</span><br><span class="line">            &lt;input type=&quot;text&quot; class=&quot;input_txt2&quot; name = &quot;articleName&quot; value=&quot;&#123;&#123;.article.ArtiName&#125;&#125;&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;文章内容：&lt;/label&gt;</span><br><span class="line">            &lt;textarea class=&quot;input_multxt&quot; name=&quot;content&quot;&gt;&#123;&#123;.article.Acontent&#125;&#125;&lt;/textarea&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;上传图片：&lt;/label&gt;</span><br><span class="line">            &lt;img src=&quot;&#123;&#123;.article.Aimg&#125;&#125;&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;file&quot; name=&quot;uploadname&quot; class=&quot;input_file&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group indent_group line_top&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;添 加&quot; class=&quot;confirm&quot;&gt;</span><br><span class="line">            &lt;span&gt;&#123;&#123;.errmsg&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入<code>http://192.168.110.73:8080/UpdateArticle?id=1</code>，显示如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538718026674.png" alt="1538718026674"></p>
+<h3 id="7-2编辑文章数据"><a href="#7-2编辑文章数据" class="headerlink" title="7.2编辑文章数据"></a>7.2编辑文章数据</h3><p>这一步其实是对查询到的文章进行更新操作，我们还用获取页面时的请求路径<code>UpdateArticle?id=article.id</code>,但是请求改为post请求，form标签修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;form name = logon method=&quot;post&quot; action=&quot;/UpdateArticle?id=&#123;&#123;.article.Id&#125;&#125;&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里需要上传图片，记得给form添加enctype属性</p>
+</blockquote>
+<p>接着我们去路由文件里面给我们这个请求指定方法。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/UpdateArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowUpdateArticle;post:HandleUpdate"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然后去实现HandleUpdate函数，过程仍然是获取数据，校验数据，更新数据，返回视图这几步，没有什么新的知识点，我们就不做详细分析，直接看代码:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//抽离上传文件函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">UploadFile</span><span class="params">(filePath <span class="keyword">string</span>,this beego.Controller)</span><span class="title">string</span></span>&#123;</span><br><span class="line">	file,head,err :=this.GetFile(filePath)</span><br><span class="line">	<span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//避免文件重名</span></span><br><span class="line">	fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line">	this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//处理更新数据</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">HandleUpdate</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取数据</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	articleName :=this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">	content := this.GetString(<span class="string">"content"</span>)</span><br><span class="line">	img := UploadFile(<span class="string">"uploadname"</span>,this.Controller)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//校验数据，如果数据出错,返回当前编辑页面</span></span><br><span class="line">	<span class="keyword">if</span> err !=<span class="literal">nil</span> || articleName ==<span class="string">""</span> || content == <span class="string">""</span> || img == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"编辑数据不完整"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/UpdateArticle?id="</span>+strconv.Itoa(id),<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//更新数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	<span class="keyword">if</span> err := o.Read(&amp;article);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"传递的文章id错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/UpdateArticle?id="</span>+strconv.Itoa(id),<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	article.ArtiName = articleName</span><br><span class="line">	article.Acontent = content</span><br><span class="line">	article.Aimg = img</span><br><span class="line">	o.Update(&amp;article)</span><br><span class="line">	<span class="comment">//返回视图</span></span><br><span class="line">	this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-删除文章"><a href="#8-删除文章" class="headerlink" title="8.删除文章"></a>8.删除文章</h2><h3 id="8-1删除功能实现"><a href="#8-1删除功能实现" class="headerlink" title="8.1删除功能实现"></a>8.1删除功能实现</h3><p>业务流程图如下:</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538719480706.png" alt="1538719480706"></p>
+<p>删除功能相比较前面的功能算是比较简单的，只需要传递过来文章id值，然后删除文章即可。</p>
+<p>首先我们还是要指定删除文章的请求路径：<code>DeleteArticle?id=article.Id</code></p>
+<p>然后修改路由文件，为删除请求指定控制器，指定函数。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/DeleteArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:DeleteArticle"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然后在后台实现DeleteArticle函数,代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除文章</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">DeleteArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取文章Id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"删除文章请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//删除文章</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Delete(&amp;article)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//返回视图界面</span></span><br><span class="line">	this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时候你发现功能实现了，但是存在误删的可能，整个页面显的特别不友好，我们给页面加个js提示，防止误删。</p>
+</blockquote>
+<h3 id="8-2删除js提示"><a href="#8-2删除js提示" class="headerlink" title="8.2删除js提示"></a>8.2删除js提示</h3><p>业务分析:当点击删除超链接的时候，弹出对话框，如果确认就发送请求，如果取消，就不发送请求：代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(&quot;.dels&quot;).click(function () &#123;</span><br><span class="line">        if(!confirm(&quot;是否确认删除？&quot;))&#123;</span><br><span class="line">            return false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p><img src="//daelephant.github.io/2018/11/11/beego-news发布系统/1538720450645.png" alt="1538720450645"></p>
+<h2 id="9-总结"><a href="#9-总结" class="headerlink" title="9.总结"></a>9.总结</h2>
       
 
       
@@ -711,7 +803,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://daelephant.github.io/2018/07/18/beego-note/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://daelephant.github.io/2018/11/11/beego-news发布系统/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -725,9 +817,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/11/12/beego-news发布系统续/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          beego-news发布系统续
+        
+      </div>
+    </a>
   
-    <a href="/2018/07/12/beego-news发布系统续/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">beego-news发布系统续</div>
+  
+    <a href="/2018/10/18/beego-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">beego note</div>
       <i class="icon-circle-right"></i>
     </a>
   
