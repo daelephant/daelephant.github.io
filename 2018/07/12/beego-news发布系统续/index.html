@@ -6,40 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://daelephant.github.io">
-  <title>beego-news发布系统 | Len的博客</title>
+  <title>beego-news发布系统续 | Len的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
+  <meta name="description" content="1.类型相关内容在实现类型相关业务之前，我们先创建类型表。这里我们添加上一对多多对多的关系。 一个类型下面有很多篇文章，但是一篇文章只属于一个类型，所以文章与类型属于一对多。 同时我们分析，一个用户可以阅读多篇文章，一篇文章也可以被多个用户阅读，所以文章和用户之间属于多对多关系。 由此，开始建表，建表代码如下，我们根据代码分析一对多，多对多如何设置：">
 <meta name="keywords" content="beego">
 <meta property="og:type" content="article">
-<meta property="og:title" content="beego-news发布系统">
-<meta property="og:url" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/index.html">
+<meta property="og:title" content="beego-news发布系统续">
+<meta property="og:url" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/index.html">
 <meta property="og:site_name" content="Len的博客">
-<meta property="og:description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
+<meta property="og:description" content="1.类型相关内容在实现类型相关业务之前，我们先创建类型表。这里我们添加上一对多多对多的关系。 一个类型下面有很多篇文章，但是一篇文章只属于一个类型，所以文章与类型属于一对多。 同时我们分析，一个用户可以阅读多篇文章，一篇文章也可以被多个用户阅读，所以文章和用户之间属于多对多关系。 由此，开始建表，建表代码如下，我们根据代码分析一对多，多对多如何设置：">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538500613581.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538500659872.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538591447624.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538591575762.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538591636455.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538591824871.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538591946260.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538619910805.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538595086914.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538620374676.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538669662236.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538669662236.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538715475866.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538716777459.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538717147605.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538717467806.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538718026674.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538719480706.png">
-<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538720450645.png">
-<meta property="og:updated_time" content="2019-07-12T10:03:56.736Z">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1538796748314.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1538796693152.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1538797924716.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1538841520043.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1539152548601.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1539154395379.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1539155058223.png">
+<meta property="og:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1539156697631.png">
+<meta property="og:updated_time" content="2019-07-12T10:14:45.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="beego-news发布系统">
-<meta name="twitter:description" content="Beego案例-新闻发布系统1.注册注册的业务流程图。 *业务流程图 *  2.登陆">
-<meta name="twitter:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统/1538500613581.png">
+<meta name="twitter:title" content="beego-news发布系统续">
+<meta name="twitter:description" content="1.类型相关内容在实现类型相关业务之前，我们先创建类型表。这里我们添加上一对多多对多的关系。 一个类型下面有很多篇文章，但是一篇文章只属于一个类型，所以文章与类型属于一对多。 同时我们分析，一个用户可以阅读多篇文章，一篇文章也可以被多个用户阅读，所以文章和用户之间属于多对多关系。 由此，开始建表，建表代码如下，我们根据代码分析一对多，多对多如何设置：">
+<meta name="twitter:image" content="https://daelephant.github.io/2018/07/12/beego-news发布系统续/1538796748314.png">
   
     <link rel="alternative" href="/atom.xml" title="Len的博客" type="application/atom+xml">
   
@@ -175,545 +164,429 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-beego-news发布系统" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-beego-news发布系统续" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      beego-news发布系统
+      beego-news发布系统续
     </h1>
   
 
         
-        <a href="/2018/07/12/beego-news发布系统/" class="archive-article-date">
-  	<time datetime="2018-07-12T09:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
+        <a href="/2018/07/12/beego-news发布系统续/" class="archive-article-date">
+  	<time datetime="2018-07-12T10:07:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Beego案例-新闻发布系统"><a href="#Beego案例-新闻发布系统" class="headerlink" title="Beego案例-新闻发布系统"></a>Beego案例-新闻发布系统</h1><h2 id="1-注册"><a href="#1-注册" class="headerlink" title="1.注册"></a>1.注册</h2><p>注册的业务流程图。</p>
-<p>*<em>业务流程图 *</em></p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538500613581.png" alt="1538500613581"></p>
-<h2 id="2-登陆"><a href="#2-登陆" class="headerlink" title="2.登陆"></a>2.登陆</h2><a id="more"></a>
-<p><strong>业务流程图</strong></p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538500659872.png" alt="1538500659872"></p>
-<p><strong>登陆和注册业务和我们昨天登陆和注册基本一样，所以就不再重复写这个代码</strong></p>
-<p>但是我们遇到的问题是如何做代码的迁移，把昨天的登陆和注册拿过来直接用？</p>
+        <h1 id="1-类型相关内容"><a href="#1-类型相关内容" class="headerlink" title="1.类型相关内容"></a>1.类型相关内容</h1><p>在实现类型相关业务之前，我们先创建类型表。这里我们添加上一对多多对多的关系。</p>
+<p>一个类型下面有很多篇文章，但是一篇文章只属于一个类型，所以文章与类型属于一对多。</p>
+<p>同时我们分析，一个用户可以阅读多篇文章，一篇文章也可以被多个用户阅读，所以文章和用户之间属于多对多关系。</p>
+<p>由此，开始建表，建表代码如下，我们根据代码分析一对多，多对多如何设置：</p>
+<a id="more"></a>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span></span><br><span class="line">	Name <span class="keyword">string</span> <span class="string">`orm:"unique"`</span></span><br><span class="line">	Passwd <span class="keyword">string</span> <span class="string">`orm:"size(20)"`</span></span><br><span class="line">	Articles []*Article <span class="string">`orm:"rel(m2m)"`</span> <span class="comment">//设置多对多关系</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//文章结构体</span></span><br><span class="line"><span class="keyword">type</span> Article <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span> <span class="string">`orm:"pk;auto"`</span></span><br><span class="line">	ArtiName <span class="keyword">string</span> <span class="string">`orm:"size(20)"`</span></span><br><span class="line">	Atime time.Time <span class="string">`orm:"auto_now"`</span></span><br><span class="line">	Acount <span class="keyword">int</span> <span class="string">`orm:"default(0);null"`</span></span><br><span class="line">	Acontent <span class="keyword">string</span> <span class="string">`orm:"size(500)"`</span></span><br><span class="line">	Aimg <span class="keyword">string</span>  <span class="string">`orm:"size(100)"`</span></span><br><span class="line"></span><br><span class="line">	ArticleType*ArticleType <span class="string">`orm:"rel(fk)"`</span> <span class="comment">//设置一对多关系</span></span><br><span class="line">	Users []*User <span class="string">`orm:"reverse(many)"`</span>  <span class="comment">//设置多对多的反向关系</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//类型表</span></span><br><span class="line"><span class="keyword">type</span> ArticleType <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span></span><br><span class="line">	Tname <span class="keyword">string</span> <span class="string">`orm:"size(20)"`</span></span><br><span class="line">	Articles []*Article <span class="string">`orm:"reverse(many)"`</span> <span class="comment">//设置一对多的反向关系</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//1.连接数据库</span></span><br><span class="line">	orm.RegisterDataBase(<span class="string">"default"</span>,<span class="string">"mysql"</span>,<span class="string">"root:123456@tcp(127.0.0.1:3306)/test?charset=utf8"</span>)</span><br><span class="line">	<span class="comment">//2.注册表</span></span><br><span class="line">	orm.RegisterModel(<span class="built_in">new</span>(User),<span class="built_in">new</span>(Article),<span class="built_in">new</span>(ArticleType))</span><br><span class="line">	<span class="comment">//3.生成表</span></span><br><span class="line">	<span class="comment">//1.数据库别名</span></span><br><span class="line">	<span class="comment">//2.是否强制更新</span></span><br><span class="line">	<span class="comment">//3.创建表过程是否可见</span></span><br><span class="line">	orm.RunSyncdb(<span class="string">"default"</span>,<span class="literal">false</span>,<span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根据我们以前学过数据库知识，表与表之间有几种关系？一般有三种，一对一，一对多，多对多，但是我们开发中常用的是一对多和多对多，这里我们重点掌握这两种，了解一对一即可。</p>
+<p><strong>orm中如何设置两个表之间的关系呢？</strong></p>
+<p>如果两个表之间有关系，ORM通过在两个表对应的结构体中添加对象指针或者对象指针数组来把两个表之间关联起来，并且在对象指针和对象指针数组字段添加上相应的属性，比如我们上面的文章表和类型表属于一对多，就需要在文章结构体中添加一个类型的对象指针，然后设置一对多关系（<strong>orm:”rel(fk)”</strong>），同样的，在类型表里面需要有一个文章的对象指针数组，并且设置一对多的反向关系（<strong>orm:”reverse(many)”</strong>）。</p>
 <ul>
-<li><p>首先，我们需要把静态页面拷贝到我们项目目录下面。</p>
+<li><p>*<em>一对一 *</em></p>
+<p>关系设置：两个对应的结构体中都添加对方的结构体指针，然后设置一对一关系(<strong>orm:”rel(one)”</strong>),反向关系设置为<strong>orm:”rel(one)”</strong></p>
+</li>
+<li><p>*<em>一对多 *</em></p>
+<p>关系设置：一对多中两表之间的关系不可互换,以文章表和类型表为例,当创建表的时候</p>
 <ul>
-<li><p>进入项目目录，删除掉原来的static文件夹</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538591447624.png" alt="1538591447624"></p>
+<li><p>在  文章表对应的文章结构体中添加类型表的对象指针，并且设置一对多关系(<strong>orm:”rel(fk)”</strong>),</p>
 </li>
-<li><p>然后拷贝我们昨天课堂资料中的 <code>static.zip</code>到这个目录，并解压，解压之后如下图：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538591575762.png" alt="1538591575762"></p>
+<li><p>在  类型张表对应的结构体中添加文章表的对象指针数组，并且设置一对多的反向关系（<strong>orm:”reverse(many)”</strong>）</p>
 </li>
-<li><p>打开static文件夹，显示如下，则说明拷贝成功：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538591636455.png" alt="1538591636455"></p>
+</ul>
+<p>生成表的时候，数据库会自动在  文章表中添加类型表的表的Id作为文章表的外键。如图：</p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1538796748314.png" alt="1538796748314"></p>
+<p><strong>一对多插入操作</strong>：只需要在文章表插入类型对象即可。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br><span class="line">article := models.Article&#123;&#125;</span><br><span class="line">artiType := models.ArticleType&#123;Id:id&#125;</span><br><span class="line">o.Read(&amp;artiType)</span><br><span class="line">article.ArticleType = &amp;artiType</span><br><span class="line">o.Insert(&amp;article)</span><br></pre></td></tr></table></figure>
+
+<p><strong>一对多查询：</strong> ORM做多表查询的时候默认是惰性查询，即不明确指出来要做多表查询，即便是两个表之间存在关系，ORM也不会给两个表做关联。指定多表查询的函数是RelatedSel()。参数是要关联的表名，可以有多个。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count,err = o.QueryTable(<span class="string">"Article"</span>).RelatedSel(<span class="string">"ArticleType"</span>).Count()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果关联表的那个字段没有值，那么数据查不到</p>
+</blockquote>
+</li>
+<li><p><strong>多对多</strong></p>
+<p>关系设置：多对多中两表之间的关系是平等的，所以他们的属性设置可以呼唤,以文章表和用户表为例,当创建表的时候</p>
+<ul>
+<li><p>在 文章表对应的文章结构体中添加用户表的对象指针数组，并且设置多对多关系(<strong>orm:”rel(m2m)”</strong>),</p>
+</li>
+<li><p>在用户表对应的结构体中添加文章表的对象指针数组，并且设置多对多的反向关系（<strong>orm:”reverse(many)”</strong>）</p>
+</li>
+</ul>
+<p>生成表的时候，数据库会生成一个用户和文章之间的关系表，有三个字段，Id,用户表Id，文章表ID。如下图：</p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1538796693152.png" alt="1538796693152"></p>
+</li>
+</ul>
+<p>  <strong>多对多插入操作</strong>：</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br><span class="line"><span class="comment">//1.获取操作对象</span></span><br><span class="line">arti:= Article&#123;Id: <span class="number">1</span>&#125;</span><br><span class="line"><span class="comment">//获取article的多对多操作对象</span></span><br><span class="line">m2m := o.QueryM2M(&amp;arti, <span class="string">"users"</span>)<span class="comment">//第一个参数对象必须有主键,第二个参数是字段名</span></span><br><span class="line"><span class="comment">//获取要插入的对象</span></span><br><span class="line">user := &amp;User&#123;Id:<span class="number">1</span>&#125;</span><br><span class="line">o.Read(&amp;user)</span><br><span class="line"><span class="comment">//多对多对象插入</span></span><br><span class="line">num, err := m2m.Add(user)<span class="comment">//参数可以为对象，指针，对象数组，指针数组</span></span><br></pre></td></tr></table></figure>
+
+<p>  <strong>多对多查询：</strong></p>
+<p>  有两种方法：</p>
+<p>  第一种：直接用read查询，然后加上<strong>LoadRelated</strong> ()函数来关联两张表。代码如下：</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post := Post&#123;Id: <span class="number">1</span>&#125;</span><br><span class="line">err := o.Read(&amp;post)</span><br><span class="line">num, err := o.LoadRelated(&amp;post, <span class="string">"Tags"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>  优点是简单，快捷。</p>
+<p>  缺点是返回值不是queryseter，不能调用其他的高级查询。</p>
+<p>  第二种方法，是通过过滤器查询，指定表之后，用Filter()过滤相应的条件，第一个参数是<code>表示另一张表的字段__另外一张表的表名__比较的字段</code>(注意是双下划线)，第二个字段是要比较的值，需要注意的是这个顺序是和表的插入顺序相反的。代码如下：</p>
+<h2 id="1-1添加类型"><a href="#1-1添加类型" class="headerlink" title="1.1添加类型"></a>1.1添加类型</h2><p>分析过多表之间的操作之后，我们来实现类型有关的业务，首先我们需要先添加类型。</p>
+<h3 id="1-1-1添加类型页面显示"><a href="#1-1-1添加类型页面显示" class="headerlink" title="1.1.1添加类型页面显示"></a>1.1.1添加类型页面显示</h3><ul>
+<li><p>确定添加类型显示的请求路径为<code>/AddArticleType</code></p>
+</li>
+<li><p>在路由文件中添加相关代码。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticleType"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowAddType"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后去控制器中实现ShowAddType函数，先简单的指定视图。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//展示添加文章类型页面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">ShowAddType</span><span class="params">()</span></span>&#123;</span><br><span class="line">	this.TplName = <span class="string">"addType.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在浏览器输入请求<a href="http://192.168.110.74:8080/addArticleType，页面显示如下：" target="_blank" rel="noopener">http://192.168.110.74:8080/addArticleType，页面显示如下：</a></p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1538797924716.png" alt="1538797924716"></p>
+<p>由页面可知，我们添加文章类型界面，分两块，一块是上面以表格的形式显示所有类型，一块是下面增加分类。我们先来处理增加分类。</p>
+</li>
+</ul>
+<h3 id="1-1-2添加类型数据处理"><a href="#1-1-2添加类型数据处理" class="headerlink" title="1.1.2添加类型数据处理"></a>1.1.2添加类型数据处理</h3><p>添加类型业务比较简单，首先是修改我们的视图页面内容，给form标签请求方式和请求路径，代码如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"/HandleAddType"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着我们要修改路由文件，给请求指定控制器，指定方法：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticleType"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowAddType;post:HandleAddType"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然后我们实现一下后台处理函数,这个函数的实现步骤和以前实现添加文章的步骤一样，代码处理还更简单，不详细分析，我们直接看代码:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理添加文章类型数据</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">HandleAddType</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取数据</span></span><br><span class="line">	typeName := this.GetString(<span class="string">"typeName"</span>)</span><br><span class="line">	<span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> typeName == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"添加数据失败"</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//插入数据库</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> articleType models.ArticleType</span><br><span class="line">	articleType.Tname = typeName</span><br><span class="line">	<span class="keyword">if</span> _,err :=o.Insert(&amp;articleType);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"添加数据失败"</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//返回视图</span></span><br><span class="line">	this.TplName = <span class="string">"addType.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里我们用渲染的方式返回视图合适不合适，思考一下！</p>
+</blockquote>
+<h3 id="1-1-3查询类型数据"><a href="#1-1-3查询类型数据" class="headerlink" title="1.1.3查询类型数据"></a>1.1.3查询类型数据</h3><p>现在我们类型表有数据了，可以在显示页面的时候把数据填充在页面上</p>
+<ul>
+<li><p>后台代码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//展示添加文章类型页面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">ShowAddType</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> articleTypes []models.ArticleType</span><br><span class="line">	o.QueryTable(<span class="string">"ArticleType"</span>).All(&amp;articleTypes)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//传递数据给视图并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"articleTypes"</span>] = articleTypes</span><br><span class="line">	this.TplName = <span class="string">"addType.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>视图代码</p>
+<p>在视图页面中，我们循环控制器传递过来的数组，拿到我们需要的数据</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;&#123;&#123;.Id&#125;&#125;&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&#123;&#123;.Tname&#125;&#125;&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;edit&quot;&gt;删除&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  这时候我们在浏览器输入地址<code>http://192.168.110.75:8080/addArticleType</code>,得到如下页面：</p>
+<p>  <img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1538841520043.png" alt="1538841520043"></p>
+<p>  <strong>添加一个类型测试，然后发现页面还是没有类型显示，这个说明我们代码处理出问题了，哪里出问题了呢？还记得前面给大家留的思考题吗？我们添加完文章类型之后，是直接渲染加载了视图，这时候并没有给视图传递数据，所以也就没有类型显示。这样的结果和我们的业务 不符合，所以我们需要把添加完类型之后跳转页面的方式改为重定向，然后再看结果，发现类型显示正常。</strong></p>
+<h2 id="1-2首页根据下拉框选项不同，获取不同类型数据"><a href="#1-2首页根据下拉框选项不同，获取不同类型数据" class="headerlink" title="1.2首页根据下拉框选项不同，获取不同类型数据"></a>1.2首页根据下拉框选项不同，获取不同类型数据</h2><p>现在有类型数据了，我们添加文章的时候也需要添加上类型了。</p>
+<h3 id="1-2-1添加带类型的文章"><a href="#1-2-1添加带类型的文章" class="headerlink" title="1.2.1添加带类型的文章"></a>1.2.1添加带类型的文章</h3><ul>
+<li><p>在展示页面的时候需要把类型数据绑定添加类型的下拉框</p>
+<ul>
+<li><p>后台获取数据（在展示添加文章界面那个函数里面写相关代码）</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//展示添加文章界面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*ArticleController)</span><span class="title">ShowAddArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> articleTypes []models.ArticleType</span><br><span class="line">	o.QueryTable(<span class="string">"ArticleType"</span>).All(&amp;articleTypes)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//传递数据给视图并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"articleTypes"</span>] = articleTypes</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>视图展示数据</p>
+<p>循环获取数据，在下拉框中显示类型名称</p>
 </li>
 </ul>
 </li>
-<li><p>把static文件夹中所有的html文件都拷贝到views文件夹下面（昨天的几个页面已经没用了，可以删除），拷贝之后views文件显示如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538591824871.png" alt="1538591824871"></p>
-<p>这时候用GoLand打开我们的项目,显示如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538591946260.png" alt="1538591946260"></p>
-</li>
-<li><p>打开<code>register.html</code>页面，修改页面中form表单的内容</p>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;select class=&quot;sel_opt&quot; name=&quot;select&quot;&gt;</span><br><span class="line">     &#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">            &lt;option&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">     &#123;&#123;end&#125;&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><p>给<code>&lt;form&gt;</code>标签加上<code>action=&quot;/register&quot; method=&quot;post&quot;</code>属性</p>
-</li>
-<li><p>给两个<code>&lt;input&gt;</code>标签的name分别改为<code>name=&quot;userName&quot;</code>和<code>name = &quot;passwd&quot;</code></p>
-</li>
-<li><form>表单相关代码如下:
+<li><p>添加文章的时候指定文章类型，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给文章对象指定文章类型</span></span><br><span class="line">	<span class="keyword">var</span> articleType models.ArticleType</span><br><span class="line">	articleType.Tname = typeName</span><br><span class="line">	o.Read(&amp;articleType,<span class="string">"Tname"</span>)</span><br><span class="line">	article.ArticleType = &amp;articleType</span><br><span class="line">	<span class="comment">//插入</span></span><br><span class="line">	o.Insert(&amp;article)</span><br></pre></td></tr></table></figure>
 
-</form></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">&lt;form  class=&quot;login_form&quot; name = &quot;login&quot; action=&quot;/register&quot; method=&quot;post&quot;&gt;</span><br><span class="line">     &lt;h1 class=&quot;login_title&quot;&gt;用户注册&lt;/h1&gt;</span><br><span class="line">     &lt;input type=&quot;text&quot; placeholder=&quot;用户名&quot; class=&quot;input_txt&quot; name=&quot;userName&quot;&gt;</span><br><span class="line">     &lt;input type=&quot;password&quot; placeholder=&quot;密码&quot; class=&quot;input_txt&quot; name = &quot;passwd&quot;&gt;</span><br><span class="line">     &lt;input type=&quot;submit&quot; value=&quot;注 册&quot; class=&quot;input_sub&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>打开<code>login.html</code>页面，修改form表单的内容</p>
+</ul>
+<h3 id="1-2-2列表页展示文章时，展示类型信息。"><a href="#1-2-2列表页展示文章时，展示类型信息。" class="headerlink" title="1.2.2列表页展示文章时，展示类型信息。"></a>1.2.2列表页展示文章时，展示类型信息。</h3><ul>
+<li><p>查询所有问章，关联文章类型表（查询的时候加上RelatedSel(“ArticleType”)）,代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs.Limit(pageSize,start).RelatedSel(<span class="string">"ArticleType"</span>).All(&amp;articles)</span><br></pre></td></tr></table></figure>
+
+<p>显示的时候显示出来</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articles&#125;&#125;</span><br><span class="line">   &lt;tr&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.ArtiName&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;ShowArticleDetail?id=&#123;&#123;.Id&#125;&#125;&quot;&gt;查看详情&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt; &#123;&#123;.Atime.Format &quot;2006-01-02-15-04-05&quot;&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.Acount&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;/DeleteArticle?id=&#123;&#123;.Id&#125;&#125;&quot; class=&quot;dels&quot;&gt;删除&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;UpdateArticle?id=&#123;&#123;.Id&#125;&#125;&quot;&gt;编辑&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.ArticleType.Tname&#125;&#125;&lt;/td&gt;</span><br><span class="line">   &lt;/tr&gt;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时候你发现，以前添加的文章都没有显示，还记得我们前面介绍多表操作的时候介绍的吗，加上RelatedSel之后，如果相应的字段没有数据，将查询不出来。</p>
+</blockquote>
+<h3 id="1-2-3根据下拉框选项不同，获取不同类型数据"><a href="#1-2-3根据下拉框选项不同，获取不同类型数据" class="headerlink" title="1.2.3根据下拉框选项不同，获取不同类型数据"></a>1.2.3根据下拉框选项不同，获取不同类型数据</h3><ul>
+<li><p>查询类型数据，并把数据绑定到下拉框</p>
+<p>这个业务代码和添加文章的业务代码一样，我们就不做详细分析，直接看代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	<span class="keyword">var</span> articleTypes []models.ArticleType</span><br><span class="line">	o.QueryTable(<span class="string">"ArticleType"</span>).All(&amp;articleTypes)</span><br><span class="line"></span><br><span class="line">	this.Data[<span class="string">"articleTypes"</span>] = articleTypes</span><br></pre></td></tr></table></figure>
+
+<p>视图代码：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;select name=&quot;select&quot; id=&quot;select&quot; class=&quot;sel_opt&quot;&gt;</span><br><span class="line">  &#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">        &lt;option selected=&quot;true&quot;&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">  &#123;&#123;end&#125;&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><p>给<code>&lt;form&gt;</code>标签加上<code>action=&quot;/login&quot; method=&quot;post&quot;</code>属性</p>
-</li>
-<li><p>给两个<code>&lt;input&gt;</code>标签的name分别改为<code>name=&quot;userName&quot;</code>和<code>name = &quot;passwd&quot;</code></p>
-</li>
-<li><form>表单相关代码如下：
-
-</form></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">   &lt;form  class=&quot;login_form&quot;  name = &quot;login&quot; action=&quot;/login&quot; method=&quot;post&quot;&gt;</span><br><span class="line">       &lt;h1 class=&quot;login_title&quot;&gt;用户登录&lt;/h1&gt;</span><br><span class="line">       &lt;input type=&quot;text&quot;  class=&quot;input_txt&quot; name = &quot;userName&quot;&gt;</span><br><span class="line">       &lt;input type=&quot;password&quot; name = &quot;passwd&quot;  class=&quot;input_txt&quot;&gt;</span><br><span class="line">       &lt;div class=&quot;remember&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; &gt;</span><br><span class="line">   		&lt;label&gt;记住用户名&lt;/label&gt;</span><br><span class="line">   	&lt;/div&gt;</span><br><span class="line">       &lt;input type=&quot;submit&quot; value=&quot;登 录&quot; class=&quot;input_sub&quot;&gt;</span><br><span class="line">   &lt;/form&gt;</span><br></pre></td></tr></table></figure>
-
-<p>  （登陆界面多了个记住用户名标签，明天我们实现这个功能）</p>
+<li><p>根据下拉框选中类型，获取相同类型的文章</p>
+<ul>
+<li><p>把选中的类型数据传递给后台</p>
+<p>我们以前传递数据是用form表单，这里我们还是用form表单把下拉框包起来，然后把选中的数据传递给后台。代码如下：</p>
 </li>
 </ul>
-<p>改完之后，运行项目，测试注册和登陆页面能够能唱显示，并且功能没有问题说明代码迁移成功。</p>
-<h2 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3.创建数据库"></a>3.创建数据库</h2><h3 id="3-1数据库表的设计"><a href="#3-1数据库表的设计" class="headerlink" title="3.1数据库表的设计"></a>3.1数据库表的设计</h3><p>接下来我们就要实现文章相关的操作，所以这里我们要在数据库中生成一个文章表。</p>
-<p>我们以前在数据库中创建表的时候，会给字段加很多限制属性，比如非空，长度，默认值等等，在ORM中，创建表时也可以给各个字段添加相应的限制。那如何去加限制呢？我们先看例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">type Article struct &#123;</span><br><span class="line">	Id int `orm:&quot;pk;auto&quot;`</span><br><span class="line">	ArtiName string `orm:&quot;size(20)&quot;`</span><br><span class="line">	Atime time.Time `orm:&quot;auto_now&quot;`</span><br><span class="line">	Acount int `orm:&quot;default(0);null&quot;`</span><br><span class="line">	Acontent string `orm:&quot;size(500)&quot;`</span><br><span class="line">	Aimg string  `orm:&quot;size(100)&quot;`</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;form method=&quot;get&quot; action=&quot;/ShowArticleList&quot;&gt;</span><br><span class="line">     &lt;select name=&quot;select&quot; id=&quot;select&quot; class=&quot;sel_opt&quot;&gt;</span><br><span class="line">          &#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">               &lt;option selected=&quot;true&quot;&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">          &#123;&#123;end&#125;&#125;</span><br><span class="line">     &lt;/select&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-<p> 由上面的代码可以看出，要给哪个字段添加属性，需要在这个字段后面添加 `` 括起来的内容，格式为<code>orm:&quot;限制条件&quot;</code>。那这些限制条件都有哪些呢？我在这里给大家列了一个表格。</p>
+<pre><code>&gt; 思考，我们为什么用get请求不用post请求
+
+这里没有发送请求按钮（尽量不要改美工设计的页面），我们通过js代码发送请求，js代码如下：
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#select"</span>).change(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	 $(<span class="string">"#form"</span>).submit()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></code></pre><ul>
+<li><p>根据获取的类型，查询有多少条数据，以及显示相同类型的文章</p>
+<ul>
+<li><p>获取前端传递过来的数据</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取类型名称</span></span><br><span class="line">	typeName := this.GetString(<span class="string">"select"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据类型，查询有多少条符合条件的数据，但是，需要注意这里面要考虑没有传递类型名称的请求，所以需要做个判断，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取类型名称</span></span><br><span class="line">typeName := this.GetString(<span class="string">"select"</span>)</span><br><span class="line"><span class="comment">//查询数据，以及分页显示</span></span><br><span class="line">o := orm.NewOrm()</span><br><span class="line">qs := o.QueryTable(<span class="string">"Article"</span>)</span><br><span class="line"><span class="keyword">var</span> count <span class="keyword">int64</span></span><br><span class="line"><span class="comment">//数据校验</span></span><br><span class="line"><span class="keyword">if</span> typeName == <span class="string">""</span>&#123;</span><br><span class="line">	count,_ =qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Count()</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	count,_ =qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Count()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他处理分页的业务代码不变，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//确定每页显示数</span></span><br><span class="line">pageSize := <span class="number">2</span></span><br><span class="line"><span class="comment">//获取总页数</span></span><br><span class="line">pageCount :=math.Ceil(<span class="keyword">float64</span>(count) / <span class="keyword">float64</span>(pageSize))</span><br><span class="line"><span class="comment">//获取页码</span></span><br><span class="line">pageIndex,err := this.GetInt(<span class="string">"pageIndex"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">	pageIndex = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//确定数据的起始位置</span></span><br><span class="line">start := (pageIndex - <span class="number">1</span>) * pageSize</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据类型查询相同类型的数据，同样需要做一个判断。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询相应类型的数据</span></span><br><span class="line"><span class="keyword">var</span> articles []models.Article</span><br><span class="line"><span class="keyword">if</span> typeName ==<span class="string">""</span>&#123;</span><br><span class="line">	qs.RelatedSel(<span class="string">"ArticleType"</span>).Limit(pageSize,start).All(&amp;articles)</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Limit(pageSize,start).All(&amp;articles)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他代码不变，获取列表页完整代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">ShowArticleList</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取类型名称</span></span><br><span class="line">	typeName := this.GetString(<span class="string">"select"</span>)</span><br><span class="line">	<span class="comment">//查询数据，以及分页显示</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	qs := o.QueryTable(<span class="string">"Article"</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> count <span class="keyword">int64</span></span><br><span class="line">	<span class="comment">//数据校验s</span></span><br><span class="line">	<span class="keyword">if</span> typeName == <span class="string">""</span>&#123;</span><br><span class="line">		count,_ =qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Count()</span><br><span class="line">	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">		count,_ =qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Count()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//确定每页显示数</span></span><br><span class="line">	pageSize := <span class="number">2</span></span><br><span class="line">	<span class="comment">//获取总页数</span></span><br><span class="line">	pageCount :=math.Ceil(<span class="keyword">float64</span>(count) / <span class="keyword">float64</span>(pageSize))</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取页码</span></span><br><span class="line">	pageIndex,err := this.GetInt(<span class="string">"pageIndex"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		pageIndex = <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//确定数据的起始位置</span></span><br><span class="line">	start := (pageIndex - <span class="number">1</span>) * pageSize</span><br><span class="line"></span><br><span class="line">	<span class="comment">//查询相应类型的数据</span></span><br><span class="line">	<span class="keyword">var</span> articles []models.Article</span><br><span class="line">	<span class="keyword">if</span> typeName ==<span class="string">""</span>&#123;</span><br><span class="line">		qs.RelatedSel(<span class="string">"ArticleType"</span>).Limit(pageSize,start).All(&amp;articles)</span><br><span class="line">	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">		qs.RelatedSel(<span class="string">"ArticleType"</span>).Filter(<span class="string">"ArticleType__Tname"</span>,typeName).Limit(pageSize,start).All(&amp;articles)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//查询数据库部分数据</span></span><br><span class="line">	<span class="comment">//获取类型数据</span></span><br><span class="line">	<span class="comment">//查询数据</span></span><br><span class="line">	<span class="keyword">var</span> articleTypes []models.ArticleType</span><br><span class="line">	o.QueryTable(<span class="string">"ArticleType"</span>).All(&amp;articleTypes)</span><br><span class="line"></span><br><span class="line">	this.Data[<span class="string">"articleTypes"</span>] = articleTypes</span><br><span class="line">	this.Data[<span class="string">"count"</span>] = count</span><br><span class="line">	this.Data[<span class="string">"pageCount"</span>] = <span class="keyword">int</span>(pageCount)</span><br><span class="line">	this.Data[<span class="string">"pageIndex"</span>] = pageIndex</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//传递数据并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"articles"</span>] = articles</span><br><span class="line">	this.TplName = <span class="string">"index.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时候你再看页面，会发现一个问题，有一个选项一直都不能够选中。为什么呢？</p>
+</blockquote>
+<p>是因为，我们每一次改变下拉框的选项，都会让js发出get请求给后台，后台就会重新查询所有的类型表绑定下拉框，所以每次显示的都是一个数据，这样的话，我们选中显示的那条数据，就无法触发js发送请求，因为js认为下拉框显示内容并没有变化。这时候下拉框显示也有问题，那怎么解决这个问题呢？</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-4解决下拉框选项显示的问题"><a href="#1-2-4解决下拉框选项显示的问题" class="headerlink" title="1.2.4解决下拉框选项显示的问题"></a>1.2.4解决下拉框选项显示的问题</h3><p>​    通过前面的分析，我们知道每次下拉框都是重新从数据库中获取类型数据进行绑定，这里面我们就需要对选中的类型加一个判断，当从数据库中取出的数据是选中的类型时，就给下拉框选项属性selected设置为true。首先后台要传递当前选中的类型名称给视图，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传递当下拉框选择的类型名给视图</span></span><br><span class="line">this.Data[<span class="string">"typeName"</span>] = typeName</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>前端代码处理</p>
+<p>视图中我们接收控制器传递过来的当前选中类型，然后与数据库中的类型名进行比较，如果相同就设置选中不同就不设置，代码如下：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;select name=&quot;select&quot; id=&quot;select&quot; class=&quot;sel_opt&quot;&gt;</span><br><span class="line">   &#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">        &#123;&#123;if compare .Tname $.typeName&#125;&#125;</span><br><span class="line">              &lt;option selected=&quot;true&quot;&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">        &#123;&#123;else&#125;&#125;</span><br><span class="line">              &lt;option&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">        &#123;&#123;end&#125;&#125;</span><br><span class="line">   &#123;&#123;end&#125;&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要注意的是，如果是在循环中获取控制器传递过来的数据，不能直接用<code>.</code> ,要用<code>$.</code> </p>
+</blockquote>
+<p>  然后刷新页面，我们发现问题能够解决了。</p>
+<h1 id="2-Session和Cookie"><a href="#2-Session和Cookie" class="headerlink" title="2.Session和Cookie"></a>2.Session和Cookie</h1><p>接着我们再来重新看一下我们的项目还有哪些功能没有实现呢？1.我们打开登陆界面发现，登陆界面有一个记录用户名选项，这个功能我们还没有实现。2.我们实现功能其实都是类似一个新闻类APP的后台，这种页面肯定需要做登陆判断，所以我们还需要做登陆判断。3.有登陆判断，就要实现退出登陆功能。4.打开文章详情页，我们发现最近浏览这一行内容没有实现，这里我们也需要实现一下。</p>
+<p>在实现这四个功能之前老师要给你们介绍一个新的知识点，Session和Cookie，我们这四个功能都需要用到这四个功能。那么Session和Cookie又是什么呢？Session和Cookie作用在有些时候是一样的，他们都是用来保存用户数据的。但是他们的某些特性又非常的不同，导致他们的应用场景不同。接下来我们来详细的了解一下这两种技术。</p>
+<p><strong>Cookie</strong></p>
+<p>用来一定时间的保存用户数据，数据存储在客户端（网站的客户端就是浏览器），启用的时候能设置Cookie的有效时间，当时间截至的时候，Cookie失效.</p>
+<p><strong>Beego中对Cookie的存取删</strong></p>
+<p>Beego把数据存储到Cookie中代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.SetCookie(key,value,time)<span class="comment">//第一个参数是Cookie的key值，第二个参数是Cookie的value值，第三个参数是设置的Cookie的有效时间。</span></span><br></pre></td></tr></table></figure>
+
+<p>取Cookie的代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.GetCookie(key)<span class="comment">//参数是Cookie的key值，返回值是对应的value值。当没有对应的Cookie或者Cookie已失效，返回空字符串</span></span><br></pre></td></tr></table></figure>
+
+<p>删除Cookie的代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.SetCookie(key,value,<span class="number">0</span>)<span class="comment">//第一个参数是Cookie的key值，第二个参数任意值，第三个参数把Cookie的值设置为小于0，就马上失效。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Session</strong></p>
+<p>也是用来一定时间的保存用户数据，不过数据存储在服务器，Beego启用Sesssion的时候需要在配置文件中开启Session功能。在Beego使用中，一般不设置Session的时间，当浏览器关闭的时候，Session失效。</p>
+<p>*<em>Beego中对Session的存取 *</em></p>
+<p>如果想要在项目中使用Session功能，需要先在配置文件中设置Sessionon=true</p>
+<p>Beego存储Session的代码:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.SetSession(key,value)<span class="comment">//两个参数，一个是Session的key，第二个是Session的Value</span></span><br></pre></td></tr></table></figure>
+
+<p>获取Session的代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.GetSession(key)<span class="comment">//参数是Session的key值，返回值是Session对应的value值，类型是interface&#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>删除Session的代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.DelSession(key)<span class="comment">//参数是Session的key值</span></span><br></pre></td></tr></table></figure>
+
+<p>我们通过表格来分析他们的不同</p>
 <table>
 <thead>
 <tr>
-<th align="center">限制条件</th>
-<th align="center">作用</th>
+<th align="center">不同点</th>
+<th align="center">Cookie</th>
+<th align="center">Session</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">pk</td>
-<td align="center">设置该字段为主键</td>
+<td align="center">数据存储位置</td>
+<td align="center">客户端</td>
+<td align="center">服务器</td>
 </tr>
 <tr>
-<td align="center">auto</td>
-<td align="center">这只该字段自增，但是要求该字段必须为整型</td>
+<td align="center">数据安全性（相比较而言）</td>
+<td align="center">低</td>
+<td align="center">高</td>
 </tr>
 <tr>
-<td align="center">default(0)</td>
-<td align="center">设置该字段的默认值，需要注意字段类型和默认值类型一致</td>
+<td align="center">生命周期</td>
+<td align="center">随着设置时间的结束，生命周期结束</td>
+<td align="center">当浏览器关闭的时候，生命周期结束</td>
 </tr>
 <tr>
-<td align="center">size(100)</td>
-<td align="center">设置该字段长度为100个字节，一般用来设置字符串类型</td>
-</tr>
-<tr>
-<td align="center">null</td>
-<td align="center">设置该字段允许为空，默认不允许为空</td>
-</tr>
-<tr>
-<td align="center">unique</td>
-<td align="center">设置该字段全局唯一</td>
-</tr>
-<tr>
-<td align="center">digits(12);decimals(4)</td>
-<td align="center">设置浮点数位数和精度。比如这个是说，浮点数总共12位，小数位为四位。</td>
-</tr>
-<tr>
-<td align="center">auto_now</td>
-<td align="center">针对时间类型字段，作用是保存数据的更新时间</td>
-</tr>
-<tr>
-<td align="center">auto_now_add</td>
-<td align="center">针对时间类型字段,作用是保存数据的添加时间</td>
+<td align="center">适用场景</td>
+<td align="center">对安全性要求不高的，需要存储时间较长的数据</td>
+<td align="center">安全性要求搞，不需要长期存储的数据</td>
 </tr>
 </tbody></table>
-<blockquote>
-<p>注意：<strong>当模型定义里没有主键时，符合int, int32, int64, uint, uint32, uint64 类型且名称为 Id 的 Field 将被视为主键，能够自增.</strong> “</p>
-<p>Mysql中时间类型有date和datetime两种类型，但是我们go里面只有time.time一种类型，如果项目里面要求精确的话，就需要指定类型，指定类型用的是type(date)或者type(datetime)</p>
-</blockquote>
-<h3 id="3-2生成表"><a href="#3-2生成表" class="headerlink" title="3.2生成表"></a>3.2生成表</h3><p>这时候注意，我们添加了结构体对象之后，并不能直接生成表，需要注册，注册的代码就是初始化数据库三行代码中的第二行，注册表结构，把要创建的表对应的结构体对象作为函数的参数，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">orm.RegisterModel(new(User),new(Article))</span><br></pre></td></tr></table></figure>
+<p>简单了解了这两个知识点之后，我们来看一下，如何实现我们项目剩余的四个功能。</p>
+<h2 id="2-1记住用户名"><a href="#2-1记住用户名" class="headerlink" title="2.1记住用户名"></a>2.1记住用户名</h2><p>在登录页如果我们勾选了记住用户名的选项框，在下次登陆的时候，用户名那一栏就默认显示上次存储的用户名。并且记住用户名默认勾选，如果我们取消勾选记住用户名，下次访问登陆页面的时候就不显示用户名，记住用户名也不默认勾选。一般情况下，记住用户名都能记住很久，对安全系数要求也不是很高，这里我们用Cookie来实现这个功能。</p>
+<p>我们观察视图代码发现，当登陆的时候，form表单提交了记住用户名单选框的数据，用beego.Info()打印一下获取到的数据，发现当记住用户名选中的时候我们在后台会会获取到字符串”on”，没有选中的时候获取不到，根据这个现象，我们可以用来判断是否邓丽，当登陆的时候，我们可以用Cookie存储用户名，在没有选中的时候删除Cookie。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理注册用户名数据</span></span><br><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">remember := this.GetString(<span class="string">"remember"</span>)</span><br><span class="line">beego.Info(remember)</span><br><span class="line"><span class="keyword">if</span> remember == <span class="string">"on"</span>&#123;</span><br><span class="line">	beego.Info(remember)</span><br><span class="line">	this.Ctx.SetCookie(<span class="string">"userName"</span>,userName,<span class="number">1000</span>)</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">	this.Ctx.SetCookie(<span class="string">"userName"</span>,userName,<span class="number">-1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>创建之后，我们可以在goland下方查看创建表过程，也可以进入数据库查看是否建表成功，成功的话，数据库显示如下:</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538619910805.png" alt="1538619910805"></p>
-<p>登陆成功之后，访问新闻列表展示页面，但是我们现在还没有新闻，所以我们先实现插入文章界面。</p>
-<h2 id="4-插入文章"><a href="#4-插入文章" class="headerlink" title="4.插入文章"></a>4.插入文章</h2><p>业务流程图</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538595086914.png" alt="1538595086914"></p>
-<p>插入页面我们用的视图是<code>add.html</code>，这里我们规定添加文章界面的请求路径为<code>/addArticle</code></p>
-<h3 id="4-1修改路由文件"><a href="#4-1修改路由文件" class="headerlink" title="4.1修改路由文件"></a>4.1修改路由文件</h3><p>在router.go文件的init函数中添加下面这一行代码</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticle"</span>,&amp;controllers.ArticleControlle&#123;&#125;,<span class="string">"get:ShowAddArticle"</span>)</span><br></pre></td></tr></table></figure>
+<p>在展示登陆页面的时候，我们需要去获取Cookie的值，然后判断，如果获取到了Cookie的值，就在用户名里面显示，并且把记住用户名设置为选中状态，如果没有获取到Cookie的值就把用户名设置为空，记住用户名设置为非选中状态，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">userName := this.Ctx.GetCookie(<span class="string">"userName"</span>)</span><br><span class="line"><span class="comment">//对数据进行判断，然后设置数据传递给视图</span></span><br><span class="line"><span class="keyword">if</span> userName != <span class="string">""</span>&#123;</span><br><span class="line">	this.Data[<span class="string">"userName"</span>] = userName</span><br><span class="line">	this.Data[<span class="string">"checked"</span>] = <span class="string">"checked"</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	this.Data[<span class="string">"userName"</span>] = <span class="string">""</span></span><br><span class="line">	this.Data[<span class="string">"checked"</span>] = <span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-2添加文章界面的显示"><a href="#4-2添加文章界面的显示" class="headerlink" title="4.2添加文章界面的显示"></a>4.2添加文章界面的显示</h3><ul>
-<li><p>先创建一个article.go文件用来存放文章有关的业务代码</p>
-</li>
-<li><p>然后在article.go文件中创建一个ArticleController控制器，并定义一个ShowAddArticle函数代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"github.com/astaxie/beego"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ArticleController <span class="keyword">struct</span> &#123;</span><br><span class="line">	beego.Controller</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*ArticleController)</span><span class="title">ShowAddArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接着我们来实现<code>ShowAddArticle</code>函数，这个函数只是用来展示页面的，所以我们只需要给他制定一个视图就可以，代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this*ArticleController)</span><span class="title">ShowAddArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>写完代码之后，我们从浏览器发出一个请求<code>http://192.168.110.71:8080/addArticle</code>，如果能在浏览器中看到下面这个界面，表示页面展示成功：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538620374676.png" alt="1538620374676"></p>
-</li>
-</ul>
-<h3 id="4-3插入文章数据处理"><a href="#4-3插入文章数据处理" class="headerlink" title="4.3插入文章数据处理"></a>4.3插入文章数据处理</h3><p>上面我们显示了添加文章界面，观察界面可以发现，我们需要获取<strong>文章标题</strong>，<strong>文章类型</strong>,  <strong>文章内容</strong>，<strong>上传图片</strong>。其中文章类型牵涉到多表操作，我们放到明天来讲，今天只讲简单的单表操作。首先让我们来看一下，插入页面的前端部分修改。</p>
-<h4 id="4-3-1前端页面修改"><a href="#4-3-1前端页面修改" class="headerlink" title="4.3.1前端页面修改"></a>4.3.1前端页面修改</h4><p>由页面可知，我们这里面是要上传数据，所以我们这里需要一个form表单，打开前端界面<code>add.html</code>，能看到我们这里面确实有一个<form>标签，只是没有属性，我们需要给<form>标签添加action和method属性，这个请求还是添加文章，所以我们还可以用添加文章的请求路径，设置action属性<code>action=&quot;/addArticle&quot;</code>。因为上传数据，我们这里用post方法，设置method属性<code>method=&quot;post&quot;</code>。其他部分不用修改。form修改代码如下：</form></form></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"/addArticle"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-2路由内容修改"><a href="#4-3-2路由内容修改" class="headerlink" title="4.3.2路由内容修改"></a>4.3.2路由内容修改</h4><p>我们在前端添加了addArticle请求的post方法，所以需要修改一下router.go，给addArticle的post请求指定一个函数，修改代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/addArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowAddArticle;post:HandleAddArticle"</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-3后台代码实现"><a href="#4-3-3后台代码实现" class="headerlink" title="4.3.3后台代码实现"></a>4.3.3后台代码实现</h4><p>有了函数名之后，我们就需要在后台中实现这个函数。</p>
-<ul>
-<li><p>首先是获取数据</p>
-<p>这时候我们看一下前端界面，我们需要获取<strong>文章标题，</strong> <strong>文章内容</strong>，<strong>上传图片</strong>数据，文章标题和文章内容都是字符串，比较简单，直接通过GetString获取，所以我们先获取这两个内容。通过查看add.html代码我们发现，文章标题对应的<input>标签name等于articleName，文章内容对应的<textarea>标签name等于content（注意这里用的是textarea标签，不是用的input，但是获取数据方式一样）。获取数据的代码如下：</textarea></p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">articleName := this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">content := this.GetString(<span class="string">"content"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取数据之后就做数据校验，我们这里还是做判空校验</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对数据进行校验</span></span><br><span class="line"><span class="keyword">if</span> articleName == <span class="string">""</span>|| content == <span class="string">""</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"添加文章数据不完整"</span>)</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">	<span class="keyword">return</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>正常的添加流程，在校验完数据之后就要把数据插入数据库了，但是我们添加文章这个界面有点特殊，因为这里面牵涉到一个静态文件的上传，所以我们先处理静态文件上传功能。</p>
-</li>
-<li><p>静态文件上传(<strong>难点</strong>)</p>
-<ul>
-<li><p>前端代码</p>
-<p><strong>如果form表单中牵涉到文件上传，在form表单中就需要添加一个属性<code>enctype=&quot;multipart/form-data&quot;</code>不然上传就是假上传</strong>，后台不能获取到上传的文件。<form>修改如下：</form></p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">"post"</span> action=<span class="string">"/addArticle"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">	&lt;input <span class="keyword">type</span>=<span class="string">"file"</span> class=<span class="string">"input_file"</span>  name=<span class="string">"uploadname"</span>&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>后台代码修改</p>
-<p>后台接收上传文件有两个函数可以用。</p>
-<p>*<em>GetFile(key string) (multipart.File, *multipart.FileHeader, error)  *</em></p>
-<p>*<em>作用 *</em>是获取前端传递过来的文件。</p>
-<p><strong>参数</strong> 是input标签中的name值</p>
-<p><strong>返回值</strong> 有三个，一个是文件流（就是我们打开文件返回的内容），第二个是文件相关信息，包括文件头，文件大小，文件名字等，第三个是错误信息。示例代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">file,head,err := this.GetFile(<span class="string">"uploadname"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">	beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">	this.TplName = <span class="string">"add.html"</span></span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>*<em>SaveToFile(fromfile, tofile string) error *</em></p>
-<p><strong>作用</strong>直接保存前端出过来的文件。</p>
-<p><strong>参数</strong> 有两个参数，第一个参数是前端<input>标签的name属性值，第二个参数是文件在服务器端存储的位置。<strong>注意:这个位置字符串在前面需要加一个<code>.</code></strong></p>
-<p><strong>返回值</strong>是错误信息。示例代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">err := this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/1.jpg"</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在我们开发过程中，如果后台接收文件并存储需要做以下几种判断</p>
-<p><strong>文件格式判断</strong></p>
-<p>我们通过GetFile可以获取到文件名，然后通过path包，可以分离出文件的后缀，即文件格式，把你需要的文件格式过滤出来，不需要的返回即可。我们根据文件名获取文件后缀，代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>文件大小的判断</strong></p>
-<p>我们获取文件之后，在存储之前，文件流一般是在内存中，所以文件不易过大，我们在这里做一个文件大小的判断。代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>避免文件重名</strong></p>
-<p>获取文件之后我们要把文件存储到服务器上，但是用户可能会上传同名的文件，如果文件同名的话，后来上传的文件就把之前上传的文件给覆盖了，所以我们要给上传的文件重新确定一个名字。这里我们以上传文件时的时间作为上传文件的文件名。默认的时间格式和我们常见的时间格式不一样，所以这里我们需要对事件做一个格式化。格式化字符串为<code>&quot;2006-01-02-15-04-05（规定的必须是这个，方便记忆可以用6-1-2-3-4-5来记）</code>代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line"><span class="comment">//存储</span></span><br><span class="line">this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>保存数据到数据库</p>
-<p>这里是数据的插入操作，我们不做详细解释，直接看代码：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入数据库</span></span><br><span class="line"><span class="comment">//获取orm对象</span></span><br><span class="line">o := orm.NewOrm()</span><br><span class="line"><span class="comment">//获取要插入的对象</span></span><br><span class="line"><span class="keyword">var</span> article models.Article</span><br><span class="line"><span class="comment">//给对象赋值</span></span><br><span class="line">article.ArtiName = articleName</span><br><span class="line">article.Acontent = content</span><br><span class="line"><span class="comment">//这一步需要注意，我们存储的图片是图片地址，没有 .</span></span><br><span class="line">article.Aimg = <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line">o.Insert(&amp;article)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>返回视图</p>
-<p>如果没有视图，先返回一句话，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.Ctx.WriteString(<span class="string">"添加成功"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完整代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据</span></span><br><span class="line">	articleName := this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">	content := this.GetString(<span class="string">"content"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> articleName == <span class="string">""</span> || content == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"添加文章数据不完整，请重新输入"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取上传图片</span></span><br><span class="line">	file,head,err := this.GetFile(<span class="string">"uploadname"</span>)</span><br><span class="line">	<span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		this.TplName = <span class="string">"add.html"</span></span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//避免文件重名</span></span><br><span class="line">	fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line">	this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入数据库</span></span><br><span class="line">	<span class="comment">//获取orm对象</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="comment">//获取要插入的对象</span></span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	<span class="comment">//给对象赋值</span></span><br><span class="line">	article.ArtiName = articleName</span><br><span class="line">	article.Acontent = content</span><br><span class="line">	<span class="comment">//这一步需要注意，我们存储的图片是图片地址，没有.</span></span><br><span class="line">	article.Aimg = <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line">	<span class="comment">//插入</span></span><br><span class="line">	o.Insert(&amp;article)</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回视图</span></span><br><span class="line">	this.Ctx.WriteString(<span class="string">"添加成功"</span>)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="5-新闻信息展示"><a href="#5-新闻信息展示" class="headerlink" title="5.新闻信息展示"></a>5.新闻信息展示</h2><p>添加文章之后我们回到文章显示界面，我们这里固定显示文章列表页的请求为<code>/ShowArticleList</code>,然后给这个请求指定控制器，以及相应的方法修改。</p>
-<h3 id="5-1修改路由文件"><a href="#5-1修改路由文件" class="headerlink" title="5.1修改路由文件"></a>5.1修改路由文件</h3><p>首先我们修改路由文件，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/ShowArticleList"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowArticleList"</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2后台代码"><a href="#5-2后台代码" class="headerlink" title="5.2后台代码"></a>5.2后台代码</h3><p>修改路由文件之后，我们实现ShowArticleList函数。</p>
-<h4 id="5-2-1获取所有文章"><a href="#5-2-1获取所有文章" class="headerlink" title="5.2.1获取所有文章"></a>5.2.1获取所有文章</h4><ul>
-<li><p>获取orm对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o := orm.NewOrm()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>定义一个对象数组，用来存储获取的所有对象</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> articles []models.Article</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>指定要查询的数据库表，用QueryTable函数，参数是表名，返回值是<strong>queryseter</strong>，ORM 以 <strong>QuerySeter</strong> 来组织查询，每个返回 <strong>QuerySeter</strong> 的方法都会获得一个新的 <strong>QuerySeter</strong> 对象。 </p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs := o.QueryTable(<span class="string">"Article"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取所有数据，用all方法，参数是对象数组地址</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs.All(&amp;articles)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取数据之后把数据传递给视图，并且指定视图文件</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.Data[<span class="string">"articles"</span>] = articles</span><br><span class="line">this.TplName = <span class="string">"index.html"</span></span><br></pre></td></tr></table></figure>
-
-<p>在浏览器里面输入地址之后能获取下面页面，表示代码没有问题</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538669662236.png" alt="1538669662236"></p>
-</li>
-<li><p>ORM高级查询<strong>（重点）</strong></p>
-<p>我们在后面项目开发中对数据库的查询，一般都是指定数据库表，用高级查询的方法进行查询。ORM支持如下几种高级查询。</p>
-<table>
-<thead>
-<tr>
-<th align="center">函数名</th>
-<th align="center">作用</th>
-<th align="center">用法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Limit()</td>
-<td align="center">获取部分数据</td>
-<td align="center">有两个参数，第一个参数是指定获取几条数据，第二个参数指定从哪里获取qs.Limit(size,start)。返回值还是qs</td>
-</tr>
-<tr>
-<td align="center">OrderBy()</td>
-<td align="center">根据指定的字段排序</td>
-<td align="center">只有一个参数，参数作用是指定按照哪个字段排序，返回值是qs</td>
-</tr>
-<tr>
-<td align="center">Distinct()</td>
-<td align="center">去重</td>
-<td align="center">没有参数，返回值是qs</td>
-</tr>
-<tr>
-<td align="center">Count()</td>
-<td align="center">查询符合条件的数据条目数</td>
-<td align="center">没有参数，返回值是查询到的条目数和错误信息</td>
-</tr>
-<tr>
-<td align="center">All()</td>
-<td align="center">把查询到的数据全部存储到指定的容器里面</td>
-<td align="center">只有一个参数，指定存储查询对象的存储容器</td>
-</tr>
-<tr>
-<td align="center">RelatedSel()</td>
-<td align="center">多表查询的时候使用，指定关联的数据库表</td>
-<td align="center">参数长度不限，关联几个表，放几个参数</td>
-</tr>
-<tr>
-<td align="center">Filter()</td>
-<td align="center">过滤器，相当于SQL语句中的where</td>
-<td align="center">有两个参数，第一个参数是指定查询条件，第二个参数是值</td>
-</tr>
-<tr>
-<td align="center">…</td>
-<td align="center">…</td>
-<td align="center">…</td>
-</tr>
-</tbody></table>
-<p>还有其他很多高级查询，具体参考：<a href="https://beego.me/docs/mvc/model/query.md页面查看" target="_blank" rel="noopener">https://beego.me/docs/mvc/model/query.md页面查看</a></p>
-</li>
-</ul>
-<h3 id="5-3前端代码"><a href="#5-3前端代码" class="headerlink" title="5.3前端代码"></a>5.3前端代码</h3><h4 id="5-3-1视图循环语法"><a href="#5-3-1视图循环语法" class="headerlink" title="5.3.1视图循环语法"></a>5.3.1视图循环语法</h4><p>后台传递给视图的数据是对象数组，要访问到每一个对象需要循环访问这个数组，那我们来看一下这个循环语法。循环语法有两种，一种格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range $index,$val := .articles&#125;&#125;</span><br><span class="line">        &#123;&#123;$val&#125;&#125;        </span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>$index</code>表示的是下标，<code>$val</code>表示的数组元素，循环的内容放在range和end之间。</p>
-<p>另外一种循环如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articles&#125;&#125;</span><br><span class="line">	&#123;&#123;.Name&#125;&#125;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在range和end之间通过&#123;&#123;.&#125;&#125;直接获取数组元素的字段值。</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-3-2视图数据展示"><a href="#5-3-2视图数据展示" class="headerlink" title="5.3.2视图数据展示"></a>5.3.2视图数据展示</h4><p>了解了视图的循环语法之后，我们就可以循环获取控制器传递过来的对象数组数据。代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;range .articles&#125;&#125;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.ArtiName&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot;&gt;查看详情&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt; &#123;&#123;.Atime.Format &quot;2006-01-02-15-04-05&quot;&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&#123;&#123;.Acount&#125;&#125;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;dels&quot;&gt;删除&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;&lt;a href=&quot;#&quot;&gt;编辑&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">       &lt;td&gt;财经新闻&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&#123;&#123;end&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>视图中接收数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;form  class=&quot;login_form&quot;  name = &quot;login&quot; action=&quot;/login&quot; method=&quot;post&quot;&gt;</span><br><span class="line">    &lt;h1 class=&quot;login_title&quot;&gt;用户登录&lt;/h1&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;  class=&quot;input_txt&quot; name = &quot;userName&quot; value=&quot;&#123;&#123;.userName&#125;&#125;&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;password&quot; name = &quot;passwd&quot;  class=&quot;input_txt&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;remember&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;remember&quot; &#123;&#123;.checked&#125;&#125; &gt;&lt;label&gt;记住用户名&lt;/label&gt;&lt;/div&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot; value=&quot;登 录&quot; class=&quot;input_sub&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>实现之后我们就可以把添加文章最后的跳转改成显示文章列表页，超链接和文章类型，我们在接下来的页面实现。</p>
+<p>注意，当checkbox添加一个checked属性时，checkbox就为选中状态</p>
 </blockquote>
-<h3 id="5-4数据的分页显示-难点"><a href="#5-4数据的分页显示-难点" class="headerlink" title="5.4数据的分页显示(难点)"></a>5.4数据的分页显示(难点)</h3><p>观察我们的列表页可以发现，我们文章里表下面是分页展示，接着我们来实现这个分页。分页功能在我们平常浏览网页的时候也比较常见，这里我们先实现简单的分页功能，等到我们项目实战的时候会给大家封装一个分页函数，实现一个高级点的分页。首页显示如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538669662236.png" alt="1538669662236"></p>
-<p><strong>分页的好处</strong>：如果没有分页，我们访问完数据就要全部在页面显示，有分页之后我们可以显示部分数据，好处有一下两点。</p>
-<ul>
-<li>方便浏览，分页浏览可以更方便我们平常访问网页。</li>
-<li>提高访问网站速度。如果一次性把数据全部从数据库中取出来，效率没有一次取出部分数据块。</li>
-</ul>
-<p>了解了上面的内容之后我们开始写代码实现分页的功能，一般开发中遇见这种大的功能模块，我们都是划分为几个小块，一点一点来实现。我们从简单到复杂来实现相应功能，首先我们先获取总页数和总记录数。</p>
-<h4 id="5-4-1获取总记录数和总页数"><a href="#5-4-1获取总记录数和总页数" class="headerlink" title="5.4.1获取总记录数和总页数"></a>5.4.1获取总记录数和总页数</h4><p>首页显示代码是ShowArticleList函数，所以我们分页的业务代码也在这个函数里面。</p>
-<ul>
-<li><p>获取总记录数，orm是用count函数来获取数据的记录数，没有参数，返回值为记录数和错误信息，代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count，err := qs.Count()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取总页数</p>
-<p><strong>总页数 = 总记录数  /  每页显示的数据条数</strong></p>
-<p>总记录数我们已经获取了，所以需要我们自己设置每页显示多少条数据，然后相除就可以获得，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//确定每页显示数</span></span><br><span class="line">	pageSize := <span class="number">2</span></span><br><span class="line"><span class="comment">//获取总页数</span></span><br><span class="line">	pageCount := count / pageSize</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>把数据传递给视图，并在视图中显示。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.Data[<span class="string">"count"</span>] = count</span><br><span class="line">this.Data[<span class="string">"pageCount"</span>] = pageCount</span><br></pre></td></tr></table></figure>
+<h2 id="2-2登陆判断"><a href="#2-2登陆判断" class="headerlink" title="2.2登陆判断"></a>2.2登陆判断</h2><p>因为我们操作的都是后台管理界面，所以我们需要做登陆判断。我们这里面用Session来实现这个功能。</p>
+<p>在使用Session之前记得要在配置文件中设置sessionon=true</p>
+<p>当登陆成功之后就设置Session，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置session</span></span><br><span class="line">this.SetSession(<span class="string">"userName"</span>,userName)</span><br></pre></td></tr></table></figure>
 
-<p>这时候你会发现，当你的最后一页显示的数据不满的话，总页数会少计算一页，原因是我们求总页数的计算是两个整数相除，除不尽的时候会自动舍去小数位。这和我们真实的业务不相符。所以我们需要修改获取总页数的代码。怎么修改呢？完全改成浮点数显然也不行，因为总页码不会是小数。这里面我们用天花板函数Ceil()。<strong>Ceil()</strong>的作用是<strong>传递过来一个浮点数，获取比这个浮点数大的又离这个浮点数最近的整数</strong>,代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取总页数</span></span><br><span class="line">	pageCount :=math.Ceil(<span class="keyword">float64</span>(count) / <span class="keyword">float64</span>(pageSize))</span><br></pre></td></tr></table></figure>
+<p>后台几个展示页面的函数都需要获取session,然后判断，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取session，并判断是否为空，如果为空跳转到登录页面</span></span><br><span class="line">userName := this.GetSession(<span class="string">"userName"</span>)</span><br><span class="line"><span class="keyword">if</span> userName == <span class="literal">nil</span>&#123;</span><br><span class="line">	this.Redirect(<span class="string">"/ShowLogin"</span>,<span class="number">302</span>)</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>页码这时候显示正确。</p>
+<h2 id="2-3退出登陆"><a href="#2-3退出登陆" class="headerlink" title="2.3退出登陆"></a>2.3退出登陆</h2><p>退出登录其实就是删除登陆session，然后跳转回登陆界面。</p>
+<ul>
+<li><p>在文章列表页有个退出登陆，我们需要给他加一个href，这里我们规定退出登陆的请求路径为<code>/logout</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/logout"</span> <span class="attr">class</span>=<span class="string">"logout fr"</span>&gt;</span>退 出<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接着我们在路由中指定请求对应的控制器和方法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/logout"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:Logout"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后我们实现一个Logout函数，业务逻辑很简单，我们直接看代码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//退出登录</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">Logout</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//删除session</span></span><br><span class="line">	this.DelSession(<span class="string">"userName"</span>)</span><br><span class="line">	<span class="comment">//跳转</span></span><br><span class="line">	this.Redirect(<span class="string">"/login"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h4 id="5-4-2获取首页和末页数据"><a href="#5-4-2获取首页和末页数据" class="headerlink" title="5.4.2获取首页和末页数据"></a>5.4.2获取首页和末页数据</h4><p>获取完总页数和总记录数之后，最简单的功能模块就是首页和末页内容的显示。首页和末页，我们需要把相应的页码传递过来才能知道获取哪些数据。那视图如何给后台传递数据呢？我们在平常浏览网页的时候经常会遇到类似于这样的URL地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://tieba.baidu.com/f?fr=index&amp;fp=0&amp;ie=utf-8&amp;red_tag=m2329796506</span><br></pre></td></tr></table></figure>
-
-<p>我们重点关注?后面的内容，他们是成对出现的，每对之间用<code>&amp;</code>连接，这种是URL传值的一种。我们在后台通过GetString函数可以获取到相应的值。</p>
+<h2 id="2-4最近浏览"><a href="#2-4最近浏览" class="headerlink" title="2.4最近浏览"></a>2.4最近浏览</h2><p>最近浏览也就是在我们浏览文章的时候给文章添加上用户信息，然后在再查询这些信息，在页面中显示。</p>
 <ul>
-<li><p>设置首页的超链接</p>
-<p>我们可以通过URL传值的方式把页码传递过来。这里我们设置首页的<a>标签超链接为<code>/ShowArticleList?pageIndex=1</code></a></p>
+<li><p>添加浏览信息</p>
+<p>我们这里是给文章表添加浏览的用户信息。代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ORM对象</span></span><br><span class="line">o := orm.NewOrm()</span><br><span class="line"><span class="comment">//获取插入数据的对象</span></span><br><span class="line"><span class="keyword">var</span> article models.Article</span><br><span class="line">article.Id = id</span><br><span class="line">o.Read(&amp;article)</span><br><span class="line"><span class="comment">//获取多对多操作对象,用的是函数QueryM2M(),第一个参数是要插入数据的对象，第二个参数是要插入数据的字段名,返回值是多对多操作对象</span></span><br><span class="line">m2m := o.QueryM2M(&amp;article,<span class="string">"Users"</span>)</span><br><span class="line"><span class="comment">//获取要插入的对象</span></span><br><span class="line">user := models.User&#123;Name:userName.(<span class="keyword">string</span>)&#125;</span><br><span class="line">o.Read(&amp;user,<span class="string">"Name"</span>)</span><br><span class="line"><span class="comment">//多对多插入</span></span><br><span class="line">m2m.Add(user)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取首页数据</p>
-<p>我们先通过GetString()获取到页码，然后通过页码获取相应的数据。这里给大家介绍数据库获取部分数据的函数*<em>Limit() *</em></p>
-<p><strong>Limit()</strong></p>
-<p><strong>作用：</strong>获取数据库中部分数据</p>
-<p><strong>参数:</strong>第一个参数是获取多少数据，第二个参数是从哪里开始取数据</p>
-<p><strong>返回值</strong>是queryseter类型，示例代码如下</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qs := qs.Limit(pageSize,start)</span><br></pre></td></tr></table></figure>
+<li><p>显示浏览信息</p>
+<p>有两种显示多对多信息的方法</p>
+<p>第一种，直接加载多对多关系，用的函数是LoadRelated()，第一个参数是查询对象，第二个参数是多对多关系字段，代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num,err := o.LoadRelated(&amp;article,<span class="string">"Users"</span>)</span><br></pre></td></tr></table></figure>
 
-<p>我们掌握了limit函数之后，现在要获取数据库中部分数据，pageSize我们已经知道了，这个start怎么去求呢？我们可以根据start的规律来找，比如说，第一页数据的起始位置是0,第二页的其实位置是2，第三页的其实位置是4，你发现起始位置刚好是页码减一乘以pageSize，由此我们得出公式。<strong>start = (pageIndex - 1) * pageSize</strong> </p>
-<p>那么我们获取首页的代码如下：</p>
+<p>这时候我们在前端就可以循环显示最近浏览的用户信息,这里我们用第二种视图循环语法：</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取页码</span><br><span class="line">pageIndex,_ := this.GetInt(&quot;pageIndex&quot;)</span><br><span class="line">//确定数据的起始位置</span><br><span class="line">start := (pageIndex - 1) * pageSize</span><br><span class="line">//查询数据库部分数据</span><br><span class="line">qs.Limit(pageSize,start).All(&amp;articles)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;label&gt;最近浏览：&lt;/label&gt;</span><br><span class="line">&lt;p class=&quot;detail&quot;&gt;&#123;&#123;range .article.Users&#125;&#125;&#123;&#123;.Name&#125;&#125; | &#123;&#123;end&#125;&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 
-<p>  这时候有个问题，我们从其他页面跳转到首页的时候没有指定pageIndex,所以我们需要对获取不到pageIndex的情况进行处理，<strong>处理方案：</strong>当没有获取到pageIndex的时候默认pageIndex等于1，即默认访问首页内容。修改后的代码如下：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取页码</span><br><span class="line">	pageIndex,err := this.GetInt(&quot;pageIndex&quot;)</span><br><span class="line">	if err != nil&#123;</span><br><span class="line">		pageIndex = 1</span><br><span class="line">	&#125;</span><br><span class="line">//确定数据的起始位置</span><br><span class="line">	start := (pageIndex - 1) * pageSize</span><br><span class="line">//查询数据库部分数据</span><br><span class="line">	qs.Limit(pageSize,start).All(&amp;articles)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>获取末页数据只要参考着首页，把传过来的pageIndex改为总页码数即可。设置末页的链接为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/ShowArticleList?pageIndex=&#123;&#123;.pageCount&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>  这时候我们多点几次查看详情会发现个问题，我们添加关系的时候是浏览一次就添加一次，那么我们显示的时候就会重复显示相同用户的用户名，效果如下：</p>
+<p>  <img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1539152548601.png" alt="1539152548601"></p>
+<p>  但是我们一般浏览网页的时候，一个用户浏览过了只显示一次该用户信息即可，所以这里面我们需要去重，还记得我们前面介绍的高级查询去重的方法吗？<code>Distinct()</code>去重，但是这个函数必须要是queryseter对象才能操作，所以我们第一种多对多查询方法就不行了。这里我们用第二种多对多查询。代码如下：</p>
+  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> users []models.User</span><br><span class="line">o.QueryTable(<span class="string">"User"</span>).Filter(<span class="string">"Articles__Article__Id"</span>,article.Id).Distinct().All(&amp;users)</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>这时候记得把页码也传递给视图</p>
+<p>注意：我们这里插入的是想article中插入user，但是查询的是从user中去获取。</p>
 </blockquote>
-</li>
-</ul>
-<h4 id="5-4-2获取上一页和下一页数据"><a href="#5-4-2获取上一页和下一页数据" class="headerlink" title="5.4.2获取上一页和下一页数据"></a>5.4.2获取上一页和下一页数据</h4><p>前面我们已经获取了首页和末页的数据，仿照着链接，我们可以把上一页下一页的链接也实现，设置上一页的超链接为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/ShowArticleList?pageIndex=&#123;&#123;.pageIndex&#125;&#125; - 1</span><br></pre></td></tr></table></figure>
+<h1 id="3-项目优化"><a href="#3-项目优化" class="headerlink" title="3.项目优化"></a>3.项目优化</h1><h2 id="3-1路由过滤器"><a href="#3-1路由过滤器" class="headerlink" title="3.1路由过滤器"></a>3.1路由过滤器</h2><p>我们在项目实现的时候，只给文章列表页和详情页添加了登陆判断，我们思考一下，我们这个案例其实是整个的后台管理，所以每个页面都需要添加登陆判断，那我们就需要每个地方都要添加登陆判断，重复代码很多。这里给大家介绍一个新的技术，路由过滤器，在路由层面添加一个过滤，实现登陆判断。那我们来看一下什么是路由过滤器。</p>
+<p><strong>作用：</strong>可以根据<strong>指定的匹配规则</strong>在<strong>特定的项目运行阶段</strong>去<strong>执行自定义函数</strong>，函数一般放在beego.router()之前 。</p>
+<p>那我们看一下路由过滤器函数的格式：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.InsertFilter(pattern <span class="keyword">string</span>, position <span class="keyword">int</span>, filter FilterFunc)</span><br></pre></td></tr></table></figure>
 
-<p>，但是你在index.html写了这个之后，编辑器会报错，html标签属性不能直接进行数学运算。这时候我们就要想办法，不在视图里面操作，并且给pageIndex减1，方法有很多，这里呢，老师给你们介绍一种beego处理这种简单业务逻辑的方法，<strong>视图函数</strong></p>
-<ul>
-<li><p><strong>视图函数</strong>(模板函数)</p>
-<p><strong>使用条件:</strong>beego支持用户定义视图函数，但是必须在beego.Run()调用之前。</p>
-<p>设置如下:</p>
-<ul>
-<li><p>先定义函数</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">hello</span><span class="params">(in <span class="keyword">string</span>)</span><span class="params">(out <span class="keyword">string</span>)</span></span>&#123;</span><br><span class="line">    out = in + <span class="string">"world"</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加映射</p>
-<p>添加映射是把后台的函数名和视图中调用的函数名关联起来，两个名字可以不一样。用的方法是AddFuncMap(),第一个参数是视图中调用的函数名，第二个参数是后台的函数名</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.AddFuncMap(<span class="string">"hi"</span>,hello)这一步必须在beego.Run()之前调用</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在视图中调用，有两种形式</p>
-<p>第一种调用视图函数</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;.Content | hi&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>第一个参数是路由匹配规则，支持正则</p>
+<p>第二个参数是指定项目运行阶段，在beego项目运行过程中，框架帮我们分了五个阶段，分别是：</p>
+<p>a)      BeforeStatic 静态地址之前</p>
+<p>b)     BeforeRouter 寻找路由之前</p>
+<p>c)      BeforeExec 找到路由之后，开始执行相应的 Controller 之前</p>
+<p>d)     AfterExec 执行完 Controller 逻辑之后执行的过滤器</p>
+<p>e)     FinishRouter 执行完逻辑之后执行的过滤器</p>
+<p>具体对应是如下这种图的时间点：</p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1539154395379.png" alt="1539154395379"></p>
+<p>第三个参数，就是指定过滤器函数。</p>
+<blockquote>
+<p>路由过滤器一般放在beego.Router()之前。</p>
+</blockquote>
+<p>那么我们接着来看一下过滤器函数的格式：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> FilterFunc <span class="function"><span class="keyword">func</span><span class="params">(*context.Context)</span></span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>注意，这里面的.Content是传递给函数的参数，类型要一致，函数的返回值将在这里显示,只能传递一个参数</p>
+<p>参数必须是context.Context</p>
 </blockquote>
-<p>   第二种调用视图函数</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&#123;&#123;hi .Content&#125;&#125;</span><br></pre></td></tr></table></figure></code></pre><blockquote>
-<p>第二种方法刚好和第一种方法顺序反过来，是先写函数名，再写参数，如果参数比较多，可以一直往后写。这种方法在开发中也比较常用。</p>
-</blockquote>
-<ul>
-<li><p>beego默认封装的视图函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|    函数名     |                   函数作用                   | 使用方法                                     |</span><br><span class="line">| :--------: | :--------------------------------------: | ---------------------------------------- |</span><br><span class="line">| dateformat |             实现了时间的格式化，返回字符串。             | &#123;&#123;dateformat .Time “2006-01-02T15:04:05Z07:00”&#125;&#125; |</span><br><span class="line">|    date    |  实现了类似 PHP 的 date 函数，可以很方便的根据字符串返回时间 。   | &#123;&#123;date .T “Y-m-d H:i:s”&#125;&#125;                |</span><br><span class="line">|  compare   |    实现了比较两个对象的比较，如果相同返回 true，否者 false。    | &#123;&#123;compare .A .B&#125;&#125;                        |</span><br><span class="line">|   substr   |          实现了字符串的截取，支持中文截取的完美截取           | &#123;&#123;substr .Str 0 30&#125;&#125;                     |</span><br><span class="line">|  html2str  | 实现了把 html 转化为字符串，剔除一些 script、css 之类的元素，返回纯文本信息 。 | &#123;&#123;html2str .Htmlinfo&#125;&#125;                   |</span><br><span class="line">|  str2html  |        实现了把相应的字符串当作 HTML 来输出，不转义         | &#123;&#123;str2html .Strhtml&#125;&#125;                    |</span><br></pre></td></tr></table></figure>
+<p>示例代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> BeforeExecFunc = <span class="function"><span class="keyword">func</span><span class="params">(ctx * context.Context)</span></span> &#123;</span><br><span class="line">	userName:=ctx.Input.Session(<span class="string">"userName"</span>)</span><br><span class="line">	<span class="keyword">if</span> userName == <span class="literal">nil</span>&#123;</span><br><span class="line">		ctx.Redirect(<span class="number">302</span>,<span class="string">"/login"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">beego.InsertFilter(<span class="string">"/index"</span>,beego.BeforeExec,BeforeExecFunc)</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>还有一些其他不常用的， 可以参考开发文档了解</p>
-</blockquote>
+<h2 id="3-2视图布局"><a href="#3-2视图布局" class="headerlink" title="3.2视图布局"></a>3.2视图布局</h2><p>实现了过滤器函数之后，我们再来看我们整个项目，页面显示如下：</p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1539155058223.png" alt="1539155058223"></p>
+<p>你会发现有些内容在每个页面中都有显示，那我们能不能避免这些重复操作呢？这里给大家介绍一个新的知识点，视图布局：</p>
+<p><strong>作用:</strong>通过设置模板页面，其他页面可以直接调用模板，避免再次处理重复代码。</p>
+<p>视图布局本质上就是两个html界面的拼接，比如我们现在有一个包含重复部分的html界面layout.html，还有一个只包含添加文章业务的界面，我们可以根据如下去实现两个页面的拼接 。</p>
+<p>操作如下：</p>
+<p>控制器代码如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.Layout = <span class="string">"layout.html"</span></span><br><span class="line">this.TplName = <span class="string">"add.html"</span></span><br></pre></td></tr></table></figure>
+
+<p>layout.html中的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;后台管理页面&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/reset.css&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/main.css&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/js/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;header&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot; class=&quot;logo fl&quot;&gt;&lt;img src=&quot;/static/img/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;/logout&quot; class=&quot;logout fr&quot;&gt;退 出&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;side_bar&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;user_info&quot;&gt;</span><br><span class="line">        &lt;img src=&quot;/static/img/person.png&quot; alt=&quot;张大山&quot;&gt;</span><br><span class="line">        &lt;p&gt;欢迎你 &lt;em&gt;李雷&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=&quot;menu_con&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;first_menu active&quot;&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;icon02&quot;&gt;文章管理&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">        &lt;ul class=&quot;sub_menu show&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon031&quot;&gt;文章列表&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;/addArticle&quot; class=&quot;icon032&quot;&gt;添加文章&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon034&quot;&gt;添加分类&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;.LayoutContent&#125;&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 注意这里面的 &#123;&#123;.LayoutContent&#125;&#125;，这个标签的地方就是用来存放add.html的地方。</span><br></pre></td></tr></table></figure>
+
+<p>add.html中就可以删除掉相同的代码，代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">    &lt;div class=&quot;main_body&quot; id=&quot;main_body&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;breadcrub&quot;&gt;</span><br><span class="line">            当前位置：文章管理&gt;添加文章</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;pannel&quot;&gt;</span><br><span class="line">            &lt;form method=&quot;post&quot; action=&quot;/addArticle&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br><span class="line">            &lt;h3 class=&quot;review_title&quot;&gt;添加文章&lt;/h3&gt;</span><br><span class="line">            &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">                &lt;label&gt;文章标题：&lt;/label&gt;</span><br><span class="line">                &lt;input type=&quot;text&quot; class=&quot;input_txt2&quot; name=&quot;articleName&quot; &gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">                &lt;label&gt;文章类型：&lt;/label&gt;</span><br><span class="line">                &lt;select class=&quot;sel_opt&quot; name=&quot;select&quot;&gt;</span><br><span class="line">                    &#123;&#123;range .articleTypes&#125;&#125;</span><br><span class="line">                        &lt;option&gt;&#123;&#123;.Tname&#125;&#125;&lt;/option&gt;</span><br><span class="line">                    &#123;&#123;end&#125;&#125;</span><br><span class="line">                &lt;/select&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">                &lt;label&gt;文章内容：&lt;/label&gt;</span><br><span class="line">                &lt;textarea class=&quot;input_multxt&quot; name=&quot;content&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">                &lt;label&gt;上传图片：&lt;/label&gt;</span><br><span class="line">                &lt;input type=&quot;file&quot; class=&quot;input_file&quot;  name=&quot;uploadname&quot;&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;form_group indent_group line_top&quot;&gt;</span><br><span class="line">                &lt;input type=&quot;submit&quot; value=&quot;添 加&quot; class=&quot;confirm&quot;&gt;</span><br><span class="line">                &lt;span&gt;&#123;&#123;.errmsg&#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入网址，这时候你可能会发现问题，我们的<title>标签 这种小部分没办法改变。这里我们可以通过this.Data给layout传值。</title></p>
+<ul>
+<li><p>js代码传递</p>
+<p>细心的同学还会发现，我们在某些页面需要加js代码，这个 内容怎么传递到页面当中呢，这里再给大家介绍一个功能LayoutSection。</p>
+<p>*<em>LayoutSection *</em>作用：this.Layout指定了模板文件，可以实现两个页面的拼接，那有时候某些js或者是css样式，该如何传递呢？我们可以用LayoutSection传递。</p>
+<p>*<em>LayoutSection *</em>:用法：</p>
+<p>控制器代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.Layout = <span class="string">" layout.html"</span></span><br><span class="line">this.LayoutSections = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br><span class="line">this.LayoutSections[<span class="string">"Scripts"</span>] = <span class="string">"scripts.html"</span></span><br></pre></td></tr></table></figure>
+
+<p>在layout.html中添加下面相应内容：</p>
 </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;后台管理页面&lt;/title&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/reset.css&quot;&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/main.css&quot;&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/static/js/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;header&quot;&gt;</span><br><span class="line">  &lt;a href=&quot;#&quot; class=&quot;logo fl&quot;&gt;&lt;img src=&quot;/static/img/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;/logout&quot; class=&quot;logout fr&quot;&gt;退 出&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;side_bar&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;user_info&quot;&gt;</span><br><span class="line">      &lt;img src=&quot;/static/img/person.png&quot; alt=&quot;张大山&quot;&gt;</span><br><span class="line">      &lt;p&gt;欢迎你 &lt;em&gt;李雷&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;menu_con&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;first_menu active&quot;&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;icon02&quot;&gt;文章管理&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">      &lt;ul class=&quot;sub_menu show&quot;&gt;</span><br><span class="line">          &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon031&quot;&gt;文章列表&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;&lt;a href=&quot;/addArticle&quot; class=&quot;icon032&quot;&gt;添加文章&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon034&quot;&gt;添加分类&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#123;.LayoutContent&#125;&#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&#123;&#123;.Scripts&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3补充"><a href="#3-3补充" class="headerlink" title="3.3补充"></a>3.3补充</h2><p>我们回顾一下，看看我们的项目还有哪点没有实现呢？类型的删除是不是还没有实现，可能有的学生会说，老师这个删除和文章的删除一样，直接删除不久行了嘛！这里老师要特别提醒：*<em>类型是与多表操作有关的，删除效果和单表的文章不一样 *</em></p>
+<p>那我们来看一下类型的删除：</p>
+<p>同样还是四步骤：*<em>请求-&gt;路由-&gt;控制器-&gt;视图 *</em></p>
 <ul>
-<li><p>用视图函数实现获取上一页下一页页码</p>
-<ul>
-<li><p>定义函数</p>
-<p>因为函数要在beego.Run()之前执行，我们可以把函数直接定义在main.go中,定义函数如下：</p>
+<li><p>请求</p>
+<p>删除类型是在添加类型页面中实现的，在这个页面中有一个删除的<a>标签，如下图所示：</a></p>
+<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统续/1539156697631.png" alt="1539156697631"></p>
+<p>那我们给这个<a>标签加上请求路径，同样的，我们需要给请求路径上加上类型Id。代码如下：</a></p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">   //获取下一页页码</span><br><span class="line">   func ShowNextPage(pageIndex int)int&#123;</span><br><span class="line">   	return pageIndex + 1</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //获取上一页页码</span><br><span class="line">   func ShowPrePage(pageIndex int)int&#123;</span><br><span class="line">   	return pageIndex - 1</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;a href=&quot;/deleteType?id=&#123;&#123;.Id&#125;&#125;&quot; class=&quot;edit&quot;&gt;删除&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>添加映射</li>
-</ul>
+<li><p>路由</p>
+<p>添加相应路由，指定控制器和方法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/deleteType"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:DeleteType"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>控制器</p>
+<p>有了方法名，就实现相关代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除类型</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">DeleteType</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取数据</span></span><br><span class="line">	id,err:=this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	<span class="comment">//校验数据</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//处理数据</span></span><br><span class="line">	<span class="keyword">var</span> articleType models.ArticleType</span><br><span class="line">	articleType.Id = id</span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	o.Delete(&amp;articleType)</span><br><span class="line">	<span class="comment">//返回视图</span></span><br><span class="line">	this.Redirect(<span class="string">"/addArticleType"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>视图</p>
+<p>删除之后，我们返回页面发现，类型确实删除了。但是需要注意的是，我们类型绑定的还有相关的文章，这时候我们回到文章列表页，发现，<strong>删除类型，把该类型有关的文章也删除了</strong>,这是因为，beego默认执行的是级联删除，那这个级联删除能不能设置呢？在beego中级联删除的设置，是在建表的时候添加的设置如下：</p>
+<p>设置对应的 rel 关系删除时，如何处理关系字段。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cascade        级联删除(默认值)</span><br><span class="line">set_null       设置为 NULL，需要设置 null = true</span><br><span class="line">set_default    设置为默认值，需要设置 default 值</span><br><span class="line">do_nothing     什么也不做，忽略</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文章结构体</span></span><br><span class="line"><span class="keyword">type</span> Article <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="keyword">int</span> <span class="string">`orm:"pk;auto"`</span></span><br><span class="line">	ArtiName <span class="keyword">string</span> <span class="string">`orm:"size(20)"`</span></span><br><span class="line">	Atime time.Time <span class="string">`orm:"auto_now"`</span></span><br><span class="line">	Acount <span class="keyword">int</span> <span class="string">`orm:"default(0);null"`</span></span><br><span class="line">	Acontent <span class="keyword">string</span> <span class="string">`orm:"size(500)"`</span></span><br><span class="line">	Aimg <span class="keyword">string</span>  <span class="string">`orm:"size(100)"`</span></span><br><span class="line"></span><br><span class="line">	ArticleType*ArticleType <span class="string">`orm:"rel(fk);null;on_delete(set_null)"`</span></span><br><span class="line">	Users []*User <span class="string">`orm:"reverse(many)"`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">beego.AddFuncMap(&quot;next&quot;,ShowNextPage)</span><br><span class="line">beego.AddFuncMap(&quot;pre&quot;,ShowPrePage)</span><br></pre></td></tr></table></figure>
+<h1 id="4-Beego总结"><a href="#4-Beego总结" class="headerlink" title="4.Beego总结"></a>4.Beego总结</h1><p>大总结，我们在课堂上进行，也可以自行先总结一下</p>
 
-<ul>
-<li><p>在视图中调用</p>
-<p>我们这里用第二种调用视图函数的方法</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line"> &lt;li&gt;&lt;a href=&quot;/ShowArticleList?pageIndex=&#123;&#123;pre .pageIndex&#125;&#125;&quot;&gt;上一页 &lt;/a&gt; &lt;/li&gt;</span><br><span class="line"> &lt;li&gt; &lt;a href=&quot;/ShowArticleList?pageIndex=&#123;&#123;next .pageIndex&#125;&#125;&quot;&gt;下一页&lt;/a&gt;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>问题：显示之后，我们点击上一页下一页发现功能实现了，但是有一个问题，一直点击上一页页码能出现负值，一直点击下一页页码能超过总页码，那我们怎么解决呢？</p>
-</blockquote>
-<ul>
-<li><p>问题解决</p>
-<p>页码超出范围的问题，思路：只需要在获取上一页下一页页码的时候对页码做一个判断即可,代码如下：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">//获取下一页页码</span><br><span class="line">func ShowNextPage(pageIndex int,pageCount int)int&#123;</span><br><span class="line">    if pageIndex == pageCount&#123;</span><br><span class="line">        return pageIndex</span><br><span class="line">    &#125;</span><br><span class="line">    return pageIndex + 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//获取上一页页码</span><br><span class="line">func ShowPrePage(pageIndex int)int&#123;</span><br><span class="line">    if pageIndex == 1&#123;</span><br><span class="line">        return pageIndex</span><br><span class="line">    &#125;</span><br><span class="line">    return pageIndex - 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  到这里我们的分页功能就完全实现了</p>
-<h3 id="5-5小结"><a href="#5-5小结" class="headerlink" title="5.5小结"></a>5.5小结</h3><h2 id="6-查看文章详情"><a href="#6-查看文章详情" class="headerlink" title="6.查看文章详情"></a>6.查看文章详情</h2><p>业务流程图如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538715475866.png" alt="1538715475866"></p>
-<p>首先我们还是需要设计一下查看详情的请求路径。分析可知，我们查看文章详情必须指定要查看哪一篇文章，所以我们在点击查看详情的时候需要把能够标识具体哪一篇文章的数据传递给后台，这里我们通过URL传值的方式，传递文章ID给后台，设计路由为<code>/ShowArticleDetail?id=article.Id</code></p>
-<h3 id="6-1文章详情页面显示"><a href="#6-1文章详情页面显示" class="headerlink" title="6.1文章详情页面显示"></a>6.1文章详情页面显示</h3><ul>
-<li><p>前端处理</p>
-<p>修改查看详情的超链接代码如下：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;td&gt;&lt;a href=&quot;ShowArticleDetail?id=&#123;&#123;.Id&#125;&#125;&quot;&gt;查看详情&lt;/a&gt;&lt;/td&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改路由文件，添加查看详情的路由匹配，然后指定控制和请求对应的方法,修改如下:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go</span><br><span class="line">beego.Router(&quot;/ShowArticleDetail&quot;,&amp;controllers.ArticleController&#123;&#125;,&quot;get:ShowArticleDetail&quot;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>实现ShowArticleDetail()函数</p>
-<p>首先呢，我们需要获取传递过来的文章id</p>
-</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id,err := this.GetInt(<span class="string">"id"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>  然后做数据校验</p>
-  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  数据没问题的话，就根据文章id查询文章信息</p>
-  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br></pre></td></tr></table></figure>
-
-<p>  获取数据之后，指定视图，并给视图传递数据</p>
-  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"content.html"</span></span><br></pre></td></tr></table></figure>
-
-<p>  完整代码如下</p>
-  <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取文章id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line"><span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br><span class="line"></span><br><span class="line"><span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"content.html"</span></span><br></pre></td></tr></table></figure>
-
-<p>  访问浏览器，查看页面如下：</p>
-<p>  <img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538716777459.png" alt="1538716777459"></p>
-<p>  这时候页面显示的是假数据，我们修改视图文件，让页面显示的数据为我们添加的文章数据：</p>
-<ul>
-<li>视图文件修改,还没有添加的数据不做修改。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;div class=&quot;pannel&quot;&gt;</span><br><span class="line">          &lt;h3 class=&quot;review_title&quot;&gt;文章详情&lt;/h3&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章标题：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&lt;b&gt;&#123;&#123;.article.ArtiName&#125;&#125;&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章类型：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;体育新闻&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;文章内容：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&lt;img src=&quot;&#123;&#123;.article.Aimg&#125;&#125;&quot;&gt;&#123;&#123;.article.Acontent&#125;&#125;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;阅读次数：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&#123;&#123;.article.Acount&#125;&#125;&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;最近浏览：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;张三 | 李四 |&lt;/p&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">              &lt;label&gt;创建时间：&lt;/label&gt;</span><br><span class="line">              &lt;p class=&quot;detail&quot;&gt;&#123;&#123;.article.Atime.Format &quot;2006-01-02-15-04-05&quot;&#125;&#125;&lt;/p&gt;</span><br><span class="line">              &lt;span&gt;&#123;&#123;.errmsg&#125;&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>  保存之后再次刷新页面，显示如下：</p>
-<p>  <img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538717147605.png" alt="1538717147605"></p>
-<p>  我们查看详情页面的显示这部分就实现了。</p>
-<h3 id="6-2阅读次数增加"><a href="#6-2阅读次数增加" class="headerlink" title="6.2阅读次数增加"></a>6.2阅读次数增加</h3><p>每次查看详情其实就是阅读次数的增加，我们需要在查看详情函数里面给阅读次数加一，代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给查询出来的文章阅读次数加一</span></span><br><span class="line">	article.Acount += <span class="number">1</span></span><br><span class="line">	o.Update(&amp;article)</span><br></pre></td></tr></table></figure>
-
-<h2 id="7-编辑文章内容"><a href="#7-编辑文章内容" class="headerlink" title="7.编辑文章内容"></a>7.编辑文章内容</h2><h3 id="7-1编辑页面显示"><a href="#7-1编辑页面显示" class="headerlink" title="7.1编辑页面显示"></a>7.1编辑页面显示</h3><p>业务流程图如下:</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538717467806.png" alt="1538717467806"></p>
-<p>编辑页面显示和文章详情页面处理流程基本一样,也同样需要传递文章ID，先需要确定请求路径，这里我们设置请求路径为<code>UpdateArticle?id=article.id</code>，修改路由文件，代码如下:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/UpdateArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowUpdateArticle"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>然后在后台查询数据传递给视图，逻辑重复，就不详细分析了，代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//展示编辑文章界面</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">ShowUpdateArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取文章id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	<span class="comment">//数据校验</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//查询数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Read(&amp;article)</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">//传递数据给视图,并指定视图</span></span><br><span class="line">	this.Data[<span class="string">"article"</span>] = article</span><br><span class="line">	this.TplName = <span class="string">"update.html"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>前端数据展示代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;更新文章内容&lt;/title&gt;</span><br><span class="line"> &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/reset.css&quot;&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/css/main.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;header&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot; class=&quot;logo fl&quot;&gt;&lt;img src=&quot;/static/img/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot; class=&quot;logout fr&quot;&gt;退 出&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;side_bar&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;user_info&quot;&gt;</span><br><span class="line">        &lt;img src=&quot;/static/img/person.png&quot; alt=&quot;张大山&quot;&gt;</span><br><span class="line">        &lt;p&gt;欢迎你 &lt;em&gt;李雷&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=&quot;menu_con&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;first_menu active&quot;&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;icon02&quot;&gt;文章管理&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">        &lt;ul class=&quot;sub_menu show&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon031&quot;&gt;文章列表&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon032&quot;&gt;添加文章&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon034&quot;&gt;添加分类&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;main_body&quot; id=&quot;main_body&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;breadcrub&quot;&gt;</span><br><span class="line">        当前位置：文章管理&gt;编辑文章</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;pannel&quot;&gt;</span><br><span class="line">        &lt;form name = logon &gt;</span><br><span class="line">        &lt;h3 class=&quot;review_title&quot;&gt;编辑文章&lt;/h3&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;文章标题：&lt;/label&gt;</span><br><span class="line">            &lt;input type=&quot;text&quot; class=&quot;input_txt2&quot; name = &quot;articleName&quot; value=&quot;&#123;&#123;.article.ArtiName&#125;&#125;&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;文章内容：&lt;/label&gt;</span><br><span class="line">            &lt;textarea class=&quot;input_multxt&quot; name=&quot;content&quot;&gt;&#123;&#123;.article.Acontent&#125;&#125;&lt;/textarea&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group&quot;&gt;</span><br><span class="line">            &lt;label&gt;上传图片：&lt;/label&gt;</span><br><span class="line">            &lt;img src=&quot;&#123;&#123;.article.Aimg&#125;&#125;&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;file&quot; name=&quot;uploadname&quot; class=&quot;input_file&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;form_group indent_group line_top&quot;&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;添 加&quot; class=&quot;confirm&quot;&gt;</span><br><span class="line">            &lt;span&gt;&#123;&#123;.errmsg&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器输入<code>http://192.168.110.73:8080/UpdateArticle?id=1</code>，显示如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538718026674.png" alt="1538718026674"></p>
-<h3 id="7-2编辑文章数据"><a href="#7-2编辑文章数据" class="headerlink" title="7.2编辑文章数据"></a>7.2编辑文章数据</h3><p>这一步其实是对查询到的文章进行更新操作，我们还用获取页面时的请求路径<code>UpdateArticle?id=article.id</code>,但是请求改为post请求，form标签修改如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">&lt;form name = logon method=&quot;post&quot; action=&quot;/UpdateArticle?id=&#123;&#123;.article.Id&#125;&#125;&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里需要上传图片，记得给form添加enctype属性</p>
-</blockquote>
-<p>接着我们去路由文件里面给我们这个请求指定方法。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/UpdateArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:ShowUpdateArticle;post:HandleUpdate"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>然后去实现HandleUpdate函数，过程仍然是获取数据，校验数据，更新数据，返回视图这几步，没有什么新的知识点，我们就不做详细分析，直接看代码:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//抽离上传文件函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">UploadFile</span><span class="params">(filePath <span class="keyword">string</span>,this beego.Controller)</span><span class="title">string</span></span>&#123;</span><br><span class="line">	file,head,err :=this.GetFile(filePath)</span><br><span class="line">	<span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片错误，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//文件格式判断</span></span><br><span class="line">	fileExt := path.Ext(head.Filename)</span><br><span class="line">	<span class="keyword">if</span> fileExt != <span class="string">".jpg"</span> &amp;&amp; fileExt != <span class="string">".png"</span> &amp;&amp; fileExt != <span class="string">".jpeg"</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片格式不正确，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//文件大小判断</span></span><br><span class="line">	<span class="keyword">if</span> head.Size &gt; <span class="number">5000000</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"上传图片太大，请重新添加！"</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//避免文件重名</span></span><br><span class="line">	fileName := time.Now().Format(<span class="string">"2006-01-02-15-04-05"</span>)</span><br><span class="line">	this.SaveToFile(<span class="string">"uploadname"</span>,<span class="string">"./static/img/"</span>+fileName+fileExt)</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"/static/img/"</span>+fileName+fileExt</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//处理更新数据</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">HandleUpdate</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取数据</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	articleName :=this.GetString(<span class="string">"articleName"</span>)</span><br><span class="line">	content := this.GetString(<span class="string">"content"</span>)</span><br><span class="line">	img := UploadFile(<span class="string">"uploadname"</span>,this.Controller)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//校验数据，如果数据出错,返回当前编辑页面</span></span><br><span class="line">	<span class="keyword">if</span> err !=<span class="literal">nil</span> || articleName ==<span class="string">""</span> || content == <span class="string">""</span> || img == <span class="string">""</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"编辑数据不完整"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/UpdateArticle?id="</span>+strconv.Itoa(id),<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//更新数据</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	<span class="keyword">if</span> err := o.Read(&amp;article);err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"传递的文章id错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/UpdateArticle?id="</span>+strconv.Itoa(id),<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	article.ArtiName = articleName</span><br><span class="line">	article.Acontent = content</span><br><span class="line">	article.Aimg = img</span><br><span class="line">	o.Update(&amp;article)</span><br><span class="line">	<span class="comment">//返回视图</span></span><br><span class="line">	this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="8-删除文章"><a href="#8-删除文章" class="headerlink" title="8.删除文章"></a>8.删除文章</h2><h3 id="8-1删除功能实现"><a href="#8-1删除功能实现" class="headerlink" title="8.1删除功能实现"></a>8.1删除功能实现</h3><p>业务流程图如下:</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538719480706.png" alt="1538719480706"></p>
-<p>删除功能相比较前面的功能算是比较简单的，只需要传递过来文章id值，然后删除文章即可。</p>
-<p>首先我们还是要指定删除文章的请求路径：<code>DeleteArticle?id=article.Id</code></p>
-<p>然后修改路由文件，为删除请求指定控制器，指定函数。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beego.Router(<span class="string">"/DeleteArticle"</span>,&amp;controllers.ArticleController&#123;&#125;,<span class="string">"get:DeleteArticle"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>然后在后台实现DeleteArticle函数,代码如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除文章</span></span><br><span class="line"><span class="function"><span class="keyword">func</span><span class="params">(this*ArticleController)</span><span class="title">DeleteArticle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//获取文章Id</span></span><br><span class="line">	id,err := this.GetInt(<span class="string">"id"</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span>&#123;</span><br><span class="line">		beego.Info(<span class="string">"删除文章请求路径错误"</span>)</span><br><span class="line">		this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//删除文章</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	<span class="keyword">var</span> article models.Article</span><br><span class="line">	article.Id = id</span><br><span class="line">	o.Delete(&amp;article)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//返回视图界面</span></span><br><span class="line">	this.Redirect(<span class="string">"/ShowArticleList"</span>,<span class="number">302</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这时候你发现功能实现了，但是存在误删的可能，整个页面显的特别不友好，我们给页面加个js提示，防止误删。</p>
-</blockquote>
-<h3 id="8-2删除js提示"><a href="#8-2删除js提示" class="headerlink" title="8.2删除js提示"></a>8.2删除js提示</h3><p>业务分析:当点击删除超链接的时候，弹出对话框，如果确认就发送请求，如果取消，就不发送请求：代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(&quot;.dels&quot;).click(function () &#123;</span><br><span class="line">        if(!confirm(&quot;是否确认删除？&quot;))&#123;</span><br><span class="line">            return false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下：</p>
-<p><img src="//daelephant.github.io/2018/07/12/beego-news发布系统/1538720450645.png" alt="1538720450645"></p>
-<h2 id="9-总结"><a href="#9-总结" class="headerlink" title="9.总结"></a>9.总结</h2>
       
 
       
@@ -803,7 +676,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://daelephant.github.io/2018/07/12/beego-news发布系统/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://daelephant.github.io/2018/07/12/beego-news发布系统续/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -817,18 +690,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/12/beego-news发布系统续/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/18/beego-note/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          beego-news发布系统续
+          beego note
         
       </div>
     </a>
   
   
-    <a href="/2018/07/11/Linux拾遗/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux拾遗</div>
+    <a href="/2018/07/12/beego-news发布系统/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">beego-news发布系统</div>
       <i class="icon-circle-right"></i>
     </a>
   
