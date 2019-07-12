@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://daelephant.github.io">
   <title>MySQL拾遗之二 | Len的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束   1.2 数据类型——值类型1.2.1   整型   类型 字节 范围    tinyint 1 -128~127   smal">
+  <meta name="description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL拾遗之二">
 <meta property="og:url" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/index.html">
 <meta property="og:site_name" content="Len的博客">
-<meta property="og:description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束   1.2 数据类型——值类型1.2.1   整型   类型 字节 范围    tinyint 1 -128~127   smal">
+<meta property="og:description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536718268668.png">
 <meta property="og:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536719919287.png">
@@ -36,10 +36,10 @@
 <meta property="og:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536744649329.png">
 <meta property="og:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536744676337.png">
 <meta property="og:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536744701721.png">
-<meta property="og:updated_time" content="2019-07-11T23:56:54.503Z">
+<meta property="og:updated_time" content="2019-07-12T00:00:37.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL拾遗之二">
-<meta name="twitter:description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束   1.2 数据类型——值类型1.2.1   整型   类型 字节 范围    tinyint 1 -128~127   smal">
+<meta name="twitter:description" content="1.1 今日目标 了解MySQL常用的客户端软件 理解整型的使用 理解浮点型的使用 理解字符型的使用 理解枚举型的使用 理解集合型的使用 理解日期型的使用 理解非空约束 理解默认值约束 理解自动增长 理解主键约束 理解唯一键约束 知道备注 知道SQL注释 理解外键约束">
 <meta name="twitter:image" content="https://daelephant.github.io/2017/06/12/MySQL拾遗之二/1536718268668.png">
   
     <link rel="alternative" href="/atom.xml" title="Len的博客" type="application/atom+xml">
@@ -211,9 +211,10 @@
 <li>理解唯一键约束</li>
 <li>知道备注</li>
 <li>知道SQL注释</li>
-<li>理解外键约束 </li>
+<li>理解外键约束 <a id="more"></a>
+<h2 id="1-2-数据类型——值类型"><a href="#1-2-数据类型——值类型" class="headerlink" title="1.2 数据类型——值类型"></a>1.2 数据类型——值类型</h2></li>
 </ol>
-<h2 id="1-2-数据类型——值类型"><a href="#1-2-数据类型——值类型" class="headerlink" title="1.2 数据类型——值类型"></a>1.2 数据类型——值类型</h2><h4 id="1-2-1-整型"><a href="#1-2-1-整型" class="headerlink" title="1.2.1   整型"></a>1.2.1   整型</h4><table>
+<h4 id="1-2-1-整型"><a href="#1-2-1-整型" class="headerlink" title="1.2.1   整型"></a>1.2.1   整型</h4><table>
 <thead>
 <tr>
 <th align="center">类型</th>
